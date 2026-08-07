@@ -23,9 +23,10 @@
   <link rel="icon" href="assets/rabea_brand_logo.webp" type="image/webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="assets/home_hero_day.jpg" type="image/jpeg" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="preload" as="image" href="assets/home_hero_day.jpg" type="image/jpeg" imagesrcset="assets/home_hero_day.jpg 960w" imagesizes="100vw" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" /></noscript>
+  <link rel="stylesheet" href="styles.css?v=7" />
   <script>document.documentElement.classList.add("js");</script>
   <script type="application/ld+json">
   {
@@ -44,17 +45,22 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": []
+    "mainEntity": [
+      { "@type": "Question", "name": "Is Rabe3 Al-Quloob free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Core reading, adhkar, dua, hadith, and daily tools are free. Premium unlocks advanced themes, cloud sync, and deeper practice features." } },
+      { "@type": "Question", "name": "Does it work offline?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Download your Mushaf and audio for reading and listening without an internet connection." } },
+      { "@type": "Question", "name": "Is it safe for children?", "acceptedAnswer": { "@type": "Answer", "text": "Kids mode is ad-free, PIN-protected, and includes parental controls for screen time and profiles." } },
+      { "@type": "Question", "name": "Which languages are supported?", "acceptedAnswer": { "@type": "Answer", "text": "The entire app interface is available in 28 languages — from Arabic and English to Urdu, Turkish, Chinese, and more." } }
+    ]
   }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n-aria="a11y_skip">Skip to content</a>
 
-  <nav class="nav" id="site-nav" aria-label="Primary">
+  <nav class="nav" id="site-nav" data-i18n-aria="a11y_nav">
     <div class="container nav-inner">
       <a class="brand" href="#top">
-        <img src="assets/rabea_brand_logo.webp" alt="" width="36" height="36" decoding="async" />
+        <img src="assets/rabea_brand_logo.webp" alt="" data-i18n-alt="a11y_brand_logo" width="36" height="36" decoding="async" />
         <span data-i18n="brand_name">ربيع القلوب</span>
       </a>
       <div class="nav-links" id="nav-links">
@@ -92,12 +98,12 @@
       <div class="hero-bg">
         <picture>
           <source srcset="assets/home_hero_day.jpg" type="image/jpeg" />
-          <img src="assets/home_hero_day.jpg" alt="" width="1536" height="1024" fetchpriority="high" decoding="async" />
+          <img src="assets/home_hero_day.jpg" alt="" width="960" height="640" fetchpriority="high" decoding="async" sizes="100vw" srcset="assets/home_hero_day.jpg 960w" />
         </picture>
       </div>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="hero-eyebrow" data-i18n="hero_eyebrow">A new standard for Quran apps</p>
+          <p class="eyebrow eyebrow-gold hero-eyebrow" data-i18n="hero_eyebrow">A new standard for Quran apps</p>
           <h1 data-i18n="hero_headline">The Quran experience you always wished existed.</h1>
           <p class="hero-sub" data-i18n="hero_sub">Immerse yourself in stillness. Grow with intelligent guidance. Bring your family closer to the Book — without ads, noise, or compromise.</p>
           <ul class="hero-benefits">
@@ -106,7 +112,7 @@
             <li data-i18n="hero_b3">A safe kids world and daily companion — private by design</li>
           </ul>
           <div class="hero-cta">
-            <a class="btn btn-primary btn-lg" href="#download" data-i18n="hero_cta_primary">Get the app</a>
+            <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.rabe3alquloob.app" target="_blank" rel="noopener" data-i18n="hero_cta_primary">Get the app</a>
             <a class="btn btn-ghost btn-lg" href="#why" data-i18n="hero_cta_secondary">See how it works</a>
           </div>
         </div>
@@ -128,7 +134,7 @@
     </header>
 
     <!-- Trust -->
-    <section class="trust" id="trust" aria-label="Trust">
+    <section class="trust" id="trust" data-i18n-aria="a11y_trust">
       <div class="container">
         <div class="trust-grid reveal">
           <div class="trust-pill"><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><span data-i18n="trust_no_ads">No ads, ever</span></div>
@@ -143,7 +149,7 @@
     <!-- Mission -->
     <section class="mission" id="mission" aria-labelledby="mission-heading">
       <div class="container mission-inner reveal">
-        <p class="mission-label" data-i18n="mission_label">Our purpose</p>
+        <p class="mission-label eyebrow eyebrow-gold" data-i18n="mission_label">Our purpose</p>
         <h2 id="mission-heading" class="mission-statement" data-i18n="mission_statement">To restore calm, beauty, and dignity to your relationship with the Book of Allah.</h2>
       </div>
     </section>
@@ -264,7 +270,7 @@
       <div class="container experience-grid">
         <div class="experience-visual reveal">
           <div class="visual-card wide-card">
-            <img src="assets/home_ramadan_banner_bg.png" alt="" class="wide-shot" loading="lazy" />
+            <img src="assets/home_ramadan_banner_bg.jpg" alt="" class="wide-shot" width="800" height="500" loading="lazy" />
           </div>
         </div>
         <div class="experience-copy reveal">
@@ -321,13 +327,15 @@
           <h2 data-i18n="section_themes_title">Fifteen moods for your Mushaf.</h2>
           <p class="section-lead" data-i18n="section_themes_desc">From golden dawn to midnight mosque — each theme transforms reading into an experience you want to return to.</p>
         </div>
-        <div class="theme-track reveal" role="list" data-i18n-aria="a11y_theme_gallery">
-          <figure class="theme-tile" role="listitem"><img src="assets/theme_hero_golden_dawn.jpg" alt="" loading="lazy" width="400" height="533" /><figcaption data-i18n="theme_golden">Golden Dawn</figcaption></figure>
-          <figure class="theme-tile" role="listitem"><img src="assets/theme_hero_midnight_mosque.jpg" alt="" loading="lazy" width="400" height="533" /><figcaption data-i18n="theme_midnight">Midnight Mosque</figcaption></figure>
-          <figure class="theme-tile" role="listitem"><img src="assets/theme_hero_emerald_paradise.jpg" alt="" loading="lazy" width="400" height="533" /><figcaption data-i18n="theme_emerald">Emerald Paradise</figcaption></figure>
-          <figure class="theme-tile premium" role="listitem"><img src="assets/theme_hero_ottoman_blue.jpg" alt="" loading="lazy" width="400" height="533" /><figcaption data-i18n="theme_ottoman">Ottoman Blue</figcaption></figure>
-          <figure class="theme-tile premium" role="listitem"><img src="assets/theme_hero_neon_makkah.jpg" alt="" loading="lazy" width="400" height="533" /><figcaption data-i18n="theme_neon">Neon Makkah</figcaption></figure>
-          <figure class="theme-tile premium" role="listitem"><img src="assets/theme_hero_sakura_mosque.jpg" alt="" loading="lazy" width="400" height="533" /><figcaption data-i18n="theme_sakura">Sakura Mosque</figcaption></figure>
+        <div class="theme-track-wrap reveal">
+        <div class="theme-track" role="list" data-i18n-aria="a11y_theme_gallery">
+          <figure class="theme-tile" role="listitem"><img src="assets/theme_hero_golden_dawn.jpg" alt="" loading="lazy" width="400" height="533" /><figcaption id="theme-cap-1" data-i18n="theme_golden">Golden Dawn</figcaption></figure>
+          <figure class="theme-tile" role="listitem"><img src="assets/theme_hero_midnight_mosque.jpg" alt="" loading="lazy" width="400" height="533" /><figcaption id="theme-cap-2" data-i18n="theme_midnight">Midnight Mosque</figcaption></figure>
+          <figure class="theme-tile" role="listitem"><img src="assets/theme_hero_emerald_paradise.jpg" alt="" loading="lazy" width="400" height="533" /><figcaption id="theme-cap-3" data-i18n="theme_emerald">Emerald Paradise</figcaption></figure>
+          <figure class="theme-tile premium" role="listitem"><img src="assets/theme_hero_ottoman_blue.jpg" alt="" loading="lazy" width="400" height="533" /><figcaption id="theme-cap-4" data-i18n="theme_ottoman">Ottoman Blue</figcaption></figure>
+          <figure class="theme-tile premium" role="listitem"><img src="assets/theme_hero_neon_makkah.jpg" alt="" loading="lazy" width="400" height="533" /><figcaption id="theme-cap-5" data-i18n="theme_neon">Neon Makkah</figcaption></figure>
+          <figure class="theme-tile premium" role="listitem"><img src="assets/theme_hero_sakura_mosque.jpg" alt="" loading="lazy" width="400" height="533" /><figcaption id="theme-cap-6" data-i18n="theme_sakura">Sakura Mosque</figcaption></figure>
+        </div>
         </div>
         <p class="theme-note reveal" data-i18n="theme_more_note">9 more themes inside the app — 6 shown here.</p>
       </div>
@@ -345,35 +353,11 @@
               <li data-i18n="premium_p2">Cloud backup for your practice clips and progress</li>
               <li data-i18n="premium_p3">AI coach and deep tajweed insights</li>
             </ul>
-            <a class="btn btn-primary" href="#download" data-i18n="premium_cta">Unlock with Rabe3 Plus</a>
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.rabe3alquloob.app" target="_blank" rel="noopener" data-i18n="premium_cta">Download to explore Plus</a>
           </div>
           <div class="premium-visual" aria-hidden="true">
             <img src="assets/theme_hero_golden_dawn.jpg" alt="" loading="lazy" />
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Values -->
-    <section class="values" id="values">
-      <div class="container">
-        <div class="section-intro reveal">
-          <p class="eyebrow" data-i18n="values_eyebrow">Design principles</p>
-          <h2 data-i18n="values_title">Every decision serves your worship.</h2>
-        </div>
-        <div class="values-grid">
-          <article class="value-card reveal">
-            <h3 data-i18n="value_1_t">Calm over clutter</h3>
-            <p data-i18n="value_1_d">No feeds, no badges, no dark patterns — just space to be with the ayah.</p>
-          </article>
-          <article class="value-card reveal">
-            <h3 data-i18n="value_2_t">Family-first safety</h3>
-            <p data-i18n="value_2_d">Kids mode is gated, ad-free, and built with controls parents actually use.</p>
-          </article>
-          <article class="value-card reveal">
-            <h3 data-i18n="value_3_t">Honest privacy</h3>
-            <p data-i18n="value_3_d">Your bookmarks and practice stay on your device unless you choose cloud sync.</p>
-          </article>
         </div>
       </div>
     </section>
@@ -440,11 +424,11 @@
           <h2 data-i18n="download_title">Begin your journey today.</h2>
           <p class="section-lead" data-i18n="download_lead">Download Rabe3 Al-Quloob — calm, beautiful, and built for a lifetime with the Quran.</p>
           <div class="download-actions">
-            <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.rabe3alquloob.app" target="_blank" rel="noopener" data-i18n="hero_cta_primary">Get the app</a>
-            <a class="btn btn-facebook" href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" data-i18n="footer_facebook">Follow on Facebook</a>
+            <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.rabe3alquloob.app" target="_blank" rel="noopener" data-i18n="download_play_badge">Get it on Google Play</a>
+            <a class="btn btn-ghost btn-lg" href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" data-i18n="footer_facebook">Follow on Facebook</a>
           </div>
           <p class="download-note" data-i18n="download_soon">Free on Google Play · Android</p>
-          <code class="package-id">com.rabe3alquloob.app</code>
+          <p class="package-id"><span class="visually-hidden">Package ID:</span><code>com.rabe3alquloob.app</code></p>
         </div>
       </div>
     </section>
@@ -455,7 +439,7 @@
       <div class="footer-brand">
         <strong data-i18n="brand_name">ربيع القلوب</strong>
         <p data-i18n="footer_tagline">May Allah accept our efforts. © Rabe3 Al-Quloob</p>
-        <a class="footer-social" href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" aria-label="Facebook">
+        <a class="footer-social" href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" data-i18n-aria="a11y_facebook">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
         </a>
       </div>
@@ -469,9 +453,13 @@
     </div>
   </footer>
 
+  <aside class="sticky-cta" id="sticky-cta" hidden>
+    <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.rabe3alquloob.app" target="_blank" rel="noopener" data-i18n="sticky_cta">Get the app</a>
+  </aside>
+
   <button class="scroll-top" id="scroll-top" type="button" data-i18n-aria="a11y_back_top">↑</button>
 
-  <script src="i18n.js?v=6" defer></script>
-  <script src="app.js?v=6" defer></script>
+  <script src="i18n.js?v=7" defer></script>
+  <script src="app.js?v=7" defer></script>
 </body>
 </html>

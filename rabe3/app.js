@@ -55,6 +55,25 @@
   langBtn.addEventListener("click", () => {
     const open = menu.classList.toggle("open");
     langBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) menu.querySelector(".lang-option")?.focus();
+  });
+
+  menu.addEventListener("keydown", (e) => {
+    const options = [...menu.querySelectorAll(".lang-option")];
+    const idx = options.indexOf(document.activeElement);
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      options[(idx + 1) % options.length]?.focus();
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      options[(idx - 1 + options.length) % options.length]?.focus();
+    } else if (e.key === "Home") {
+      e.preventDefault();
+      options[0]?.focus();
+    } else if (e.key === "End") {
+      e.preventDefault();
+      options[options.length - 1]?.focus();
+    }
   });
 
   document.addEventListener("click", (e) => {
@@ -109,9 +128,32 @@
     nav?.classList.toggle("scrolled", window.scrollY > 16);
     setActiveNav();
     document.getElementById("scroll-top")?.classList.toggle("visible", window.scrollY > 640);
+    updateStickyCta();
   };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  const stickyCta = document.getElementById("sticky-cta");
+  const heroEl = document.getElementById("top");
+  const downloadEl = document.getElementById("download");
+  const mobileMq = window.matchMedia("(max-width: 768px)");
+
+  function updateStickyCta() {
+    if (!stickyCta || !heroEl || !downloadEl || !mobileMq.matches) {
+      stickyCta?.classList.remove("is-visible");
+      document.body.classList.remove("has-sticky-cta");
+      return;
+    }
+    stickyCta.hidden = false;
+    const y = window.scrollY + nav.offsetHeight;
+    const heroEnd = heroEl.offsetTop + heroEl.offsetHeight;
+    const downloadStart = downloadEl.offsetTop;
+    const show = y > heroEnd - 100 && y < downloadStart - 120;
+    stickyCta.classList.toggle("is-visible", show);
+    document.body.classList.toggle("has-sticky-cta", show);
+  }
+
+  mobileMq.addEventListener("change", updateStickyCta);
 
   document.getElementById("scroll-top")?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
@@ -206,6 +248,11 @@
   } else {
     document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
   }
+
+  document.querySelectorAll(".theme-tile").forEach((tile) => {
+    const cap = tile.querySelector("figcaption");
+    if (cap?.id) tile.setAttribute("aria-labelledby", cap.id);
+  });
 
   window.initI18n();
   updateFaqSchema(document.documentElement.lang || "ar");

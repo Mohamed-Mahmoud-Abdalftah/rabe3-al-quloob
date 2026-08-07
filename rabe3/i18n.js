@@ -2,7 +2,7 @@
 const RABE3_I18N = {
   en: {
     meta_title: "Rabe3 Al-Quloob — Your Quran, beautifully reimagined",
-    meta_desc: "The most beautiful Quran companion — read with calm, practice with intelligence, grow with your family. Privacy-first. Offline-ready. 28 languages.",
+    meta_desc: "Read, memorize, and live with the Quran — calm Mushaf reader, recitation studio, daily adhkar, kids mode, and privacy-first design. 28 languages.",
     brand_name: "Rabe3 Al-Quloob",
     nav_why: "Why us", nav_reader: "Reader", nav_studio: "Studio", nav_kids: "Kids", nav_daily: "Daily",
     nav_privacy: "Privacy", nav_download: "Download",
@@ -65,23 +65,22 @@ const RABE3_I18N = {
     download_lead: "Download Rabe3 Al-Quloob — calm, beautiful, and built for a lifetime with the Quran.",
     download_soon: "Free on Google Play · Android",
     download_play_badge: "Get it on Google Play",
-    premium_cta: "Unlock with Rabe3 Plus",
+    premium_cta: "Download to explore Plus",
+    theme_premium: "Premium theme",
     theme_more_note: "9 more themes inside the app — 6 shown here.",
     langs_landing_note: "This page is fully translated in Arabic and English. The app UI supports 28 languages.",
+    section_langs_desc: "Switch the app to your language — 28 options from Arabic to Chinese, Turkish, Urdu, and more.",
     a11y_skip: "Skip to content",
     a11y_menu: "Open menu",
+    a11y_nav: "Primary navigation",
+    a11y_trust: "Trust highlights",
     a11y_scroll_down: "Scroll to trust badges",
     a11y_back_top: "Back to top",
     a11y_lang_menu: "Choose language",
     a11y_theme_gallery: "Reader theme gallery",
-    values_eyebrow: "Design principles",
-    values_title: "Every decision serves your worship.",
-    value_1_t: "Calm over clutter",
-    value_1_d: "No feeds, no badges, no dark patterns — just space to be with the ayah.",
-    value_2_t: "Family-first safety",
-    value_2_d: "Kids mode is gated, ad-free, and built with controls parents actually use.",
-    value_3_t: "Honest privacy",
-    value_3_d: "Your bookmarks and practice stay on your device unless you choose cloud sync.",
+    a11y_facebook: "Follow Rabe3 Al-Quloob on Facebook",
+    a11y_brand_logo: "Rabe3 Al-Quloob logo",
+    sticky_cta: "Get the app",
     hero_badge: "✦ Complete Islamic experience",
     section_features_eyebrow: "Everything you need", section_features_title: "Eight pillars on your home screen",
     section_features_desc: "Every tool for your daily Quran journey — one tap away.",
@@ -119,7 +118,6 @@ const RABE3_I18N = {
     section_langs_eyebrow: "Global", section_langs_title: "28 languages. One home.",
     section_community_eyebrow: "Stay connected", section_community_title: "Join the Rabe3 community",
     section_community_desc: "Follow us on Facebook for launch updates, news, and new features.",
-    section_langs_desc: "The entire app UI is available in 28 languages — from Arabic and English to Urdu, Chinese, Turkish, and more.",
     section_privacy_eyebrow: "Privacy", section_privacy_title: "Your worship stays yours.",
     section_privacy_desc: "We built Rabe3 Al-Quloob the way a sacred app should be built — with respect, transparency, and zero compromise on your data.",
     privacy_c1_t: "On-device by default", privacy_c1_d: "Bookmarks, notes, and progress live on your phone. No account required to begin your journey.",
@@ -129,7 +127,7 @@ const RABE3_I18N = {
   },
   ar: {
     meta_title: "ربيع القلوب — رحلتك مع القرآن، بجمال هادئ",
-    meta_desc: "أجمل رفيق للقرآن — اقرأ بهدوء، تدرّب بذكاء، انمُ مع عائلتك. خصوصية أولاً. يعمل بدون إنترنت. ٢٨ لغة.",
+    meta_desc: "اقرأ واحفظ وعِش مع القرآن — مصحف هادئ، استوديو تلاوة، أذكار يومية، وضع أطفال، وخصوصية أولاً. ٢٨ لغة.",
     brand_name: "ربيع القلوب",
     nav_why: "لماذا نحن", nav_reader: "القراءة", nav_studio: "الاستوديو", nav_kids: "الأطفال", nav_daily: "اليومي",
     nav_privacy: "الخصوصية", nav_download: "تحميل",
@@ -194,23 +192,22 @@ const RABE3_I18N = {
     download_lead: "حمّل ربيع القلوب — هادئ، جميل، ومبني لعمر مع القرآن.",
     download_soon: "مجاني على Google Play · أندرويد",
     download_play_badge: "حمّله من Google Play",
-    premium_cta: "افتح مع ربيع بلس",
+    premium_cta: "حمّل التطبيق لاستكشاف بلس",
+    theme_premium: "ثيم بريميوم",
     theme_more_note: "٩ ثيمات إضافية داخل التطبيق — ٦ معروضة هنا.",
     langs_landing_note: "هذه الصفحة مترجمة بالكامل للعربية والإنجليزية. واجهة التطبيق تدعم ٢٨ لغة.",
+    section_langs_desc: "بدّل لغة التطبيق — ٢٨ خيارًا من العربية إلى الصينية والتركية والأردية والمزيد.",
     a11y_skip: "تخطي إلى المحتوى",
     a11y_menu: "فتح القائمة",
+    a11y_nav: "التنقل الرئيسي",
+    a11y_trust: "مؤشرات الثقة",
     a11y_scroll_down: "انتقل إلى شارات الثقة",
     a11y_back_top: "العودة للأعلى",
     a11y_lang_menu: "اختر اللغة",
     a11y_theme_gallery: "معرض ثيمات القراءة",
-    values_eyebrow: "مبادئ التصميم",
-    values_title: "كل قرار يخدم عبادتك.",
-    value_1_t: "سكينة لا فوضى",
-    value_1_d: "لا خلاصات ولا شارات ولا حيل — فقط مساحة لتكون مع الآية.",
-    value_2_t: "العائلة أولاً",
-    value_2_d: "وضع الأطفال محمي وبلا إعلانات مع تحكم يستخدمه الوالدان فعلًا.",
-    value_3_t: "خصوصية صادقة",
-    value_3_d: "علاماتك وتدريبك يبقيان على جهازك ما لم تختر المزامنة السحابية.",
+    a11y_facebook: "تابع ربيع القلوب على فيسبوك",
+    a11y_brand_logo: "شعار ربيع القلوب",
+    sticky_cta: "حمّل التطبيق",
     section_features_eyebrow: "كل ما تحتاجه", section_features_title: "ثمانية أركان في شاشتك الرئيسية",
     section_features_desc: "كل أداة لرحلتك اليومية مع القرآن — بنقرة واحدة.",
     f_mushaf_t: "المصحف", f_mushaf_d: "اقرأ القرآن الكريم مع العلامات والملاحظات والتفسير والترجمات وتجربة قراءة هادئة.",
@@ -245,7 +242,6 @@ const RABE3_I18N = {
     premium_p1: "ثيمات قراءة حصرية لليل والسفر", premium_p2: "نسخ احتياطي سحابي لمقاطع التدريب وتقدمك", premium_p3: "مدرب ذكي ورؤى تجويد عميقة",
     section_premium_cta: "اعرف المزيد في التطبيق",
     section_langs_eyebrow: "عالمي", section_langs_title: "٢٨ لغة. بيت واحد.",
-    section_langs_desc: "واجهة التطبيق بالكامل متوفرة بـ ٢٨ لغة — من العربية والإنجليزية إلى الأردية والصينية والتركية والمزيد.",
     section_community_eyebrow: "تواصل معنا", section_community_title: "انضم لمجتمع ربيع القلوب",
     section_community_desc: "تابعنا على فيسبوك لآخر الأخبار، موعد الإطلاق، والتحديثات الجديدة.",
     section_privacy_eyebrow: "الخصوصية", section_privacy_title: "عبادتك تبقى لك.",
@@ -630,6 +626,16 @@ function applyLanguage(lang) {
     const key = el.getAttribute("data-i18n-aria");
     const val = t(lang, key);
     if (val !== key) el.setAttribute("aria-label", val);
+  });
+
+  document.querySelectorAll("[data-i18n-alt]").forEach(el => {
+    const key = el.getAttribute("data-i18n-alt");
+    const val = t(lang, key);
+    if (val !== key) el.setAttribute("alt", val);
+  });
+
+  document.querySelectorAll(".theme-tile.premium").forEach((tile) => {
+    tile.setAttribute("aria-label", t(lang, "theme_premium"));
   });
 
   // Chips
