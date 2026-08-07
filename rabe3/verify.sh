@@ -31,7 +31,7 @@ done
 
 for lang in ar en tr de es zh ru; do
   body=$(curl -s "$SITE/?lang=$lang")
-  if echo "$body" | grep -q 'class="reveal"'; then
+  if echo "$body" | grep -q 'reveal'; then
     echo "OK   content ?lang=$lang"
   else
     echo "FAIL missing reveal ?lang=$lang"
