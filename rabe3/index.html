@@ -31,6 +31,7 @@
         <a href="#kids" data-i18n="nav_kids">الأطفال</a>
         <a href="#themes" data-i18n="nav_themes">الثيمات</a>
         <a href="#premium" data-i18n="nav_premium">بريميوم</a>
+        <a href="#privacy" data-i18n="nav_privacy">الخصوصية</a>
         <a href="#languages" data-i18n="nav_langs">اللغات</a>
         <a href="#download" data-i18n="nav_download">تحميل</a>
       </div>
@@ -64,11 +65,9 @@
         </div>
       </div>
       <div class="hero-visual">
-        <img class="hero-float f1" src="assets/home_ic_mushaf_3d.png" alt="" width="88" />
-        <img class="hero-float f2" src="assets/home_ic_azkar_3d.png" alt="" width="72" />
-        <img class="hero-float f3" src="assets/home_gift_3d.png" alt="" width="64" />
+        <div class="hero-glow" aria-hidden="true"></div>
         <div class="hero-phone">
-          <img src="assets/home_verse_bg.png" alt="Rabe3 home screen" width="480" height="960" style="width:100%;height:auto" />
+          <img src="assets/home_hero_day.png" alt="Rabe3 Al-Quloob app preview" width="480" height="960" />
         </div>
       </div>
     </div>
@@ -137,10 +136,10 @@
   </section>
 
   <!-- Practice Studio -->
-  <section id="practice" style="background:rgba(255,255,255,0.02)">
+  <section id="practice" class="section-alt">
     <div class="container">
       <div class="showcase reveal">
-        <div class="showcase-media">
+        <div class="showcase-frame">
           <img src="assets/home_continue_quran_3d.png" alt="Recitation Studio" loading="lazy" />
         </div>
         <div class="showcase-body">
@@ -157,8 +156,8 @@
           <p data-i18n="section_daily_desc">مواقيت الصلاة، آية اليوم، التحدي اليومي، بانر رمضان، الإنجازات، والتذكيرات.</p>
           <div class="chip-list" data-i18n-chips="daily_chips"></div>
         </div>
-        <div class="showcase-media">
-          <img src="assets/home_ramadan_banner_bg.png" alt="Daily features" loading="lazy" />
+        <div class="showcase-frame wide">
+          <img src="assets/home_verse_bg.png" alt="Daily features" loading="lazy" />
         </div>
       </div>
     </div>
@@ -189,32 +188,32 @@
       </div>
       <div class="kids-grid">
         <article class="kids-card reveal">
-          <img src="assets/kids_journey_island_juz_amma.webp" alt="" loading="lazy" />
+          <div class="icon-wrap"><img src="assets/kids_journey_island_juz_amma.webp" alt="" loading="lazy" /></div>
           <h4 data-i18n="kids_c1_t">خريطة الرحلة</h4>
           <p data-i18n="kids_c1_d">افتح الجزر، اجمع النجوم، وأكمل السور على خريطة مغامرات.</p>
         </article>
         <article class="kids-card reveal">
-          <img src="assets/kids_journey_island_golden.webp" alt="" loading="lazy" />
+          <div class="icon-wrap"><img src="assets/kids_journey_island_golden.webp" alt="" loading="lazy" /></div>
           <h4 data-i18n="kids_c2_t">قصص ومرح</h4>
           <p data-i18n="kids_c2_d">قصص إسلامية مرئية وحكايات ممتعة بـ ٢٣ لغة من حول العالم.</p>
         </article>
         <article class="kids-card reveal">
-          <img src="assets/home_ic_mushaf_3d.png" alt="" width="64" height="64" loading="lazy" />
+          <div class="icon-wrap"><img src="assets/home_ic_mushaf_3d.png" alt="" loading="lazy" /></div>
           <h4 data-i18n="kids_c3_t">اسمع وردّد</h4>
           <p data-i18n="kids_c3_d">تلاوة مناسبة للأطفال بالميكروفون — اسمع، سجّل، واستمع لنفسك.</p>
         </article>
         <article class="kids-card reveal">
-          <img src="assets/kids_journey_reward_chest_open.webp" alt="" loading="lazy" />
+          <div class="icon-wrap"><img src="assets/kids_journey_reward_chest_open.webp" alt="" loading="lazy" /></div>
           <h4 data-i18n="kids_c4_t">المتجر والمكافآت</h4>
           <p data-i18n="kids_c4_d">اجمع النجوم، افتح الشخصيات والملابس والقبعات واحتفل بالإنجازات.</p>
         </article>
         <article class="kids-card reveal">
-          <img src="assets/home_gift_3d.png" alt="" width="64" height="64" loading="lazy" />
+          <div class="icon-wrap"><img src="assets/home_gift_3d.png" alt="" loading="lazy" /></div>
           <h4 data-i18n="kids_c5_t">فيديوهات التجويد</h4>
           <p data-i18n="kids_c5_d">دروس فيديو قصيرة لتعلم أحكام التجويد بطريقة ممتعة.</p>
         </article>
         <article class="kids-card reveal">
-          <img src="assets/kids_journey_char_girl_hafiza_idle.webp" alt="" width="64" height="64" loading="lazy" />
+          <div class="icon-wrap"><img src="assets/kids_journey_char_girl_hafiza_idle.webp" alt="" loading="lazy" /></div>
           <h4 data-i18n="kids_c6_t">لوحة الوالدين</h4>
           <p data-i18n="kids_c6_d">ملفات متعددة، وقت شاشة، تتبع التقدم، وحماية برقم سري.</p>
         </article>
@@ -223,7 +222,7 @@
   </section>
 
   <!-- Themes -->
-  <section id="themes" style="background:rgba(255,255,255,0.02)">
+  <section id="themes" class="section-alt">
     <div class="container">
       <div class="section-head reveal">
         <div class="eyebrow" data-i18n="section_themes_eyebrow">ثيمات القراءة</div>
@@ -272,8 +271,39 @@
     </div>
   </section>
 
+  <!-- Privacy -->
+  <section id="privacy" class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-i18n="section_privacy_eyebrow">خصوصيتك تهمنا</div>
+        <h2 data-i18n="section_privacy_title">خصوصية وشفافية</h2>
+        <p data-i18n="section_privacy_desc">نحترم خصوصيتك — لا إعلانات، لا بيع لبياناتك، وتحكم كامل في الأذونات.</p>
+      </div>
+      <div class="privacy-grid reveal">
+        <article class="privacy-card">
+          <div class="icon" aria-hidden="true">🔒</div>
+          <h4 data-i18n="privacy_c1_t">بياناتك ملكك</h4>
+          <p data-i18n="privacy_c1_d">التقدم والعلامات والملاحظات تُخزَّن على جهازك. لا نجمع بريدًا إلكترونيًا للاستخدام الأساسي.</p>
+        </article>
+        <article class="privacy-card">
+          <div class="icon" aria-hidden="true">👶</div>
+          <h4 data-i18n="privacy_c2_t">وضع الأطفال آمن</h4>
+          <p data-i18n="privacy_c2_d">وضع الأطفال محمي برقم سري للوالدين، بدون إعلانات، مع تحكم في وقت الشاشة.</p>
+        </article>
+        <article class="privacy-card">
+          <div class="icon" aria-hidden="true">🎙️</div>
+          <h4 data-i18n="privacy_c3_t">الميكروفون بإذنك</h4>
+          <p data-i18n="privacy_c3_d">الميكروفون للتدريب على التلاوة فقط — تُعالج الصوت محليًا قدر الإمكان ولا تُباع بياناتك.</p>
+        </article>
+      </div>
+      <div class="privacy-cta reveal">
+        <a class="btn btn-outline" href="../privacy/" data-i18n="footer_privacy">سياسة الخصوصية الكاملة</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Languages -->
-  <section id="languages" style="background:rgba(255,255,255,0.02)">
+  <section id="languages" class="section-alt">
     <div class="container">
       <div class="section-head reveal">
         <h2 data-i18n="section_langs_title">٢٨ لغة</h2>
@@ -285,23 +315,35 @@
 
   <!-- Download -->
   <section id="download">
-    <div class="container" style="text-align:center">
-      <div class="section-head reveal">
+    <div class="container">
+      <div class="download-card reveal">
+        <img class="logo" src="assets/rabea_brand_logo.webp" alt="Rabe3 Al-Quloob" width="100" height="100" loading="lazy" />
         <h2 data-i18n="hero_title">ربيع القلوب</h2>
-        <p data-i18n="hero_lead">تطبيق قرآني هادئ يغذي القلب.</p>
+        <p class="lead" data-i18n="download_lead">تطبيق قرآني متكامل — حمّله قريبًا على Google Play</p>
+        <div class="download-actions">
+          <a class="btn btn-primary" id="play-store-btn" href="https://play.google.com/store/apps/details?id=com.rabe3alquloob.app" target="_blank" rel="noopener" data-i18n="hero_cta_primary">حمّل التطبيق</a>
+          <a class="btn btn-facebook" href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" data-i18n="footer_facebook">تابعنا على فيسبوك</a>
+        </div>
+        <span class="package-id">com.rabe3alquloob.app</span>
+        <span class="coming-soon" data-i18n="download_soon">قريبًا على Google Play — سجّل متابعتنا على فيسبوك لمعرفة موعد الإطلاق</span>
       </div>
-      <div class="hero-cta reveal" style="justify-content:center;margin-bottom:32px">
-        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.quran.labs.androidquran" target="_blank" rel="noopener" data-i18n="hero_cta_primary">حمّل التطبيق</a>
-      </div>
-      <img src="assets/rabea_brand_logo.webp" alt="Rabe3 Al-Quloob" width="120" height="120" style="margin:0 auto;border-radius:28px;opacity:0.9" loading="lazy" />
     </div>
   </section>
 
   <footer>
     <div class="container footer-inner">
-      <span data-i18n="footer_tagline">تقبل الله منا ومنكم. © ربيع القلوب</span>
+      <div class="footer-brand">
+        <strong data-i18n="hero_title">ربيع القلوب</strong>
+        <span data-i18n="footer_tagline">تقبل الله منا ومنكم. © ربيع القلوب</span>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
       <div class="footer-links">
         <a href="../privacy/" data-i18n="footer_privacy">سياسة الخصوصية</a>
+        <a href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" data-i18n="footer_facebook">فيسبوك</a>
         <a href="mailto:support@rabe3alquloob.com" data-i18n="footer_contact">تواصل معنا</a>
       </div>
     </div>
