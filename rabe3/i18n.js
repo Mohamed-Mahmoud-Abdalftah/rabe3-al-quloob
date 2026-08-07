@@ -480,6 +480,7 @@ function applyLanguage(lang) {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     const val = t(lang, key);
+    if (val === key) return;
     if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") el.placeholder = val;
     else el.textContent = val;
   });
