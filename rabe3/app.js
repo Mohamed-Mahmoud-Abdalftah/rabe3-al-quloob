@@ -1,7 +1,7 @@
 (function () {
   document.body.classList.add("is-loading");
   const PLAY_STORE = document.body.dataset.playStore || "https://play.google.com/store/apps/details?id=com.rabe3alquloob.app";
-  const FULL_LANDING_LANGS = new Set(["en", "ar"]);
+  const FULL_LANDING_LANGS = new Set(["en", "ar", "tr", "fr", "id", "ur"]);
   window.RABE3_FULL_LANDING_LANGS = FULL_LANDING_LANGS;
 
   const menu = document.getElementById("lang-menu");

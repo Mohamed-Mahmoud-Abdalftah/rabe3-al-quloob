@@ -26,7 +26,7 @@
   <link rel="preload" as="image" href="assets/home_hero_day.jpg" type="image/jpeg" imagesrcset="assets/home_hero_day.jpg 960w" imagesizes="100vw" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" /></noscript>
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=10" />
   <script>document.documentElement.classList.add("js");</script>
   <script type="application/ld+json">
   {
@@ -385,20 +385,13 @@
             <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-trigger-4"><p data-i18n="faq_a4">The entire app interface is available in 28 languages — from Arabic and English to Urdu, Turkish, Chinese, and more.</p></div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Languages -->
-    <section class="languages" id="languages">
-      <div class="container">
-        <div class="section-intro reveal">
-          <p class="eyebrow" data-i18n="section_langs_eyebrow">Global</p>
-          <h2 data-i18n="section_langs_title">28 languages. One home.</h2>
+        <div class="faq-langs reveal" id="languages">
+          <h3 data-i18n="section_langs_title">28 languages. One home.</h3>
           <p class="section-lead" data-i18n="section_langs_desc">Switch the app to your language — 28 options from Arabic to Chinese, Turkish, Urdu, and more.</p>
+          <div class="lang-cloud" id="lang-cloud" role="list"></div>
+          <button type="button" class="btn btn-ghost lang-expand" id="lang-expand" aria-expanded="false" aria-controls="lang-cloud" data-i18n="langs_show_all">Show all 28 languages</button>
+          <p class="langs-note" data-i18n="langs_landing_note">This page is fully translated in Arabic, English, Turkish, French, Indonesian, and Urdu. The app UI supports 28 languages.</p>
         </div>
-        <div class="lang-cloud reveal" id="lang-cloud" role="list"></div>
-        <button type="button" class="btn btn-ghost lang-expand" id="lang-expand" aria-expanded="false" aria-controls="lang-cloud" data-i18n="langs_show_all">Show all 28 languages</button>
-        <p class="langs-note reveal" data-i18n="langs_landing_note">This page is fully translated in Arabic and English. The app UI supports 28 languages.</p>
       </div>
     </section>
 
@@ -411,7 +404,13 @@
           <h2 data-i18n="download_title">Begin your journey today.</h2>
           <p class="section-lead" data-i18n="download_lead">Download Rabe3 Al-Quloob — calm, beautiful, and built for a lifetime with the Quran.</p>
           <div class="download-actions">
-            <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.rabe3alquloob.app" target="_blank" rel="noopener noreferrer" data-i18n="download_play_badge">Get it on Google Play</a>
+            <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.rabe3alquloob.app" target="_blank" rel="noopener noreferrer" data-i18n-aria="a11y_play_badge">
+              <svg class="play-badge__icon" viewBox="0 0 24 24" aria-hidden="true" width="28" height="28"><path fill="currentColor" d="M3.6 1.8c-.4.2-.6.6-.6 1.1v18.2c0 .5.2.9.6 1.1.4.2.9.2 1.3 0l16.2-9.1c.4-.2.6-.6.6-1.1s-.2-.9-.6-1.1L4.9 1.8c-.4-.2-.9-.2-1.3 0z"/></svg>
+              <span class="play-badge__text">
+                <span class="play-badge__small" data-i18n="play_badge_top">GET IT ON</span>
+                <span class="play-badge__large" data-i18n="play_badge_bottom">Google Play</span>
+              </span>
+            </a>
             <a class="btn btn-ghost btn-lg" href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener noreferrer" data-i18n="footer_facebook">Follow on Facebook</a>
           </div>
           <p class="download-note" data-i18n="download_soon">Free on Google Play · Android</p>
@@ -446,7 +445,8 @@
 
   <button class="scroll-top" id="scroll-top" type="button" data-i18n-aria="a11y_back_top">↑</button>
 
-  <script src="i18n.js?v=9" defer></script>
-  <script src="app.js?v=9" defer></script>
+  <script src="landing-patch.js?v=10" defer></script>
+  <script src="i18n.js?v=10" defer></script>
+  <script src="app.js?v=10" defer></script>
 </body>
 </html>

@@ -587,11 +587,7 @@ h3 { font-size: 1.125rem; }
 .faq-trigger:focus-visible,
 .lang-pill:focus-visible,
 .menu-toggle:focus-visible,
-.scroll-top:focus-visible {
-  outline: 2px solid var(--accent-bright);
-  outline-offset: 3px;
-}
-
+.play-badge:focus-visible,
 .scroll-top:focus-visible {
   outline: 2px solid var(--accent-bright);
   outline-offset: 3px;
@@ -1038,6 +1034,25 @@ body.is-ready {
   line-height: 1.65;
 }
 
+/* ── Languages (in FAQ) ── */
+.faq-langs {
+  margin-top: clamp(40px, 6vw, 56px);
+  padding-top: clamp(32px, 5vw, 48px);
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.faq-langs h3 {
+  margin: 0 0 10px;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  letter-spacing: -0.02em;
+}
+
+.faq-langs .section-lead {
+  margin: 0 auto 20px;
+  max-width: 52ch;
+}
+
 /* ── Languages ── */
 .languages {
   padding: var(--section-pad) 0;
@@ -1129,8 +1144,64 @@ body.is-ready {
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
+  align-items: center;
   margin-bottom: 16px;
   position: relative;
+}
+
+.play-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 22px 10px 16px;
+  border-radius: 12px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+  min-height: 52px;
+}
+
+.play-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.play-badge:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 3px;
+}
+
+.play-badge__icon {
+  flex-shrink: 0;
+  color: #34a853;
+}
+
+.play-badge__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.1;
+}
+
+.play-badge__small {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  opacity: 0.88;
+}
+
+.play-badge__large {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+[dir="rtl"] .play-badge__text {
+  align-items: flex-end;
 }
 
 .download-note {

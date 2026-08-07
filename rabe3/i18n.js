@@ -68,9 +68,12 @@ const RABE3_I18N = {
     premium_cta: "Download to explore Plus",
     theme_premium: "Premium theme",
     theme_more_note: "9 more themes inside the app — 6 shown here.",
-    langs_landing_note: "This page is fully translated in Arabic and English. The app UI supports 28 languages.",
+    langs_landing_note: "This page is fully translated in Arabic, English, Turkish, French, Indonesian, and Urdu. The app UI supports 28 languages.",
     langs_show_all: "Show all 28 languages",
     langs_show_less: "Show fewer languages",
+    play_badge_top: "GET IT ON",
+    play_badge_bottom: "Google Play",
+    a11y_play_badge: "Get it on Google Play",
     section_langs_desc: "Switch the app to your language — 28 options from Arabic to Chinese, Turkish, Urdu, and more.",
     a11y_skip: "Skip to content",
     a11y_menu: "Open menu",
@@ -200,9 +203,12 @@ const RABE3_I18N = {
     premium_cta: "حمّل التطبيق لاستكشاف بلس",
     theme_premium: "ثيم بريميوم",
     theme_more_note: "٩ ثيمات إضافية داخل التطبيق — ٦ معروضة هنا.",
-    langs_landing_note: "هذه الصفحة مترجمة بالكامل للعربية والإنجليزية. واجهة التطبيق تدعم ٢٨ لغة.",
+    langs_landing_note: "هذه الصفحة مترجمة بالكامل للعربية والإنجليزية والتركية والفرنسية والإندونيسية والأردية. واجهة التطبيق تدعم ٢٨ لغة.",
     langs_show_all: "عرض كل اللغات الـ٢٨",
     langs_show_less: "عرض أقل",
+    play_badge_top: "حمّله من",
+    play_badge_bottom: "Google Play",
+    a11y_play_badge: "حمّله من Google Play",
     section_langs_desc: "بدّل لغة التطبيق — ٢٨ خيارًا من العربية إلى الصينية والتركية والأردية والمزيد.",
     a11y_skip: "تخطي إلى المحتوى",
     a11y_menu: "فتح القائمة",
@@ -305,7 +311,7 @@ const RABE3_I18N = {
     section_langs_title: "28 Sprachen",
     section_langs_desc: "Die gesamte App-Oberfläche ist in 28 Sprachen verfügbar.",
     footer_privacy: "Datenschutz", footer_facebook: "Facebook", footer_contact: "Kontakt", footer_tagline: "Möge Allah unsere Bemühungen annehmen. © Rabe3 Al-Quloob",
-    download_lead: "Dein Quran-Begleiter — bald auf Google Play", download_soon: "Bald auf Google Play — folge uns auf Facebook"
+    download_lead: "Lade Rabe3 Al-Quloob herunter — ruhig, schön und für ein Leben mit dem Quran gebaut.", download_soon: "Kostenlos auf Google Play · Android"
   },
   fr: {
     meta_title: "Rabe3 Al-Quloob — Votre compagnon Coran complet",
@@ -396,7 +402,7 @@ const RABE3_I18N = {
     section_langs_title: "28 dil",
     section_langs_desc: "Tüm uygulama arayüzü 28 dilde mevcuttur.",
     footer_privacy: "Gizlilik Politikası", footer_facebook: "Facebook", footer_contact: "Bize ulaşın", footer_tagline: "Allah çabalarımızı kabul etsin. © Rabe3 Al-Quloob",
-    download_lead: "Eksiksiz Kur'an uygulaması — yakında Google Play'de", download_soon: "Yakında Google Play'de — lansman için bizi Facebook'ta takip edin"
+    download_lead: "Rabe3 Al-Quloob'u indirin — sakin, güzel ve Kur'an ile bir ömür için inşa edildi.", download_soon: "Google Play'de ücretsiz · Android"
   },
   id: {
     meta_title: "Rabe3 Al-Quloob — Teman Al-Quran Lengkap Anda",
@@ -533,7 +539,6 @@ const RABE3_I18N = {
     section_langs_desc: "Весь интерфейс приложения доступен на 28 языках.",
     footer_privacy: "Конфиденциальность", footer_contact: "Связаться", footer_tagline: "Да примет Аллах наши усилия. © Rabe3 Al-Quloob"
   },
-  ur: null, /* mapped to fa for RTL fallback - use uz */
 };
 
 // Fill remaining languages by cloning en and patching key labels
@@ -564,6 +569,7 @@ const LANG_META = [
   { code: "tr", label: "Türkçe", rtl: false },
   { code: "ug", label: "ئۇيغۇرچە", rtl: true },
   { code: "uk", label: "Українська", rtl: false },
+  { code: "ur", label: "اردو", rtl: true },
   { code: "uz", label: "Oʻzbekcha", rtl: false },
   { code: "vi", label: "Tiếng Việt", rtl: false },
   { code: "zh", label: "中文", rtl: false },
@@ -581,7 +587,7 @@ const PATCH = {
   vi: { meta_title: "Rabe3 Al-Quloob — Người bạn đồng hành Quran đầy đủ", hero_lead: "Ứng dụng Quran thanh bình nuôi dưỡng trái tim — Mushaf, studio đọc, dhikr, cầu nguyện, hadith, giờ cầu nguyện, phiêu lưu trẻ em và hơn thế nữa.", hero_cta_primary: "Tải ứng dụng", nav_features: "Tính năng", nav_practice: "Đọc", nav_kids: "Trẻ em", nav_themes: "Chủ đề", nav_langs: "Ngôn ngữ", nav_download: "Tải xuống", section_features_title: "Tám trụ cột trên màn hình chính", section_kids_title: "Phiêu lưu Quran cho trẻ em", section_themes_title: "15 chủ đề Mushaf tuyệt đẹp", section_langs_title: "28 ngôn ngữ", footer_privacy: "Quyền riêng tư", footer_contact: "Liên hệ" },
   th: { meta_title: "Rabe3 Al-Quloob — เพื่อนร่วมทางอัลกุรอานที่สมบูรณ์", hero_lead: "แอปอัลกุรอานที่เงียบสงบ บำรุงหัวใจ — Mushaf สตูดิโอการอ่าน ซิกร ดุอาอ์ ฮะดีษ เวลาละหมาด การผจญภัยเด็ก และอื่นๆ", hero_cta_primary: "ดาวน์โหลดแอป", nav_features: "คุณสมบัติ", nav_practice: "การอ่าน", nav_kids: "เด็ก", nav_themes: "ธีม", nav_langs: "ภาษา", nav_download: "ดาวน์โหลด", section_features_title: "แปดเสาหลักบนหน้าจอหลัก", section_kids_title: "การผจญภัยอัลกุรอานสำหรับเด็ก", section_themes_title: "15 ธีม Mushaf ที่สวยงาม", section_langs_title: "28 ภาษา", footer_privacy: "นโยบายความเป็นส่วนตัว", footer_contact: "ติดต่อเรา" },
   uk: { meta_title: "Rabe3 Al-Quloob — Ваш повний супутник Корану", hero_lead: "Спокійний додаток Корану, що живить серце — Мусхаф, студія читання, азкари, дуа, хадиси, намаз, дитяча пригода та інше.", hero_cta_primary: "Завантажити додаток", nav_features: "Функції", nav_practice: "Читання", nav_kids: "Діти", nav_themes: "Теми", nav_langs: "Мови", nav_download: "Завантажити", section_features_title: "Вісім стовпів на головному екрані", section_kids_title: "Коранічна пригода для дітей", section_themes_title: "15 приголомшливих тем Мусхафа", section_langs_title: "28 мов", footer_privacy: "Конфіденційність", footer_contact: "Зв'язатися" },
-  fa: { meta_title: "ربيع القلوب — همراه کامل قرآن شما", meta_desc: "بخوانید، حفظ کنید، تلاوت تمرین کنید، اذکار، دعا، حدیث، اوقات نماز، قبله، حالت کودک و ۱۵ تم — به ۲۸ زبان.", hero_badge: "✦ تجربه اسلامی کامل", hero_title: "ربيع القلوب", hero_lead: "اپلیکیشن آرام قرآن که قلب را تغذیه می‌کند — مصحف، استودیو تلاوت، اذکار، دعا، احادیث، اوقات شرعی، ماجراجویی کودکان و بیشتر.", hero_cta_primary: "دانلود اپ", hero_cta_secondary: "کاوش ویژگی‌ها", nav_features: "ویژگی‌ها", nav_practice: "تلاوت", nav_kids: "کودکان", nav_themes: "تم‌ها", nav_premium: "پریمیوم", nav_privacy: "حریم خصوصی", nav_langs: "زبان‌ها", nav_download: "دانلود", section_privacy_title: "حریم خصوصی و شفافیت", footer_privacy: "حریم خصوصی", footer_facebook: "فیس‌بوک", footer_contact: "تماس", footer_tagline: "خداوند عمل ما را بپذیرد. © ربيع القلوب", download_lead: "همراه کامل قرآن — به زودی در Google Play", download_soon: "به زودی در Google Play — ما را در فیس‌بوک دنبال کنید" },
+  fa: { meta_title: "ربيع القلوب — همراه کامل قرآن شما", meta_desc: "بخوانید، حفظ کنید، تلاوت تمرین کنید، اذکار، دعا، حدیث، اوقات نماز، قبله، حالت کودک و ۱۵ تم — به ۲۸ زبان.", hero_badge: "✦ تجربه اسلامی کامل", hero_title: "ربيع القلوب", hero_lead: "اپلیکیشن آرام قرآن که قلب را تغذیه می‌کند — مصحف، استودیو تلاوت، اذکار، دعا، احادیث، اوقات شرعی، ماجراجویی کودکان و بیشتر.", hero_cta_primary: "دانلود اپ", hero_cta_secondary: "کاوش ویژگی‌ها", nav_features: "ویژگی‌ها", nav_practice: "تلاوت", nav_kids: "کودکان", nav_themes: "تم‌ها", nav_premium: "پریمیوم", nav_privacy: "حریم خصوصی", nav_langs: "زبان‌ها", nav_download: "دانلود", section_privacy_title: "حریم خصوصی و شفافیت", footer_privacy: "حریم خصوصی", footer_facebook: "فیس‌بوک", footer_contact: "تماس", footer_tagline: "خداوند عمل ما را بپذیرد. © ربيع القلوب", download_lead: "Rabe3 Al-Quloob را دانلود کنید — آرام، زیبا و برای یک عمر با قرآن.", download_soon: "رایگان در Google Play · اندروید" },
   az: { hero_cta_primary: "Tətbiqi yüklə", nav_features: "Xüsusiyyətlər", nav_download: "Yüklə", section_langs_title: "28 dil", footer_privacy: "Məxfilik" },
   bs: { hero_cta_primary: "Preuzmi aplikaciju", nav_features: "Funkcije", nav_privacy: "Privatnost", nav_download: "Preuzmi", section_langs_title: "28 jezika", footer_privacy: "Privatnost", footer_facebook: "Facebook", download_soon: "Uskoro na Google Play" },
   hr: { hero_cta_primary: "Preuzmi aplikaciju", nav_features: "Značajke", nav_download: "Preuzmi", section_langs_title: "28 jezika", footer_privacy: "Privatnost" },
@@ -604,7 +610,13 @@ function buildCatalog() {
       RABE3_I18N[code] = { ...RABE3_I18N[code], ...PATCH[code] };
     }
   }
-  delete RABE3_I18N.ur;
+  const landingPatch = typeof window !== "undefined" ? window.LANDING_PATCH : null;
+  if (landingPatch) {
+    for (const [code, patch] of Object.entries(landingPatch)) {
+      if (!RABE3_I18N[code]) RABE3_I18N[code] = { ...base, ...patch };
+      else RABE3_I18N[code] = { ...RABE3_I18N[code], ...patch };
+    }
+  }
 }
 buildCatalog();
 
@@ -694,6 +706,12 @@ function applyLanguage(lang) {
     const url = new URL(location.href);
     url.searchParams.set("lang", lang);
     history.replaceState(null, "", url);
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      const cUrl = new URL(canonical.href || location.href);
+      cUrl.searchParams.set("lang", lang);
+      canonical.href = cUrl.toString();
+    }
   } catch (_) {}
 
   try { localStorage.setItem("rabe3-landing-lang", lang); } catch (_) {}
@@ -718,7 +736,7 @@ function initI18n() {
 
 if (typeof window !== "undefined") {
   window.RABE3_LANG_META = LANG_META;
-  window.RABE3_FULL_LANDING_LANGS = new Set(["en", "ar"]);
+  window.RABE3_FULL_LANDING_LANGS = new Set(["en", "ar", "tr", "fr", "id", "ur"]);
   window.applyLanguage = applyLanguage;
   window.initI18n = initI18n;
   window.t = t;
