@@ -844,8 +844,9 @@ body { opacity: 1; }
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--line);
-  aspect-ratio: 3/4;
+  aspect-ratio: 420 / 664;
   cursor: default;
+  background: var(--bg-soft);
   transition: transform 0.35s var(--ease-out), box-shadow 0.35s;
 }
 
@@ -864,8 +865,10 @@ body { opacity: 1; }
   height: 100%;
   object-fit: cover;
   object-position: center center;
+  display: block;
   transition: transform 0.5s var(--ease-out);
 }
+.theme-tile.premium img { object-position: center 42%; }
 
 .theme-tile.premium::after {
   content: "★";
