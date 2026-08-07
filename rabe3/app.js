@@ -30,13 +30,26 @@
     const pill = document.createElement("button");
     pill.type = "button";
     pill.className = "lang-pill";
-    if (!FULL_LANDING_LANGS.has(code)) pill.classList.add("lang-pill--partial");
+    if (!FULL_LANDING_LANGS.has(code)) {
+      pill.classList.add("lang-pill--partial", "lang-pill--more");
+    }
     pill.dataset.lang = code;
     pill.setAttribute("role", "listitem");
     pill.setAttribute("aria-pressed", "false");
     pill.textContent = label;
     pill.addEventListener("click", () => selectLanguage(code));
     langCloud.appendChild(pill);
+  });
+
+  const langExpand = document.getElementById("lang-expand");
+
+  langExpand?.addEventListener("click", () => {
+    const expanded = langCloud.classList.toggle("is-expanded");
+    langExpand.setAttribute("aria-expanded", expanded ? "true" : "false");
+    const lang = document.documentElement.lang || "en";
+    if (typeof window.t === "function") {
+      langExpand.textContent = window.t(lang, expanded ? "langs_show_less" : "langs_show_all");
+    }
   });
 
   function selectLanguage(code) {

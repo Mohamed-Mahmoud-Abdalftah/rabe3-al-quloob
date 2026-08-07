@@ -69,6 +69,8 @@ const RABE3_I18N = {
     theme_premium: "Premium theme",
     theme_more_note: "9 more themes inside the app — 6 shown here.",
     langs_landing_note: "This page is fully translated in Arabic and English. The app UI supports 28 languages.",
+    langs_show_all: "Show all 28 languages",
+    langs_show_less: "Show fewer languages",
     section_langs_desc: "Switch the app to your language — 28 options from Arabic to Chinese, Turkish, Urdu, and more.",
     a11y_skip: "Skip to content",
     a11y_menu: "Open menu",
@@ -199,6 +201,8 @@ const RABE3_I18N = {
     theme_premium: "ثيم بريميوم",
     theme_more_note: "٩ ثيمات إضافية داخل التطبيق — ٦ معروضة هنا.",
     langs_landing_note: "هذه الصفحة مترجمة بالكامل للعربية والإنجليزية. واجهة التطبيق تدعم ٢٨ لغة.",
+    langs_show_all: "عرض كل اللغات الـ٢٨",
+    langs_show_less: "عرض أقل",
     section_langs_desc: "بدّل لغة التطبيق — ٢٨ خيارًا من العربية إلى الصينية والتركية والأردية والمزيد.",
     a11y_skip: "تخطي إلى المحتوى",
     a11y_menu: "فتح القائمة",
@@ -679,16 +683,34 @@ function applyLanguage(lang) {
   const meta = LANG_META.find(l => l.code === lang);
   if (langBtnLabel && meta) langBtnLabel.textContent = meta.label;
 
+  const langExpand = document.getElementById("lang-expand");
+  const langCloudEl = document.getElementById("lang-cloud");
+  if (langExpand) {
+    const expanded = langCloudEl?.classList.contains("is-expanded");
+    langExpand.textContent = t(lang, expanded ? "langs_show_less" : "langs_show_all");
+  }
+
+  try {
+    const url = new URL(location.href);
+    url.searchParams.set("lang", lang);
+    history.replaceState(null, "", url);
+  } catch (_) {}
+
   try { localStorage.setItem("rabe3-landing-lang", lang); } catch (_) {}
 }
 
 function initI18n() {
   let lang = "ar";
   try {
-    const saved = localStorage.getItem("rabe3-landing-lang");
-    const nav = navigator.language?.split("-")[0];
-    if (saved && RABE3_I18N[saved]) lang = saved;
-    else if (nav && RABE3_I18N[nav]) lang = nav;
+    const urlLang = new URLSearchParams(location.search).get("lang");
+    if (urlLang && RABE3_I18N[urlLang]) {
+      lang = urlLang;
+    } else {
+      const saved = localStorage.getItem("rabe3-landing-lang");
+      const nav = navigator.language?.split("-")[0];
+      if (saved && RABE3_I18N[saved]) lang = saved;
+      else if (nav && RABE3_I18N[nav]) lang = nav;
+    }
   } catch (_) {}
   applyLanguage(lang);
   return lang;
