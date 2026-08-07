@@ -1,10 +1,12 @@
-# ربيع القلوب
+# ربيع القلوب — Rabe3 Al-Quloob
 
-تطبيق **ربيع القلوب** — سياسة الخصوصية وصفحات عامة مرتبطة بالنشر على Google Play.
+موقع التطبيق الرسمي (GitHub Pages).
 
-- Privacy Policy: [privacy/](./privacy/)
+| الصفحة | الرابط |
+|--------|--------|
+| الرئيسية | https://mohamed-mahmoud-abdalftah.github.io/rabe3-al-quloob/ |
+| المميزات | https://mohamed-mahmoud-abdalftah.github.io/rabe3-al-quloob/rabe3/ |
+| سياسة الخصوصية | https://mohamed-mahmoud-abdalftah.github.io/rabe3-al-quloob/privacy/ |
+
 - Package: `com.rabe3alquloob.app`
-
-بعد تفعيل GitHub Pages، الرابط العام:
-
-`https://mohamed-mahmoud-abdalftah.github.io/rabe3-al-quloob/privacy/`
+- اللغات: 28 لغة في صفحة المميزات

@@ -96,6 +96,24 @@
       text-align: center;
     }
     a { color: var(--accent); }
+    .site-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .site-nav a {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .site-nav a:hover { background: var(--accent-soft); color: var(--accent); }
     [dir="ltr"] body, .ltr { direction: ltr; text-align: left; }
     .hidden { display: none; }
   </style>
@@ -110,6 +128,10 @@
         <button type="button" id="btn-ar" class="active" onclick="setLang('ar')">العربية</button>
         <button type="button" id="btn-en" onclick="setLang('en')">English</button>
       </div>
+      <nav class="site-nav" aria-label="Site">
+        <a href="../">الرئيسية · Home</a>
+        <a href="../rabe3/">المميزات · Features</a>
+      </nav>
     </header>
 
     <div id="ar">

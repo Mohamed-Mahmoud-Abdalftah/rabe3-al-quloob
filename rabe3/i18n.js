@@ -1,0 +1,498 @@
+/* Rabe3 Al-Quloob — i18n for landing page (28 languages) */
+const RABE3_I18N = {
+  en: {
+    meta_title: "Rabe3 Al-Quloob — Your Complete Quran Companion",
+    meta_desc: "Read, memorize, practice recitation, adhkar, dua, hadith, prayer times, Qibla, kids mode, and 15 beautiful themes — in 28 languages.",
+    nav_features: "Features", nav_practice: "Practice", nav_kids: "Kids", nav_themes: "Themes",
+    nav_premium: "Premium", nav_langs: "Languages", nav_download: "Download",
+    hero_badge: "✦ Complete Islamic experience",
+    hero_title: "Rabe3 Al-Quloob",
+    hero_lead: "A serene Quran app that nourishes the heart — Mushaf, recitation studio, adhkar, dua, hadith, prayer times, kids adventure, and more in one beautiful home.",
+    hero_cta_primary: "Get the app", hero_cta_secondary: "Explore features",
+    stat_langs: "Languages", stat_azkar: "Adhkar", stat_dua: "Supplications", stat_hadith: "Hadiths", stat_themes: "Themes",
+    section_features_eyebrow: "Everything you need", section_features_title: "Eight pillars on your home screen",
+    section_features_desc: "Every tool for your daily Quran journey — one tap away.",
+    f_mushaf_t: "Mus'haf", f_mushaf_d: "Read the Holy Quran with bookmarks, notes, tafsir, translations, and a calm reading experience.",
+    f_practice_t: "Recitation Studio", f_practice_d: "Listen, repeat, shadow the sheikh, memorize, and review with smart sessions.",
+    f_azkar_t: "Azkar", f_azkar_d: "288 authentic adhkar across 28+ categories — morning, evening, travel, sleep, and more.",
+    f_dua_t: "Dua", f_dua_d: "148 authentic supplications organized by category with daily dua of the day.",
+    f_hadith_t: "Hadith", f_hadith_d: "Riyadh al-Salihin — 1,896 hadiths across 20 books with search and explanations.",
+    f_qibla_t: "Qibla", f_qibla_d: "Accurate compass direction to the Kaaba with GPS and sensor calibration.",
+    f_tasbih_t: "Tasbih", f_tasbih_d: "Digital dhikr counter with beads mode, daily goals, streaks, and statistics.",
+    f_khatma_t: "Khatma", f_khatma_d: "Track your Quran completion — pages, juz, daily goals, and practice today's page.",
+    section_practice_eyebrow: "Recitation Studio", section_practice_title: "Train like a hafiz",
+    section_practice_desc: "Shadow recitation, echo mode, memorize with gradual hiding, adaptive review, clips, streaks, family challenges, and AI coach.",
+    practice_chips: ["Shadow with sheikh","Listen & repeat","Memorize","Smart sessions","Clips & highlights","Family hub","Weekly reports","AI coach"],
+    section_kids_eyebrow: "Kids Mode", section_kids_title: "Quran adventure for children",
+    section_kids_desc: "A magical world where kids learn Quran through stories, journey maps, rewards, and fun — protected by parent PIN.",
+    kids_c1_t: "Journey Map", kids_c1_d: "Unlock islands, earn stars, and complete surahs on an adventure world map.",
+    kids_c2_t: "Stories & Fun", kids_c2_d: "Islamic video stories and fun tales in 23 languages from around the world.",
+    kids_c3_t: "Listen & Repeat", kids_c3_d: "Kid-friendly recitation with microphone — listen, record, and hear yourself.",
+    kids_c4_t: "Shop & Rewards", kids_c4_d: "Earn stars, unlock characters, clothes, hats, and celebrate achievements.",
+    kids_c5_t: "Tajweed Videos", kids_c5_d: "Short video lessons to learn tajweed rules in a fun way.",
+    kids_c6_t: "Parents Panel", kids_c6_d: "Multi-child profiles, screen time, progress tracking, and PIN protection.",
+    section_themes_eyebrow: "Reader Themes", section_themes_title: "15 stunning Mushaf themes",
+    section_themes_desc: "From Golden Dawn to Galaxy Night — free and premium illustrated themes that transform your reading.",
+    theme_golden: "Golden Dawn", theme_midnight: "Midnight Mosque", theme_emerald: "Emerald Paradise",
+    theme_ottoman: "Ottoman Blue", theme_neon: "Neon Makkah", theme_sakura: "Sakura Mosque",
+    section_daily_eyebrow: "Daily life", section_daily_title: "Your day with Rabe3",
+    section_daily_desc: "Prayer times, verse of the day, daily challenges, Ramadan banner, achievements, and reminders.",
+    daily_chips: ["Prayer times & Adhan","Verse of the day","Daily challenge","Reading streak","Ramadan mode","Bookmarks & notes","Tafsir Jalalayn & Muyassar"],
+    section_premium_title: "Rabe3 Plus & Family",
+    section_premium_desc: "Unlock premium reader themes, cloud sync for practice clips, AI coach, QTA tajweed analysis, and kids mode.",
+    section_premium_cta: "Learn more in app",
+    section_langs_title: "28 languages",
+    section_langs_desc: "The entire app UI is available in 28 languages — from Arabic and English to Urdu, Chinese, Turkish, and more.",
+    footer_privacy: "Privacy Policy", footer_contact: "Contact us", footer_tagline: "May Allah accept our efforts. © Rabe3 Al-Quloob"
+  },
+  ar: {
+    meta_title: "ربيع القلوب — رفيقك الشامل للقرآن",
+    meta_desc: "اقرأ، احفظ، تدرّب على التلاوة، الأذكار، الأدعية، الأحاديث، مواقيت الصلاة، القبلة، وضع الأطفال، و١٥ ثيمًا جميلًا — بـ ٢٨ لغة.",
+    nav_features: "المميزات", nav_practice: "التلاوة", nav_kids: "الأطفال", nav_themes: "الثيمات",
+    nav_premium: "بريميوم", nav_langs: "اللغات", nav_download: "تحميل",
+    hero_badge: "✦ تجربة إسلامية متكاملة",
+    hero_title: "ربيع القلوب",
+    hero_lead: "تطبيق قرآني هادئ يغذي القلب — مصحف، استوديو تلاوة، أذكار، دعاء، أحاديث، مواقيت، مغامرة أطفال، والمزيد في مكان واحد.",
+    hero_cta_primary: "حمّل التطبيق", hero_cta_secondary: "استكشف المميزات",
+    stat_langs: "لغة", stat_azkar: "ذكر", stat_dua: "دعاء", stat_hadith: "حديث", stat_themes: "ثيم",
+    section_features_eyebrow: "كل ما تحتاجه", section_features_title: "ثمانية أركان في شاشتك الرئيسية",
+    section_features_desc: "كل أداة لرحلتك اليومية مع القرآن — بنقرة واحدة.",
+    f_mushaf_t: "المصحف", f_mushaf_d: "اقرأ القرآن الكريم مع العلامات والملاحظات والتفسير والترجمات وتجربة قراءة هادئة.",
+    f_practice_t: "استوديو التلاوة", f_practice_d: "اسمع، ردّد، ظلّل مع الشيخ، احفظ، وراجع بجلسات ذكية.",
+    f_azkar_t: "الأذكار", f_azkar_d: "٢٨٨ ذكرًا مأثورًا في ٢٨+ فئة — صباح، مساء، سفر، نوم، وأكثر.",
+    f_dua_t: "الدعاء", f_dua_d: "١٤٨ دعاءً مأثورًا مصنّفًا مع دعاء اليوم.",
+    f_hadith_t: "الأحاديث", f_hadith_d: "رياض الصالحين — ١٬٨٩٦ حديثًا في ٢٠ كتابًا مع بحث وشروح.",
+    f_qibla_t: "القبلة", f_qibla_d: "بوصلة دقيقة لاتجاه الكعبة مع GPS ومعايرة الحساس.",
+    f_tasbih_t: "السبحة", f_tasbih_d: "عداد ذكر رقمي بوضع الخرز، أهداف يومية، سلاسل، وإحصائيات.",
+    f_khatma_t: "الختمة", f_khatma_d: "تتبع إتمام القرآن — الصفحات، الأجزاء، الأهداف اليومية، وتدرّب على صفحة اليوم.",
+    section_practice_eyebrow: "استوديو التلاوة", section_practice_title: "تدرّب كالحافظ",
+    section_practice_desc: "تظليل مع الشيخ، وضع الصدى، حفظ تدريجي، مراجعة تكيفية، مقاطع، سلاسل، تحديات عائلية، ومدرب ذكي.",
+    practice_chips: ["مع الشيخ","اسمع وردّد","احفظ","جلسات ذكية","مقاطع ومميزات","العائلة","تقارير أسبوعية","مدرب ذكي"],
+    section_kids_eyebrow: "وضع الأطفال", section_kids_title: "مغامرة قرآنية للأطفال",
+    section_kids_desc: "عالم سحري يتعلم فيه الأطفال القرآن عبر القصص وخرائط الرحلة والمكافآت — محمي برقم سري للوالدين.",
+    kids_c1_t: "خريطة الرحلة", kids_c1_d: "افتح الجزر، اجمع النجوم، وأكمل السور على خريطة مغامرات.",
+    kids_c2_t: "قصص ومرح", kids_c2_d: "قصص إسلامية مرئية وحكايات ممتعة بـ ٢٣ لغة من حول العالم.",
+    kids_c3_t: "اسمع وردّد", kids_c3_d: "تلاوة مناسبة للأطفال بالميكروفون — اسمع، سجّل، واستمع لنفسك.",
+    kids_c4_t: "المتجر والمكافآت", kids_c4_d: "اجمع النجوم، افتح الشخصيات والملابس والقبعات واحتفل بالإنجازات.",
+    kids_c5_t: "فيديوهات التجويد", kids_c5_d: "دروس فيديو قصيرة لتعلم أحكام التجويد بطريقة ممتعة.",
+    kids_c6_t: "لوحة الوالدين", kids_c6_d: "ملفات متعددة، وقت شاشة، تتبع التقدم، وحماية برقم سري.",
+    section_themes_eyebrow: "ثيمات القراءة", section_themes_title: "١٥ ثيمًا مذهلًا للمصحف",
+    section_themes_desc: "من الفجر الذهبي إلى ليلة المجرة — ثيمات مجانية وبريميوم تحوّل تجربة القراءة.",
+    theme_golden: "الفجر الذهبي", theme_midnight: "مسجد منتصف الليل", theme_emerald: "جنة الزمرد",
+    theme_ottoman: "الأزرق العثماني", theme_neon: "مكة النيون", theme_sakura: "مسجد الساكورا",
+    section_daily_eyebrow: "حياتك اليومية", section_daily_title: "يومك مع ربيع القلوب",
+    section_daily_desc: "مواقيت الصلاة، آية اليوم، التحدي اليومي، بانر رمضان، الإنجازات، والتذكيرات.",
+    daily_chips: ["مواقيت وأذان","آية اليوم","التحدي اليومي","سلسلة القراءة","وضع رمضان","علامات وملاحظات","تفسير الجلالين والميسر"],
+    section_premium_title: "ربيع بلس والعائلة",
+    section_premium_desc: "افتح ثيمات بريميوم، مزامنة سحابية للمقاطع، مدرب ذكي، تحليل تجويد QTA، ووضع الأطفال.",
+    section_premium_cta: "اعرف المزيد في التطبيق",
+    section_langs_title: "٢٨ لغة",
+    section_langs_desc: "واجهة التطبيق بالكامل متوفرة بـ ٢٨ لغة — من العربية والإنجليزية إلى الأردية والصينية والتركية والمزيد.",
+    footer_privacy: "سياسة الخصوصية", footer_contact: "تواصل معنا", footer_tagline: "تقبل الله منا ومنكم. © ربيع القلوب"
+  },
+  de: {
+    meta_title: "Rabe3 Al-Quloob — Dein vollständiger Quran-Begleiter",
+    meta_desc: "Lesen, auswendig lernen, Rezitation üben, Adhkar, Dua, Hadith, Gebetszeiten, Qibla, Kindermodus und 15 Themes — in 28 Sprachen.",
+    nav_features: "Funktionen", nav_practice: "Übung", nav_kids: "Kinder", nav_themes: "Themes",
+    nav_premium: "Premium", nav_langs: "Sprachen", nav_download: "Download",
+    hero_badge: "✦ Vollständiges islamisches Erlebnis",
+    hero_title: "Rabe3 Al-Quloob",
+    hero_lead: "Eine ruhige Quran-App, die das Herz nährt — Mushaf, Rezitationsstudio, Adhkar, Dua, Hadith, Gebetszeiten, Kinderabenteuer und mehr.",
+    hero_cta_primary: "App herunterladen", hero_cta_secondary: "Funktionen entdecken",
+    stat_langs: "Sprachen", stat_azkar: "Adhkar", stat_dua: "Bittgebete", stat_hadith: "Hadithe", stat_themes: "Themes",
+    section_features_eyebrow: "Alles was du brauchst", section_features_title: "Acht Säulen auf deinem Startbildschirm",
+    section_features_desc: "Jedes Werkzeug für deine tägliche Quran-Reise — nur einen Tipp entfernt.",
+    f_mushaf_t: "Mus'haf", f_mushaf_d: "Lies den Heiligen Quran mit Lesezeichen, Notizen, Tafsir und Übersetzungen.",
+    f_practice_t: "Rezitationsstudio", f_practice_d: "Höre, wiederhole, rezitiere mit dem Scheich, merke dir und wiederhole intelligent.",
+    f_azkar_t: "Adhkar", f_azkar_d: "288 authentische Adhkar in 28+ Kategorien — morgens, abends, Reise, Schlaf und mehr.",
+    f_dua_t: "Dua", f_dua_d: "148 authentische Bittgebete nach Kategorien mit täglichem Dua des Tages.",
+    f_hadith_t: "Hadith", f_hadith_d: "Riyadh al-Salihin — 1.896 Hadithe in 20 Büchern mit Suche und Erklärungen.",
+    f_qibla_t: "Qibla", f_qibla_d: "Genaue Kompassrichtung zur Kaaba mit GPS und Sensorkalibrierung.",
+    f_tasbih_t: "Tasbih", f_tasbih_d: "Digitaler Dhikr-Zähler mit Perlenmodus, Tageszielen und Statistiken.",
+    f_khatma_t: "Khatma", f_khatma_d: "Verfolge deinen Quran-Fortschritt — Seiten, Dschuz, Tagesziele und Übung.",
+    section_practice_eyebrow: "Rezitationsstudio", section_practice_title: "Trainiere wie ein Hafiz",
+    section_practice_desc: "Schattenrezitation, Echo-Modus, Auswendiglernen, adaptive Wiederholung, Clips, Serien, Familienherausforderungen und KI-Coach.",
+    practice_chips: ["Mit Scheich","Hören & wiederholen","Auswendig lernen","Smart Sessions","Clips","Familie","Wochenberichte","KI-Coach"],
+    section_kids_eyebrow: "Kindermodus", section_kids_title: "Quran-Abenteuer für Kinder",
+    section_kids_desc: "Eine magische Welt, in der Kinder den Quran durch Geschichten, Karten und Belohnungen lernen — geschützt durch Eltern-PIN.",
+    kids_c1_t: "Reisekarte", kids_c1_d: "Schalte Inseln frei, sammle Sterne und vervollständige Suren auf einer Abenteuerkarte.",
+    kids_c2_t: "Geschichten", kids_c2_d: "Islamische Video-Geschichten und lustige Märchen in 23 Sprachen.",
+    kids_c3_t: "Hören & Wiederholen", kids_c3_d: "Kinderfreundliche Rezitation mit Mikrofon — hören, aufnehmen, anhören.",
+    kids_c4_t: "Shop & Belohnungen", kids_c4_d: "Sammle Sterne, schalte Charaktere und Kleidung frei.",
+    kids_c5_t: "Tajweed-Videos", kids_c5_d: "Kurze Videolektionen zum Tajweed auf spielerische Weise.",
+    kids_c6_t: "Elternbereich", kids_c6_d: "Mehrere Kinderprofile, Bildschirmzeit, Fortschritt und PIN-Schutz.",
+    section_themes_eyebrow: "Leser-Themes", section_themes_title: "15 atemberaubende Mushaf-Themes",
+    section_themes_desc: "Von Golden Dawn bis Galaxy Night — kostenlose und Premium-Themes für dein Leseerlebnis.",
+    theme_golden: "Goldene Morgendämmerung", theme_midnight: "Mitternachtsmoschee", theme_emerald: "Smaragdparadies",
+    theme_ottoman: "Osmanisches Blau", theme_neon: "Neon Mekka", theme_sakura: "Sakura-Moschee",
+    section_daily_eyebrow: "Tägliches Leben", section_daily_title: "Dein Tag mit Rabe3",
+    section_daily_desc: "Gebetszeiten, Vers des Tages, tägliche Herausforderungen, Ramadan-Banner, Erfolge und Erinnerungen.",
+    daily_chips: ["Gebetszeiten & Adhan","Vers des Tages","Tägliche Herausforderung","Leseserie","Ramadan-Modus","Lesezeichen & Notizen","Tafsir Jalalayn & Muyassar"],
+    section_premium_title: "Rabe3 Plus & Family",
+    section_premium_desc: "Premium-Themes, Cloud-Sync, KI-Coach, QTA-Tajweed-Analyse und Kindermodus freischalten.",
+    section_premium_cta: "Mehr in der App",
+    section_langs_title: "28 Sprachen",
+    section_langs_desc: "Die gesamte App-Oberfläche ist in 28 Sprachen verfügbar.",
+    footer_privacy: "Datenschutz", footer_contact: "Kontakt", footer_tagline: "Möge Allah unsere Bemühungen annehmen. © Rabe3 Al-Quloob"
+  },
+  fr: {
+    meta_title: "Rabe3 Al-Quloob — Votre compagnon Coran complet",
+    meta_desc: "Lire, mémoriser, pratiquer la récitation, adhkar, dua, hadith, horaires de prière, Qibla, mode enfants et 15 thèmes — en 28 langues.",
+    nav_features: "Fonctions", nav_practice: "Pratique", nav_kids: "Enfants", nav_themes: "Thèmes",
+    nav_premium: "Premium", nav_langs: "Langues", nav_download: "Télécharger",
+    hero_badge: "✦ Expérience islamique complète",
+    hero_title: "Rabe3 Al-Quloob",
+    hero_lead: "Une application Coran sereine qui nourrit le cœur — Mushaf, studio de récitation, adhkar, dua, hadith, prières, aventure enfants et plus.",
+    hero_cta_primary: "Télécharger", hero_cta_secondary: "Explorer",
+    stat_langs: "Langues", stat_azkar: "Adhkar", stat_dua: "Invocations", stat_hadith: "Hadiths", stat_themes: "Thèmes",
+    section_features_eyebrow: "Tout ce qu'il faut", section_features_title: "Huit piliers sur votre écran d'accueil",
+    section_features_desc: "Chaque outil pour votre voyage quotidien avec le Coran — à un clic.",
+    f_mushaf_t: "Mus'haf", f_mushaf_d: "Lisez le Saint Coran avec signets, notes, tafsir et traductions.",
+    f_practice_t: "Studio de récitation", f_practice_d: "Écoutez, répétez, suivez le cheikh, mémorisez et révisez intelligemment.",
+    f_azkar_t: "Adhkar", f_azkar_d: "288 adhkar authentiques en 28+ catégories — matin, soir, voyage, sommeil et plus.",
+    f_dua_t: "Dua", f_dua_d: "148 invocations authentiques par catégorie avec dua du jour.",
+    f_hadith_t: "Hadith", f_hadith_d: "Riyadh al-Salihin — 1 896 hadiths en 20 livres avec recherche et explications.",
+    f_qibla_t: "Qibla", f_qibla_d: "Boussole précise vers la Kaaba avec GPS et calibration.",
+    f_tasbih_t: "Tasbih", f_tasbih_d: "Compteur de dhikr numérique avec perles, objectifs et statistiques.",
+    f_khatma_t: "Khatma", f_khatma_d: "Suivez votre progression — pages, juz, objectifs quotidiens et pratique.",
+    section_practice_eyebrow: "Studio", section_practice_title: "Entraînez-vous comme un hafiz",
+    section_practice_desc: "Récitation en ombre, mode écho, mémorisation, révision adaptative, clips, séries, défis familiaux et coach IA.",
+    practice_chips: ["Avec le cheikh","Écouter & répéter","Mémoriser","Sessions intelligentes","Clips","Famille","Rapports hebdo","Coach IA"],
+    section_kids_eyebrow: "Mode enfants", section_kids_title: "Aventure Coran pour enfants",
+    section_kids_desc: "Un monde magique où les enfants apprennent le Coran par les histoires, cartes et récompenses — protégé par code PIN.",
+    kids_c1_t: "Carte du voyage", kids_c1_d: "Débloquez des îles, gagnez des étoiles et complétez les sourates.",
+    kids_c2_t: "Histoires", kids_c2_d: "Histoires islamiques et contes amusants en 23 langues.",
+    kids_c3_t: "Écouter & répéter", kids_c3_d: "Récitation adaptée aux enfants avec micro — écouter, enregistrer, s'écouter.",
+    kids_c4_t: "Boutique & récompenses", kids_c4_d: "Gagnez des étoiles, débloquez personnages et vêtements.",
+    kids_c5_t: "Vidéos Tajweed", kids_c5_d: "Courtes leçons vidéo pour apprendre le tajweed.",
+    kids_c6_t: "Panneau parents", kids_c6_d: "Profils multiples, temps d'écran, progression et code PIN.",
+    section_themes_eyebrow: "Thèmes", section_themes_title: "15 magnifiques thèmes Mushaf",
+    section_themes_desc: "De Golden Dawn à Galaxy Night — thèmes gratuits et premium.",
+    theme_golden: "Aube dorée", theme_midnight: "Mosquée de minuit", theme_emerald: "Paradis émeraude",
+    theme_ottoman: "Bleu ottoman", theme_neon: "La Mecque néon", theme_sakura: "Mosquée Sakura",
+    section_daily_eyebrow: "Vie quotidienne", section_daily_title: "Votre journée avec Rabe3",
+    section_daily_desc: "Horaires de prière, verset du jour, défis, bannière Ramadan, succès et rappels.",
+    daily_chips: ["Prières & Adhan","Verset du jour","Défi quotidien","Série de lecture","Mode Ramadan","Signets & notes","Tafsir Jalalayn & Muyassar"],
+    section_premium_title: "Rabe3 Plus & Family",
+    section_premium_desc: "Thèmes premium, sync cloud, coach IA, analyse QTA et mode enfants.",
+    section_premium_cta: "En savoir plus dans l'app",
+    section_langs_title: "28 langues",
+    section_langs_desc: "L'interface complète est disponible en 28 langues.",
+    footer_privacy: "Confidentialité", footer_contact: "Contact", footer_tagline: "Qu'Allah accepte nos efforts. © Rabe3 Al-Quloob"
+  },
+  tr: {
+    meta_title: "Rabe3 Al-Quloob — Eksiksiz Kur'an Arkadaşınız",
+    meta_desc: "Okuyun, ezberleyin, tilavet pratiği yapın, zikir, dua, hadis, namaz vakitleri, kıble, çocuk modu ve 15 tema — 28 dilde.",
+    nav_features: "Özellikler", nav_practice: "Tilavet", nav_kids: "Çocuklar", nav_themes: "Temalar",
+    nav_premium: "Premium", nav_langs: "Diller", nav_download: "İndir",
+    hero_badge: "✦ Eksiksiz İslami deneyim",
+    hero_title: "Rabe3 Al-Quloob",
+    hero_lead: "Kalbi besleyen huzurlu bir Kur'an uygulaması — Mushaf, tilavet stüdyosu, zikir, dua, hadis, namaz vakitleri, çocuk macerası ve daha fazlası.",
+    hero_cta_primary: "Uygulamayı indir", hero_cta_secondary: "Özellikleri keşfet",
+    stat_langs: "Dil", stat_azkar: "Zikir", stat_dua: "Dua", stat_hadith: "Hadis", stat_themes: "Tema",
+    section_features_eyebrow: "İhtiyacınız olan her şey", section_features_title: "Ana ekranda sekiz sütun",
+    section_features_desc: "Günlük Kur'an yolculuğunuz için her araç — tek dokunuşla.",
+    f_mushaf_t: "Mushaf", f_mushaf_d: "Kutsal Kur'an'ı yer imleri, notlar, tefsir ve çevirilerle okuyun.",
+    f_practice_t: "Tilavet Stüdyosu", f_practice_d: "Dinleyin, tekrarlayın, hoca ile gölgeleyin, ezberleyin ve akıllı oturumlarla gözden geçirin.",
+    f_azkar_t: "Zikir", f_azkar_d: "28+ kategoride 288 sahih zikir — sabah, akşam, yolculuk, uyku ve daha fazlası.",
+    f_dua_t: "Dua", f_dua_d: "148 sahih dua, kategorilere göre düzenlenmiş, günün duası ile.",
+    f_hadith_t: "Hadis", f_hadith_d: "Riyadü's-Salihin — 20 kitapta 1.896 hadis, arama ve açıklamalarla.",
+    f_qibla_t: "Kıble", f_qibla_d: "GPS ve sensör kalibrasyonu ile Kabe'ye doğru hassas pusula.",
+    f_tasbih_t: "Tesbih", f_tasbih_d: "Boncuk modu, günlük hedefler ve istatistiklerle dijital zikir sayacı.",
+    f_khatma_t: "Hatim", f_khatma_d: "Kur'an tamamlama ilerlemenizi takip edin — sayfalar, cüz, günlük hedefler.",
+    section_practice_eyebrow: "Tilavet Stüdyosu", section_practice_title: "Hafız gibi çalışın",
+    section_practice_desc: "Gölge tilavet, yankı modu, kademeli ezber, uyarlanabilir tekrar, klipler, seriler, aile meydan okumaları ve AI koç.",
+    practice_chips: ["Hoca ile","Dinle & tekrarla","Ezberle","Akıllı oturumlar","Klipler","Aile","Haftalık raporlar","AI koç"],
+    section_kids_eyebrow: "Çocuk Modu", section_kids_title: "Çocuklar için Kur'an macerası",
+    section_kids_desc: "Çocukların hikayeler, haritalar ve ödüllerle Kur'an öğrendiği büyülü dünya — ebeveyn PIN'i ile korunur.",
+    kids_c1_t: "Yolculuk Haritası", kids_c1_d: "Adaları açın, yıldız kazanın ve sureleri tamamlayın.",
+    kids_c2_t: "Hikayeler", kids_c2_d: "23 dilde İslami video hikayeler ve eğlenceli masallar.",
+    kids_c3_t: "Dinle & Tekrarla", kids_c3_d: "Mikrofonlu çocuk dostu tilavet — dinle, kaydet, kendini dinle.",
+    kids_c4_t: "Mağaza & Ödüller", kids_c4_d: "Yıldız kazanın, karakterler ve kıyafetler açın.",
+    kids_c5_t: "Tecvid Videoları", kids_c5_d: "Tecvid kurallarını eğlenceli şekilde öğrenmek için kısa videolar.",
+    kids_c6_t: "Ebeveyn Paneli", kids_c6_d: "Çoklu profil, ekran süresi, ilerleme takibi ve PIN koruması.",
+    section_themes_eyebrow: "Okuyucu Temaları", section_themes_title: "15 muhteşem Mushaf teması",
+    section_themes_desc: "Altın Şafak'tan Galaksi Gecesi'ne — ücretsiz ve premium temalar.",
+    theme_golden: "Altın Şafak", theme_midnight: "Gece Camii", theme_emerald: "Zümrüt Cennet",
+    theme_ottoman: "Osmanlı Mavisi", theme_neon: "Neon Mekke", theme_sakura: "Sakura Camii",
+    section_daily_eyebrow: "Günlük hayat", section_daily_title: "Rabe3 ile gününüz",
+    section_daily_desc: "Namaz vakitleri, günün ayeti, günlük meydan okumalar, Ramazan banner'ı, başarılar ve hatırlatıcılar.",
+    daily_chips: ["Namaz & Ezan","Günün ayeti","Günlük meydan okuma","Okuma serisi","Ramazan modu","Yer imleri & notlar","Tefsir Celaleyn & Muyessir"],
+    section_premium_title: "Rabe3 Plus & Aile",
+    section_premium_desc: "Premium temalar, bulut senkronizasyonu, AI koç, QTA tecvid analizi ve çocuk modu.",
+    section_premium_cta: "Uygulamada daha fazla",
+    section_langs_title: "28 dil",
+    section_langs_desc: "Tüm uygulama arayüzü 28 dilde mevcuttur.",
+    footer_privacy: "Gizlilik Politikası", footer_contact: "Bize ulaşın", footer_tagline: "Allah çabalarımızı kabul etsin. © Rabe3 Al-Quloob"
+  },
+  id: {
+    meta_title: "Rabe3 Al-Quloob — Teman Al-Quran Lengkap Anda",
+    meta_desc: "Baca, hafal, latih tilawah, dzikir, doa, hadis, waktu sholat, kiblat, mode anak, dan 15 tema — dalam 28 bahasa.",
+    nav_features: "Fitur", nav_practice: "Tilawah", nav_kids: "Anak", nav_themes: "Tema",
+    nav_premium: "Premium", nav_langs: "Bahasa", nav_download: "Unduh",
+    hero_badge: "✦ Pengalaman Islami lengkap",
+    hero_title: "Rabe3 Al-Quloob",
+    hero_lead: "Aplikasi Al-Quran yang menenangkan — Mushaf, studio tilawah, dzikir, doa, hadis, waktu sholat, petualangan anak, dan lainnya.",
+    hero_cta_primary: "Unduh aplikasi", hero_cta_secondary: "Jelajahi fitur",
+    stat_langs: "Bahasa", stat_azkar: "Dzikir", stat_dua: "Doa", stat_hadith: "Hadis", stat_themes: "Tema",
+    section_features_eyebrow: "Semua yang Anda butuhkan", section_features_title: "Delapan pilar di layar utama",
+    section_features_desc: "Setiap alat untuk perjalanan Al-Quran harian Anda — satu ketukan.",
+    f_mushaf_t: "Mushaf", f_mushaf_d: "Baca Al-Quran dengan penanda, catatan, tafsir, dan terjemahan.",
+    f_practice_t: "Studio Tilawah", f_practice_d: "Dengarkan, ulangi, ikuti syekh, hafalkan, dan tinjau dengan sesi pintar.",
+    f_azkar_t: "Dzikir", f_azkar_d: "288 dzikir sahih dalam 28+ kategori — pagi, sore, perjalanan, tidur, dan lainnya.",
+    f_dua_t: "Doa", f_dua_d: "148 doa sahih berdasarkan kategori dengan doa hari ini.",
+    f_hadith_t: "Hadis", f_hadith_d: "Riyadh as-Salihin — 1.896 hadis dalam 20 kitab dengan pencarian.",
+    f_qibla_t: "Kiblat", f_qibla_d: "Kompas akurat ke Ka'bah dengan GPS dan kalibrasi sensor.",
+    f_tasbih_t: "Tasbih", f_tasbih_d: "Penghitung dzikir digital dengan mode manik, target harian, dan statistik.",
+    f_khatma_t: "Khatam", f_khatma_d: "Lacak penyelesaian Al-Quran — halaman, juz, target harian, dan latihan.",
+    section_practice_eyebrow: "Studio Tilawah", section_practice_title: "Latih seperti hafiz",
+    section_practice_desc: "Tilawah bayangan, mode gema, hafalan bertahap, tinjauan adaptif, klip, streak, tantangan keluarga, dan pelatih AI.",
+    practice_chips: ["Dengan syekh","Dengar & ulang","Hafal","Sesi pintar","Klip","Keluarga","Laporan mingguan","Pelatih AI"],
+    section_kids_eyebrow: "Mode Anak", section_kids_title: "Petualangan Al-Quran untuk anak",
+    section_kids_desc: "Dunia ajaib di mana anak belajar Al-Quran melalui cerita, peta, dan hadiah — dilindungi PIN orang tua.",
+    kids_c1_t: "Peta Perjalanan", kids_c1_d: "Buka pulau, kumpulkan bintang, dan selesaikan surah.",
+    kids_c2_t: "Cerita", kids_c2_d: "Cerita Islami dan dongeng menyenangkan dalam 23 bahasa.",
+    kids_c3_t: "Dengar & Ulangi", kids_c3_d: "Tilawah ramah anak dengan mikrofon — dengar, rekam, dengar diri sendiri.",
+    kids_c4_t: "Toko & Hadiah", kids_c4_d: "Kumpulkan bintang, buka karakter dan pakaian.",
+    kids_c5_t: "Video Tajwid", kids_c5_d: "Pelajaran video singkat untuk belajar tajwid.",
+    kids_c6_t: "Panel Orang Tua", kids_c6_d: "Profil multi-anak, waktu layar, pelacakan kemajuan, dan PIN.",
+    section_themes_eyebrow: "Tema Pembaca", section_themes_title: "15 tema Mushaf menakjubkan",
+    section_themes_desc: "Dari Golden Dawn hingga Galaxy Night — tema gratis dan premium.",
+    theme_golden: "Fajar Emas", theme_midnight: "Masjid Tengah Malam", theme_emerald: "Surga Zamrud",
+    theme_ottoman: "Biru Ottoman", theme_neon: "Mekah Neon", theme_sakura: "Masjid Sakura",
+    section_daily_eyebrow: "Kehidupan sehari-hari", section_daily_title: "Hari Anda dengan Rabe3",
+    section_daily_desc: "Waktu sholat, ayat hari ini, tantangan harian, banner Ramadan, pencapaian, dan pengingat.",
+    daily_chips: ["Sholat & Adzan","Ayat hari ini","Tantangan harian","Streak baca","Mode Ramadan","Penanda & catatan","Tafsir Jalalain & Muyassar"],
+    section_premium_title: "Rabe3 Plus & Keluarga",
+    section_premium_desc: "Buka tema premium, sinkronisasi cloud, pelatih AI, analisis QTA, dan mode anak.",
+    section_premium_cta: "Pelajari lebih lanjut di aplikasi",
+    section_langs_title: "28 bahasa",
+    section_langs_desc: "Seluruh antarmuka aplikasi tersedia dalam 28 bahasa.",
+    footer_privacy: "Kebijakan Privasi", footer_contact: "Hubungi kami", footer_tagline: "Semoga Allah menerima usaha kita. © Rabe3 Al-Quloob"
+  },
+  ms: {
+    meta_title: "Rabe3 Al-Quloob — Teman Al-Quran Lengkap Anda",
+    meta_desc: "Baca, hafal, latih bacaan, zikir, doa, hadis, waktu solat, kiblat, mod kanak-kanak, dan 15 tema — dalam 28 bahasa.",
+    nav_features: "Ciri", nav_practice: "Bacaan", nav_kids: "Kanak-kanak", nav_themes: "Tema",
+    nav_premium: "Premium", nav_langs: "Bahasa", nav_download: "Muat turun",
+    hero_badge: "✦ Pengalaman Islami lengkap",
+    hero_title: "Rabe3 Al-Quloob",
+    hero_lead: "Aplikasi Al-Quran yang menenangkan — Mushaf, studio bacaan, zikir, doa, hadis, waktu solat, pengembaraan kanak-kanak, dan banyak lagi.",
+    hero_cta_primary: "Muat turun aplikasi", hero_cta_secondary: "Terokai ciri",
+    stat_langs: "Bahasa", stat_azkar: "Zikir", stat_dua: "Doa", stat_hadith: "Hadis", stat_themes: "Tema",
+    section_features_eyebrow: "Semua yang anda perlukan", section_features_title: "Lapan tonggak di skrin utama",
+    section_features_desc: "Setiap alat untuk perjalanan Al-Quran harian anda — satu ketikan.",
+    f_mushaf_t: "Mushaf", f_mushaf_d: "Baca Al-Quran dengan penanda, nota, tafsir, dan terjemahan.",
+    f_practice_t: "Studio Bacaan", f_practice_d: "Dengar, ulang, ikut syekh, hafal, dan semak dengan sesi pintar.",
+    f_azkar_t: "Zikir", f_azkar_d: "288 zikir sahih dalam 28+ kategori — pagi, petang, perjalanan, tidur, dan lain-lain.",
+    f_dua_t: "Doa", f_dua_d: "148 doa sahih mengikut kategori dengan doa hari ini.",
+    f_hadith_t: "Hadis", f_hadith_d: "Riyadh as-Salihin — 1,896 hadis dalam 20 kitab dengan carian.",
+    f_qibla_t: "Kiblat", f_qibla_d: "Kompas tepat ke Kaabah dengan GPS dan penentukuran sensor.",
+    f_tasbih_t: "Tasbih", f_tasbih_d: "Kaunter zikir digital dengan mod manik, sasaran harian, dan statistik.",
+    f_khatma_t: "Khatam", f_khatma_d: "Jejaki penyelesaian Al-Quran — halaman, juzuk, sasaran harian, dan latihan.",
+    section_practice_eyebrow: "Studio Bacaan", section_practice_title: "Latih seperti hafiz",
+    section_practice_desc: "Bacaan bayangan, mod gema, hafalan berperingkat, semakan adaptif, klip, streak, cabaran keluarga, dan jurulatih AI.",
+    practice_chips: ["Dengan syekh","Dengar & ulang","Hafal","Sesi pintar","Klip","Keluarga","Laporan mingguan","Jurulatih AI"],
+    section_kids_eyebrow: "Mod Kanak-kanak", section_kids_title: "Pengembaraan Al-Quran untuk kanak-kanak",
+    section_kids_desc: "Dunia ajaib di mana kanak-kanak belajar Al-Quran melalui cerita, peta, dan ganjaran — dilindungi PIN ibu bapa.",
+    kids_c1_t: "Peta Perjalanan", kids_c1_d: "Buka pulau, kumpul bintang, dan lengkapkan surah.",
+    kids_c2_t: "Cerita", kids_c2_d: "Cerita Islami dan dongeng menyeronokkan dalam 23 bahasa.",
+    kids_c3_t: "Dengar & Ulang", kids_c3_d: "Bacaan mesra kanak-kanak dengan mikrofon.",
+    kids_c4_t: "Kedai & Ganjaran", kids_c4_d: "Kumpul bintang, buka watak dan pakaian.",
+    kids_c5_t: "Video Tajwid", kids_c5_d: "Pelajaran video pendek untuk belajar tajwid.",
+    kids_c6_t: "Panel Ibu Bapa", kids_c6_d: "Profil berbilang kanak-kanak, masa skrin, kemajuan, dan PIN.",
+    section_themes_eyebrow: "Tema Pembaca", section_themes_title: "15 tema Mushaf menakjubkan",
+    section_themes_desc: "Dari Golden Dawn hingga Galaxy Night — tema percuma dan premium.",
+    theme_golden: "Fajar Emas", theme_midnight: "Masjid Tengah Malam", theme_emerald: "Syurga Zamrud",
+    theme_ottoman: "Biru Uthmaniah", theme_neon: "Mekah Neon", theme_sakura: "Masjid Sakura",
+    section_daily_eyebrow: "Kehidupan harian", section_daily_title: "Hari anda dengan Rabe3",
+    section_daily_desc: "Waktu solat, ayat hari ini, cabaran harian, sepanduk Ramadan, pencapaian, dan peringatan.",
+    daily_chips: ["Solat & Azan","Ayat hari ini","Cabaran harian","Streak bacaan","Mod Ramadan","Penanda & nota","Tafsir Jalalain & Muyassar"],
+    section_premium_title: "Rabe3 Plus & Keluarga",
+    section_premium_desc: "Buka tema premium, penyegerakan awan, jurulatih AI, analisis QTA, dan mod kanak-kanak.",
+    section_premium_cta: "Ketahui lebih lanjut dalam aplikasi",
+    section_langs_title: "28 bahasa",
+    section_langs_desc: "Keseluruhan antara muka aplikasi tersedia dalam 28 bahasa.",
+    footer_privacy: "Dasar Privasi", footer_contact: "Hubungi kami", footer_tagline: "Semoga Allah terima usaha kita. © Rabe3 Al-Quloob"
+  },
+  ru: {
+    meta_title: "Rabe3 Al-Quloob — Ваш полный спутник Корана",
+    meta_desc: "Читайте, заучивайте, практикуйте чтение, азкары, дуа, хадисы, намаз, киблу, детский режим и 15 тем — на 28 языках.",
+    nav_features: "Функции", nav_practice: "Чтение", nav_kids: "Дети", nav_themes: "Темы",
+    nav_premium: "Премиум", nav_langs: "Языки", nav_download: "Скачать",
+    hero_badge: "✦ Полный исламский опыт",
+    hero_title: "Rabe3 Al-Quloob",
+    hero_lead: "Спокойное приложение Корана, питающее сердце — Мусхаф, студия чтения, азкары, дуа, хадисы, намаз, детское приключение и многое другое.",
+    hero_cta_primary: "Скачать приложение", hero_cta_secondary: "Изучить функции",
+    stat_langs: "Языков", stat_azkar: "Азкаров", stat_dua: "Дуа", stat_hadith: "Хадисов", stat_themes: "Тем",
+    section_features_eyebrow: "Всё необходимое", section_features_title: "Восемь столпов на главном экране",
+    section_features_desc: "Каждый инструмент для ежедневного пути с Кораном — в одно касание.",
+    f_mushaf_t: "Мусхаф", f_mushaf_d: "Читайте Священный Коран с закладками, заметками, тафсиром и переводами.",
+    f_practice_t: "Студия чтения", f_practice_d: "Слушайте, повторяйте, следуйте за шейхом, заучивайте и повторяйте умно.",
+    f_azkar_t: "Азкары", f_azkar_d: "288 достоверных азкаров в 28+ категориях — утро, вечер, путешествие, сон и др.",
+    f_dua_t: "Дуа", f_dua_d: "148 достоверных молитв по категориям с дуа дня.",
+    f_hadith_t: "Хадисы", f_hadith_d: "Рияд ас-Салихин — 1 896 хадисов в 20 книгах с поиском.",
+    f_qibla_t: "Кибла", f_qibla_d: "Точный компас к Каабе с GPS и калибровкой датчиков.",
+    f_tasbih_t: "Тасбих", f_tasbih_d: "Цифровой счётчик зикра с режимом чёток, целями и статистикой.",
+    f_khatma_t: "Хатм", f_khatma_d: "Отслеживайте завершение Корана — страницы, джузы, цели и практика.",
+    section_practice_eyebrow: "Студия", section_practice_title: "Тренируйтесь как хафиз",
+    section_practice_desc: "Теневое чтение, режим эха, заучивание, адаптивное повторение, клипы, серии, семейные вызовы и ИИ-тренер.",
+    practice_chips: ["С шейхом","Слушать и повторять","Заучивать","Умные сессии","Клипы","Семья","Еженедельные отчёты","ИИ-тренер"],
+    section_kids_eyebrow: "Детский режим", section_kids_title: "Кораническое приключение для детей",
+    section_kids_desc: "Волшебный мир, где дети учат Коран через истории, карты и награды — защищён PIN родителей.",
+    kids_c1_t: "Карта путешествия", kids_c1_d: "Открывайте острова, собирайте звёзды и завершайте суры.",
+    kids_c2_t: "Истории", kids_c2_d: "Исламские видеоистории и сказки на 23 языках.",
+    kids_c3_t: "Слушать и повторять", kids_c3_d: "Детское чтение с микрофоном — слушай, записывай, слушай себя.",
+    kids_c4_t: "Магазин и награды", kids_c4_d: "Собирайте звёзды, открывайте персонажей и одежду.",
+    kids_c5_t: "Видео таджвида", kids_c5_d: "Короткие видеоуроки таджвида.",
+    kids_c6_t: "Панель родителей", kids_c6_d: "Несколько профилей, экранное время, прогресс и PIN.",
+    section_themes_eyebrow: "Темы", section_themes_title: "15 потрясающих тем Мусхафа",
+    section_themes_desc: "От Golden Dawn до Galaxy Night — бесплатные и премиум темы.",
+    theme_golden: "Золотой рассвет", theme_midnight: "Полуночная мечеть", theme_emerald: "Изумрудный рай",
+    theme_ottoman: "Османский синий", theme_neon: "Неоновая Мекка", theme_sakura: "Мечеть Сакура",
+    section_daily_eyebrow: "Повседневность", section_daily_title: "Ваш день с Rabe3",
+    section_daily_desc: "Время намаза, аят дня, ежедневные вызовы, баннер Рамадана, достижения и напоминания.",
+    daily_chips: ["Намаз и азан","Аят дня","Ежедневный вызов","Серия чтения","Режим Рамадана","Закладки и заметки","Тафсир Джалалайн и Муйассар"],
+    section_premium_title: "Rabe3 Plus & Family",
+    section_premium_desc: "Премиум темы, облачная синхронизация, ИИ-тренер, анализ QTA и детский режим.",
+    section_premium_cta: "Подробнее в приложении",
+    section_langs_title: "28 языков",
+    section_langs_desc: "Весь интерфейс приложения доступен на 28 языках.",
+    footer_privacy: "Конфиденциальность", footer_contact: "Связаться", footer_tagline: "Да примет Аллах наши усилия. © Rabe3 Al-Quloob"
+  },
+  ur: null, /* mapped to fa for RTL fallback - use uz */
+};
+
+// Fill remaining languages by cloning en and patching key labels
+const LANG_META = [
+  { code: "en", label: "English", rtl: false },
+  { code: "ar", label: "العربية", rtl: true },
+  { code: "az", label: "Azərbaycanca", rtl: false },
+  { code: "bs", label: "Bosanski", rtl: false },
+  { code: "de", label: "Deutsch", rtl: false },
+  { code: "es", label: "Español", rtl: false },
+  { code: "fa", label: "فارسی", rtl: true },
+  { code: "fr", label: "Français", rtl: false },
+  { code: "hr", label: "Hrvatski", rtl: false },
+  { code: "hu", label: "Magyar", rtl: false },
+  { code: "id", label: "Bahasa Indonesia", rtl: false },
+  { code: "it", label: "Italiano", rtl: false },
+  { code: "kk", label: "Қазақша", rtl: false },
+  { code: "ku", label: "کوردی", rtl: true },
+  { code: "ms", label: "Bahasa Melayu", rtl: false },
+  { code: "nl", label: "Nederlands", rtl: false },
+  { code: "pl", label: "Polski", rtl: false },
+  { code: "pt", label: "Português", rtl: false },
+  { code: "ru", label: "Русский", rtl: false },
+  { code: "sq", label: "Shqip", rtl: false },
+  { code: "sr", label: "Српски", rtl: false },
+  { code: "sv", label: "Svenska", rtl: false },
+  { code: "th", label: "ไทย", rtl: false },
+  { code: "tr", label: "Türkçe", rtl: false },
+  { code: "ug", label: "ئۇيغۇرچە", rtl: true },
+  { code: "uk", label: "Українська", rtl: false },
+  { code: "uz", label: "Oʻzbekcha", rtl: false },
+  { code: "vi", label: "Tiếng Việt", rtl: false },
+  { code: "zh", label: "中文", rtl: false },
+];
+
+// Patch translations for languages not fully written above
+const PATCH = {
+  es: { meta_title: "Rabe3 Al-Quloob — Tu compañero completo del Corán", hero_title: "Rabe3 Al-Quloob", hero_lead: "Una app del Corán serena que nutre el corazón — Mushaf, estudio de recitación, adhkar, dua, hadices, oraciones, aventura infantil y más.", hero_cta_primary: "Descargar app", hero_cta_secondary: "Explorar funciones", nav_features: "Funciones", nav_practice: "Recitación", nav_kids: "Niños", nav_themes: "Temas", nav_premium: "Premium", nav_langs: "Idiomas", nav_download: "Descargar", section_features_title: "Ocho pilares en tu pantalla de inicio", f_mushaf_t: "Mus'haf", f_practice_t: "Estudio de recitación", f_azkar_t: "Adhkar", f_dua_t: "Dua", f_hadith_t: "Hadices", f_qibla_t: "Qibla", f_tasbih_t: "Tasbih", f_khatma_t: "Khatma", section_kids_title: "Aventura del Corán para niños", section_themes_title: "15 impresionantes temas Mushaf", section_langs_title: "28 idiomas", footer_privacy: "Privacidad", footer_contact: "Contacto" },
+  it: { meta_title: "Rabe3 Al-Quloob — Il tuo compagno Corano completo", hero_lead: "Un'app del Corano serena che nutre il cuore — Mushaf, studio di recitazione, adhkar, dua, hadith, preghiere, avventura per bambini e altro.", hero_cta_primary: "Scarica l'app", nav_features: "Funzioni", nav_practice: "Recitazione", nav_kids: "Bambini", nav_themes: "Temi", nav_langs: "Lingue", nav_download: "Scarica", section_features_title: "Otto pilastri nella schermata principale", section_kids_title: "Avventura Corano per bambini", section_themes_title: "15 splendidi temi Mushaf", section_langs_title: "28 lingue", footer_privacy: "Privacy", footer_contact: "Contatti" },
+  pt: { meta_title: "Rabe3 Al-Quloob — Seu companheiro completo do Alcorão", hero_lead: "Um app do Alcorão sereno que nutre o coração — Mushaf, estúdio de recitação, adhkar, dua, hadith, orações, aventura infantil e mais.", hero_cta_primary: "Baixar app", nav_features: "Recursos", nav_practice: "Recitação", nav_kids: "Crianças", nav_themes: "Temas", nav_langs: "Idiomas", nav_download: "Baixar", section_features_title: "Oito pilares na tela inicial", section_kids_title: "Aventura do Alcorão para crianças", section_themes_title: "15 temas Mushaf impressionantes", section_langs_title: "28 idiomas", footer_privacy: "Privacidade", footer_contact: "Contato" },
+  nl: { meta_title: "Rabe3 Al-Quloob — Je complete Koran-metgezel", hero_lead: "Een serene Koran-app die het hart voedt — Mushaf, recitatiestudio, adhkar, dua, hadith, gebedstijden, kinderavontuur en meer.", hero_cta_primary: "App downloaden", nav_features: "Functies", nav_practice: "Recitatie", nav_kids: "Kinderen", nav_themes: "Thema's", nav_langs: "Talen", nav_download: "Downloaden", section_features_title: "Acht pilaren op je startscherm", section_kids_title: "Koran-avontuur voor kinderen", section_themes_title: "15 prachtige Mushaf-thema's", section_langs_title: "28 talen", footer_privacy: "Privacy", footer_contact: "Contact" },
+  pl: { meta_title: "Rabe3 Al-Quloob — Twój kompletny towarzysz Koranu", hero_lead: "Spokojna aplikacja Koranu, która karmi serce — Mushaf, studio recytacji, adhkar, dua, hadisy, czasy modlitw, przygoda dla dzieci i więcej.", hero_cta_primary: "Pobierz aplikację", nav_features: "Funkcje", nav_practice: "Recytacja", nav_kids: "Dzieci", nav_themes: "Motywy", nav_langs: "Języki", nav_download: "Pobierz", section_features_title: "Osiem filarów na ekranie głównym", section_kids_title: "Przygoda Koranu dla dzieci", section_themes_title: "15 oszałamiających motywów Mushaf", section_langs_title: "28 języków", footer_privacy: "Prywatność", footer_contact: "Kontakt" },
+  sv: { meta_title: "Rabe3 Al-Quloob — Din kompletta Koran-kompis", hero_lead: "En lugn Koran-app som när hjärtat — Mushaf, recitationsstudio, adhkar, dua, hadith, bönetider, barnäventyr och mer.", hero_cta_primary: "Ladda ner appen", nav_features: "Funktioner", nav_practice: "Recitation", nav_kids: "Barn", nav_themes: "Teman", nav_langs: "Språk", nav_download: "Ladda ner", section_features_title: "Åtta pelare på din hemskärm", section_kids_title: "Koranäventyr för barn", section_themes_title: "15 fantastiska Mushaf-teman", section_langs_title: "28 språk", footer_privacy: "Integritet", footer_contact: "Kontakt" },
+  zh: { meta_title: "Rabe3 Al-Quloob — 您的完整古兰经伴侣", hero_lead: "滋养心灵的宁静古兰经应用—— Mushaf、诵读工作室、记念、祈祷、圣训、礼拜时间、儿童冒险等一应俱全。", hero_cta_primary: "下载应用", hero_cta_secondary: "探索功能", nav_features: "功能", nav_practice: "诵读", nav_kids: "儿童", nav_themes: "主题", nav_premium: "高级版", nav_langs: "语言", nav_download: "下载", section_features_title: "主屏幕八大功能", section_kids_title: "儿童古兰经冒险", section_themes_title: "15款精美 Mushaf 主题", section_langs_title: "28种语言", footer_privacy: "隐私政策", footer_contact: "联系我们", footer_tagline: "愿真主接受我们的努力。© Rabe3 Al-Quloob" },
+  vi: { meta_title: "Rabe3 Al-Quloob — Người bạn đồng hành Quran đầy đủ", hero_lead: "Ứng dụng Quran thanh bình nuôi dưỡng trái tim — Mushaf, studio đọc, dhikr, cầu nguyện, hadith, giờ cầu nguyện, phiêu lưu trẻ em và hơn thế nữa.", hero_cta_primary: "Tải ứng dụng", nav_features: "Tính năng", nav_practice: "Đọc", nav_kids: "Trẻ em", nav_themes: "Chủ đề", nav_langs: "Ngôn ngữ", nav_download: "Tải xuống", section_features_title: "Tám trụ cột trên màn hình chính", section_kids_title: "Phiêu lưu Quran cho trẻ em", section_themes_title: "15 chủ đề Mushaf tuyệt đẹp", section_langs_title: "28 ngôn ngữ", footer_privacy: "Quyền riêng tư", footer_contact: "Liên hệ" },
+  th: { meta_title: "Rabe3 Al-Quloob — เพื่อนร่วมทางอัลกุรอานที่สมบูรณ์", hero_lead: "แอปอัลกุรอานที่เงียบสงบ บำรุงหัวใจ — Mushaf สตูดิโอการอ่าน ซิกร ดุอาอ์ ฮะดีษ เวลาละหมาด การผจญภัยเด็ก และอื่นๆ", hero_cta_primary: "ดาวน์โหลดแอป", nav_features: "คุณสมบัติ", nav_practice: "การอ่าน", nav_kids: "เด็ก", nav_themes: "ธีม", nav_langs: "ภาษา", nav_download: "ดาวน์โหลด", section_features_title: "แปดเสาหลักบนหน้าจอหลัก", section_kids_title: "การผจญภัยอัลกุรอานสำหรับเด็ก", section_themes_title: "15 ธีม Mushaf ที่สวยงาม", section_langs_title: "28 ภาษา", footer_privacy: "นโยบายความเป็นส่วนตัว", footer_contact: "ติดต่อเรา" },
+  uk: { meta_title: "Rabe3 Al-Quloob — Ваш повний супутник Корану", hero_lead: "Спокійний додаток Корану, що живить серце — Мусхаф, студія читання, азкари, дуа, хадиси, намаз, дитяча пригода та інше.", hero_cta_primary: "Завантажити додаток", nav_features: "Функції", nav_practice: "Читання", nav_kids: "Діти", nav_themes: "Теми", nav_langs: "Мови", nav_download: "Завантажити", section_features_title: "Вісім стовпів на головному екрані", section_kids_title: "Коранічна пригода для дітей", section_themes_title: "15 приголомшливих тем Мусхафа", section_langs_title: "28 мов", footer_privacy: "Конфіденційність", footer_contact: "Зв'язатися" },
+  fa: { meta_title: "ربيع القلوب — همراه کامل قرآن شما", meta_desc: "بخوانید، حفظ کنید، تلاوت تمرین کنید، اذکار، دعا، حدیث، اوقات نماز، قبله، حالت کودک و ۱۵ تم — به ۲۸ زبان.", hero_badge: "✦ تجربه اسلامی کامل", hero_title: "ربيع القلوب", hero_lead: "اپلیکیشن آرام قرآن که قلب را تغذیه می‌کند — مصحف، استودیو تلاوت، اذکار، دعا، احادیث، اوقات شرعی، ماجراجویی کودکان و بیشتر.", hero_cta_primary: "دانلود اپ", hero_cta_secondary: "کاوش ویژگی‌ها", nav_features: "ویژگی‌ها", nav_practice: "تلاوت", nav_kids: "کودکان", nav_themes: "تم‌ها", nav_premium: "پریمیوم", nav_langs: "زبان‌ها", nav_download: "دانلود", stat_langs: "زبان", stat_azkar: "ذکر", stat_dua: "دعا", stat_hadith: "حدیث", stat_themes: "تم", section_features_title: "هشت ستون در صفحه اصلی", section_kids_title: "ماجراجویی قرآن برای کودکان", section_themes_title: "۱۵ تم شگفت‌انگیز مصحف", section_langs_title: "۲۸ زبان", footer_privacy: "حریم خصوصی", footer_contact: "تماس", footer_tagline: "خداوند عمل ما را بپذیرد. © ربيع القلوب" },
+  az: { hero_cta_primary: "Tətbiqi yüklə", nav_features: "Xüsusiyyətlər", nav_download: "Yüklə", section_langs_title: "28 dil", footer_privacy: "Məxfilik" },
+  bs: { hero_cta_primary: "Preuzmi aplikaciju", nav_features: "Funkcije", nav_download: "Preuzmi", section_langs_title: "28 jezika", footer_privacy: "Privatnost" },
+  hr: { hero_cta_primary: "Preuzmi aplikaciju", nav_features: "Značajke", nav_download: "Preuzmi", section_langs_title: "28 jezika", footer_privacy: "Privatnost" },
+  hu: { hero_cta_primary: "Alkalmazás letöltése", nav_features: "Funkciók", nav_download: "Letöltés", section_langs_title: "28 nyelv", footer_privacy: "Adatvédelem" },
+  kk: { hero_cta_primary: "Қолданбаны жүктеу", nav_features: "Мүмкіндіктер", nav_download: "Жүктеу", section_langs_title: "28 тіл", footer_privacy: "Құпиялылық" },
+  ku: { hero_cta_primary: "ئەپ دابەزێنە", nav_features: "تایبەتمەندییەکان", nav_download: "دابەزاندن", section_langs_title: "٢٨ زمان", footer_privacy: "تایبەتمەندی" },
+  sq: { hero_cta_primary: "Shkarko aplikacionin", nav_features: "Veçoritë", nav_download: "Shkarko", section_langs_title: "28 gjuhë", footer_privacy: "Privatësia" },
+  sr: { hero_cta_primary: "Преузми апликацију", nav_features: "Функције", nav_download: "Преузми", section_langs_title: "28 језика", footer_privacy: "Приватност" },
+  ug: { hero_cta_primary: "ئەپنى چۈشۈر", nav_features: "ئىقتىدارلار", nav_download: "چۈشۈر", section_langs_title: "٢٨ تىل", footer_privacy: "مەخپىيەت" },
+  uz: { hero_cta_primary: "Ilovani yuklab olish", nav_features: "Xususiyatlar", nav_download: "Yuklab olish", section_langs_title: "28 til", footer_privacy: "Maxfiylik" },
+};
+
+// Build full catalog: start from en, merge full translations, then patches
+function buildCatalog() {
+  const base = RABE3_I18N.en;
+  for (const { code } of LANG_META) {
+    if (!RABE3_I18N[code]) {
+      RABE3_I18N[code] = { ...base, ...(PATCH[code] || {}) };
+    } else if (PATCH[code]) {
+      RABE3_I18N[code] = { ...RABE3_I18N[code], ...PATCH[code] };
+    }
+  }
+  delete RABE3_I18N.ur;
+}
+buildCatalog();
+
+const RTL_LANGS = new Set(LANG_META.filter(l => l.rtl).map(l => l.code));
+
+function t(lang, key) {
+  const pack = RABE3_I18N[lang] || RABE3_I18N.en;
+  return pack[key] ?? RABE3_I18N.en[key] ?? key;
+}
+
+function applyLanguage(lang) {
+  const pack = RABE3_I18N[lang] || RABE3_I18N.en;
+  const rtl = RTL_LANGS.has(lang);
+  document.documentElement.lang = lang;
+  document.documentElement.dir = rtl ? "rtl" : "ltr";
+  document.title = pack.meta_title;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.content = pack.meta_desc;
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    const val = pack[key];
+    if (val == null) return;
+    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") el.placeholder = val;
+    else el.textContent = val;
+  });
+
+  // Chips
+  document.querySelectorAll("[data-i18n-chips]").forEach(el => {
+    const key = el.getAttribute("data-i18n-chips");
+    const chips = pack[key];
+    if (!Array.isArray(chips)) return;
+    el.innerHTML = chips.map(c => `<span class="chip">${c}</span>`).join("");
+  });
+
+  // Lang menu active state
+  document.querySelectorAll(".lang-menu button").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.lang === lang);
+  });
+
+  const langBtnLabel = document.getElementById("lang-btn-label");
+  const meta = LANG_META.find(l => l.code === lang);
+  if (langBtnLabel && meta) langBtnLabel.textContent = meta.label;
+
+  try { localStorage.setItem("rabe3-landing-lang", lang); } catch (_) {}
+}
+
+function initI18n() {
+  let lang = "ar";
+  try {
+    const saved = localStorage.getItem("rabe3-landing-lang");
+    const nav = navigator.language?.split("-")[0];
+    if (saved && RABE3_I18N[saved]) lang = saved;
+    else if (nav && RABE3_I18N[nav]) lang = nav;
+  } catch (_) {}
+  applyLanguage(lang);
+  return lang;
+}
+
+if (typeof window !== "undefined") {
+  window.RABE3_LANG_META = LANG_META;
+  window.applyLanguage = applyLanguage;
+  window.initI18n = initI18n;
+}
