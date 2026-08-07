@@ -715,8 +715,8 @@ body { opacity: 1; }
   mix-blend-mode: screen;
 }
 
-.wide-card { padding: 0; overflow: hidden; }
-.wide-shot { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+.wide-card { padding: 0; overflow: hidden; background: var(--bg-soft); }
+.wide-shot { width: 100%; aspect-ratio: 16/9; object-fit: contain; object-position: center center; display: block; }
 
 .highlights {
   list-style: none;
