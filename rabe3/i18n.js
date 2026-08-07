@@ -74,9 +74,12 @@ const RABE3_I18N = {
     a11y_menu: "Open menu",
     a11y_nav: "Primary navigation",
     a11y_trust: "Trust highlights",
-    a11y_scroll_down: "Scroll to trust badges",
+    a11y_scroll_down: "Scroll to learn more",
     a11y_back_top: "Back to top",
     a11y_lang_menu: "Choose language",
+    a11y_lang_list: "Language options",
+    a11y_footer: "Footer navigation",
+    a11y_package_id: "Package ID",
     a11y_theme_gallery: "Reader theme gallery",
     a11y_facebook: "Follow Rabe3 Al-Quloob on Facebook",
     a11y_brand_logo: "Rabe3 Al-Quloob logo",
@@ -201,9 +204,12 @@ const RABE3_I18N = {
     a11y_menu: "فتح القائمة",
     a11y_nav: "التنقل الرئيسي",
     a11y_trust: "مؤشرات الثقة",
-    a11y_scroll_down: "انتقل إلى شارات الثقة",
+    a11y_scroll_down: "انتقل لمعرفة المزيد",
     a11y_back_top: "العودة للأعلى",
     a11y_lang_menu: "اختر اللغة",
+    a11y_lang_list: "خيارات اللغة",
+    a11y_footer: "تنقل التذييل",
+    a11y_package_id: "معرّف الحزمة",
     a11y_theme_gallery: "معرض ثيمات القراءة",
     a11y_facebook: "تابع ربيع القلوب على فيسبوك",
     a11y_brand_logo: "شعار ربيع القلوب",
@@ -614,6 +620,11 @@ function applyLanguage(lang) {
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.content = pack.meta_desc;
 
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.content = pack.meta_title;
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc && pack.meta_desc) ogDesc.content = pack.meta_desc;
+
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     const val = t(lang, key);
@@ -651,7 +662,15 @@ function applyLanguage(lang) {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
 
-  // Recalculate open FAQ panel heights after translation
+  document.querySelectorAll(".lang-pill").forEach((pill) => {
+    const isActive = pill.dataset.lang === lang;
+    pill.classList.toggle("active", isActive);
+    pill.setAttribute("aria-pressed", isActive ? "true" : "false");
+    const isPartial = !window.RABE3_FULL_LANDING_LANGS?.has(pill.dataset.lang);
+    pill.classList.toggle("lang-pill--partial", isPartial);
+    if (isPartial) pill.title = t(lang, "langs_landing_note");
+    else pill.removeAttribute("title");
+  });
   document.querySelectorAll(".faq-item.open .faq-answer").forEach((answer) => {
     answer.style.maxHeight = `${answer.scrollHeight}px`;
   });
@@ -677,6 +696,7 @@ function initI18n() {
 
 if (typeof window !== "undefined") {
   window.RABE3_LANG_META = LANG_META;
+  window.RABE3_FULL_LANDING_LANGS = new Set(["en", "ar"]);
   window.applyLanguage = applyLanguage;
   window.initI18n = initI18n;
   window.t = t;

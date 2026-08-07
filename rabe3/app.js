@@ -1,5 +1,9 @@
 (function () {
   document.body.classList.add("is-loading");
+  const PLAY_STORE = document.body.dataset.playStore || "https://play.google.com/store/apps/details?id=com.rabe3alquloob.app";
+  const FULL_LANDING_LANGS = new Set(["en", "ar"]);
+  window.RABE3_FULL_LANDING_LANGS = FULL_LANDING_LANGS;
+
   const menu = document.getElementById("lang-menu");
   const langBtn = document.getElementById("lang-btn");
   const navLinks = document.getElementById("nav-links");
@@ -26,8 +30,10 @@
     const pill = document.createElement("button");
     pill.type = "button";
     pill.className = "lang-pill";
+    if (!FULL_LANDING_LANGS.has(code)) pill.classList.add("lang-pill--partial");
     pill.dataset.lang = code;
     pill.setAttribute("role", "listitem");
+    pill.setAttribute("aria-pressed", "false");
     pill.textContent = label;
     pill.addEventListener("click", () => selectLanguage(code));
     langCloud.appendChild(pill);
@@ -42,8 +48,11 @@
   window.syncLangPills = (lang) => {
     document.querySelectorAll(".lang-pill").forEach((pill) => {
       pill.classList.toggle("active", pill.dataset.lang === lang);
+      pill.setAttribute("aria-pressed", pill.dataset.lang === lang ? "true" : "false");
     });
   };
+
+  langBtn.setAttribute("aria-controls", "lang-menu");
 
   const origApply = window.applyLanguage;
   window.applyLanguage = (lang) => {
@@ -83,6 +92,7 @@
     }
     if (!e.target.closest(".nav") && navLinks?.classList.contains("open")) {
       navLinks.classList.remove("open");
+      menuToggle?.classList.remove("is-open");
       menuToggle?.setAttribute("aria-expanded", "false");
     }
   });
@@ -92,18 +102,31 @@
       menu.classList.remove("open");
       langBtn?.setAttribute("aria-expanded", "false");
       navLinks?.classList.remove("open");
+      menuToggle?.classList.remove("is-open");
       menuToggle?.setAttribute("aria-expanded", "false");
     }
   });
 
   menuToggle?.addEventListener("click", () => {
     const open = navLinks.classList.toggle("open");
+    menuToggle.classList.toggle("is-open", open);
     menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) navLinks.querySelector("a")?.focus();
+  });
+
+  document.addEventListener("focusin", (e) => {
+    if (!navLinks?.classList.contains("open")) return;
+    if (!e.target.closest(".nav")) {
+      navLinks.classList.remove("open");
+      menuToggle?.classList.remove("is-open");
+      menuToggle?.setAttribute("aria-expanded", "false");
+    }
   });
 
   navLinks?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("open");
+      menuToggle?.classList.remove("is-open");
       menuToggle?.setAttribute("aria-expanded", "false");
     });
   });
