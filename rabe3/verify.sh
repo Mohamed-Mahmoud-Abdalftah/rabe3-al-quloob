@@ -25,40 +25,50 @@ for f in robots.txt sitemap.xml 404.html; do
   check "$BASE/$f"
 done
 
-for f in assets/promo/hero_bg.jpg assets/promo/hero_phone.jpg assets/promo/reader.jpg assets/promo/studio.jpg assets/promo/daily.jpg assets/promo/kids_journey.jpg assets/promo/og_brand.jpg assets/rabea_brand_logo.webp assets/kids_bg_sky_hero.jpg; do
+for f in \
+  assets/home_hero_day.jpg \
+  assets/promo/crops/theme_6_showcase.jpg \
+  assets/promo/crops/reader_phone.jpg \
+  assets/promo/crops/studio_phone.jpg \
+  assets/promo/crops/kids_phone.jpg \
+  assets/promo/crops/daily_phone.jpg \
+  assets/promo/crops/premium_phone.jpg \
+  assets/promo/crops/theme_golden_dawn.jpg \
+  assets/promo/og_brand.jpg \
+  assets/rabea_brand_logo.webp; do
   check "$SITE/$f"
 done
 
 body=$(curl -s "$SITE/index.html")
-if echo "$body" | grep -q 'kids-showcase'; then
-  echo "OK   kids-showcase present"
+if echo "$body" | grep -q 'showcase-band'; then
+  echo "OK   showcase-band present"
 else
-  echo "FAIL missing kids-showcase"
+  echo "FAIL missing showcase-band"
+  FAIL=1
+fi
+if echo "$body" | grep -q 'kids-visual-stack'; then
+  echo "OK   kids-visual-stack present"
+else
+  echo "FAIL missing kids-visual-stack"
+  FAIL=1
+fi
+if echo "$body" | grep -q 'device-frame--exp'; then
+  echo "OK   device-frame--exp present"
+else
+  echo "FAIL missing device-frame--exp"
+  FAIL=1
+fi
+if echo "$body" | grep -q 'styles.css?v=26'; then
+  echo "OK   styles v26"
+else
+  echo "FAIL missing styles v26"
   FAIL=1
 fi
 if echo "$body" | grep -q 'phone-mockup'; then
-  echo "OK   phone-mockup present"
-else
-  echo "FAIL missing phone-mockup"
-  FAIL=1
-fi
-if echo "$body" | grep -q 'kids-pills'; then
-  echo "OK   kids-pills present"
-else
-  echo "FAIL missing kids-pills"
-  FAIL=1
-fi
-if echo "$body" | grep -q 'kids-promo-grid'; then
-  echo "FAIL old kids-promo-grid still present"
+  echo "FAIL old phone-mockup still present"
   FAIL=1
 else
-  echo "OK   kids-promo-grid removed"
-fi
-if echo "$body" | grep -q 'kids_bg_sky_hero'; then
-  echo "OK   kids sky bg present"
-else
-  echo "FAIL missing kids sky bg"
-  FAIL=1
+  echo "OK   phone-mockup removed"
 fi
 
 for lang in ar en tr de es zh ru; do

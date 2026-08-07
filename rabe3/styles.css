@@ -367,8 +367,8 @@ h3 { font-size: 1.125rem; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
-  opacity: 0.22;
+  object-position: center 40%;
+  opacity: 0.28;
 }
 
 .hero-ambient { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
@@ -505,7 +505,23 @@ h3 { font-size: 1.125rem; }
   margin: 0 auto;
 }
 
-/* Unified phone mockup — crops promo art to the device area */
+.device-frame--exp {
+  width: min(100%, 290px);
+  margin: 0 auto;
+}
+
+.device-frame--sm {
+  position: absolute;
+  bottom: -16px;
+  inset-inline-end: -4px;
+  width: min(46%, 190px);
+  padding: 8px;
+  border-radius: 24px;
+  z-index: 2;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.55);
+}
+
+/* Legacy phone mockup — kept for verify compatibility */
 .phone-mockup {
   width: min(100%, 300px);
   margin: 0 auto;
@@ -586,6 +602,57 @@ h3 { font-size: 1.125rem; }
   display: block;
   width: 100%;
   height: auto;
+}
+
+/* ── App beauty showcase ── */
+.showcase-band {
+  padding: calc(var(--section-pad) * 0.85) 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(63, 168, 118, 0.08), transparent 70%),
+    var(--bg-soft);
+  border-block: 1px solid var(--line);
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 18px;
+  margin-top: 36px;
+  align-items: stretch;
+}
+
+.showcase-card {
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+  background: var(--surface);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+}
+
+.showcase-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 9 / 16;
+}
+
+.showcase-card--wide {
+  grid-row: span 1;
+}
+
+.showcase-card--wide img {
+  aspect-ratio: 2 / 1;
+  object-position: center center;
+}
+
+@media (hover: hover) {
+  .showcase-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 .device-frame {
@@ -894,6 +961,21 @@ body { opacity: 1; }
   height: 20px;
   color: var(--gold);
   flex-shrink: 0;
+}
+
+.kids-visual-stack {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 460px;
+  padding: 12px 0 28px;
+}
+
+.kids-showcase-poster {
+  width: min(100%, 300px);
+  border-radius: calc(var(--radius-lg) - 4px);
+  box-shadow: 0 36px 72px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .btn-outline-light {
@@ -1498,7 +1580,14 @@ body { opacity: 1; }
   .faq-layout { grid-template-columns: 1fr; }
 
   .hero-visual { order: -1; max-width: 280px; }
-  .phone-mockup { width: min(100%, 260px); }
+  .device-frame--exp { width: min(100%, 260px); }
+  .showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .showcase-card--wide img { aspect-ratio: 16 / 9; }
+  .kids-visual-stack { min-height: 400px; }
+  .kids-showcase-poster { width: min(100%, 260px); }
   .experience-grid.reverse .experience-visual,
   .experience-grid.reverse .experience-copy { order: unset; }
 
