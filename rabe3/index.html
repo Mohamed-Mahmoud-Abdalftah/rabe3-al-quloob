@@ -19,7 +19,7 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" id="site-nav">
     <div class="container nav-inner">
       <a class="brand" href="#top">
         <img src="assets/rabea_brand_logo.webp" alt="Rabe3" width="42" height="42" />
@@ -66,20 +66,35 @@
       </div>
       <div class="hero-visual">
         <div class="hero-glow" aria-hidden="true"></div>
-        <div class="hero-phone">
-          <img src="assets/home_hero_day.png" alt="Rabe3 Al-Quloob app preview" width="480" height="960" />
+        <div class="hero-device">
+          <div class="hero-device-notch" aria-hidden="true"></div>
+          <div class="hero-phone">
+            <img src="assets/home_hero_night.png" alt="Rabe3 Al-Quloob app preview" width="480" height="960" />
+          </div>
         </div>
+        <div class="hero-float hero-float-1" aria-hidden="true"><img src="assets/home_ic_mushaf_3d.png" alt="" width="48" height="48" /></div>
+        <div class="hero-float hero-float-2" aria-hidden="true"><img src="assets/home_ic_azkar_3d.png" alt="" width="44" height="44" /></div>
       </div>
     </div>
   </header>
 
   <!-- Stats -->
   <div class="container stats reveal" id="stats">
-    <div class="stat"><strong>28</strong><span data-i18n="stat_langs">لغة</span></div>
-    <div class="stat"><strong>288</strong><span data-i18n="stat_azkar">ذكر</span></div>
-    <div class="stat"><strong>148</strong><span data-i18n="stat_dua">دعاء</span></div>
-    <div class="stat"><strong>1,896</strong><span data-i18n="stat_hadith">حديث</span></div>
-    <div class="stat"><strong>15</strong><span data-i18n="stat_themes">ثيم</span></div>
+    <div class="stat"><strong data-count="28">28</strong><span data-i18n="stat_langs">لغة</span></div>
+    <div class="stat"><strong data-count="288">288</strong><span data-i18n="stat_azkar">ذكر</span></div>
+    <div class="stat"><strong data-count="148">148</strong><span data-i18n="stat_dua">دعاء</span></div>
+    <div class="stat"><strong data-count="1896">1,896</strong><span data-i18n="stat_hadith">حديث</span></div>
+    <div class="stat"><strong data-count="15">15</strong><span data-i18n="stat_themes">ثيم</span></div>
+  </div>
+
+  <div class="container trust-strip reveal" aria-label="Trust highlights">
+    <span class="trust-item" data-i18n="trust_no_ads">بدون إعلانات</span>
+    <span class="trust-dot" aria-hidden="true"></span>
+    <span class="trust-item" data-i18n="trust_privacy">خصوصية أولاً</span>
+    <span class="trust-dot" aria-hidden="true"></span>
+    <span class="trust-item" data-i18n="trust_offline">يعمل بدون إنترنت للقراءة</span>
+    <span class="trust-dot" aria-hidden="true"></span>
+    <span class="trust-item" data-i18n="trust_family">وضع عائلي وأطفال</span>
   </div>
 
   <!-- Features -->
@@ -92,42 +107,42 @@
       </div>
       <div class="feature-grid">
         <article class="feature-card reveal">
-          <img src="assets/home_ic_mushaf_3d.png" alt="" width="72" height="72" loading="lazy" />
+          <div class="feature-icon"><img src="assets/home_ic_mushaf_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
           <h3 data-i18n="f_mushaf_t">المصحف</h3>
           <p data-i18n="f_mushaf_d">اقرأ القرآن الكريم مع العلامات والملاحظات والتفسير والترجمات وتجربة قراءة هادئة.</p>
         </article>
         <article class="feature-card reveal">
-          <img src="assets/home_ic_quran_3d.png" alt="" width="72" height="72" loading="lazy" onerror="this.src='assets/home_continue_quran_3d.png'" />
+          <div class="feature-icon"><img src="assets/home_ic_quran_3d.png" alt="" width="72" height="72" loading="lazy" onerror="this.src='assets/home_continue_quran_3d.png'" /></div>
           <h3 data-i18n="f_practice_t">استوديو التلاوة</h3>
           <p data-i18n="f_practice_d">اسمع، ردّد، ظلّل مع الشيخ، احفظ، وراجع بجلسات ذكية.</p>
         </article>
         <article class="feature-card reveal">
-          <img src="assets/home_ic_azkar_3d.png" alt="" width="72" height="72" loading="lazy" />
+          <div class="feature-icon"><img src="assets/home_ic_azkar_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
           <h3 data-i18n="f_azkar_t">الأذكار</h3>
           <p data-i18n="f_azkar_d">٢٨٨ ذكرًا مأثورًا في ٢٨+ فئة — صباح، مساء، سفر، نوم، وأكثر.</p>
         </article>
         <article class="feature-card reveal">
-          <img src="assets/home_ic_dua_3d.png" alt="" width="72" height="72" loading="lazy" />
+          <div class="feature-icon"><img src="assets/home_ic_dua_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
           <h3 data-i18n="f_dua_t">الدعاء</h3>
           <p data-i18n="f_dua_d">١٤٨ دعاءً مأثورًا مصنّفًا مع دعاء اليوم.</p>
         </article>
         <article class="feature-card reveal">
-          <img src="assets/home_ic_hadith_3d.png" alt="" width="72" height="72" loading="lazy" />
+          <div class="feature-icon"><img src="assets/home_ic_hadith_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
           <h3 data-i18n="f_hadith_t">الأحاديث</h3>
           <p data-i18n="f_hadith_d">رياض الصالحين — ١٬٨٩٦ حديثًا في ٢٠ كتابًا مع بحث وشروح.</p>
         </article>
         <article class="feature-card reveal">
-          <img src="assets/home_ic_qibla_3d.png" alt="" width="72" height="72" loading="lazy" />
+          <div class="feature-icon"><img src="assets/home_ic_qibla_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
           <h3 data-i18n="f_qibla_t">القبلة</h3>
           <p data-i18n="f_qibla_d">بوصلة دقيقة لاتجاه الكعبة مع GPS ومعايرة الحساس.</p>
         </article>
         <article class="feature-card reveal">
-          <img src="assets/home_ic_tasbih_3d.png" alt="" width="72" height="72" loading="lazy" />
+          <div class="feature-icon"><img src="assets/home_ic_tasbih_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
           <h3 data-i18n="f_tasbih_t">السبحة</h3>
           <p data-i18n="f_tasbih_d">عداد ذكر رقمي بوضع الخرز، أهداف يومية، سلاسل، وإحصائيات.</p>
         </article>
         <article class="feature-card reveal">
-          <img src="assets/home_ic_kaaba_3d.png" alt="" width="72" height="72" loading="lazy" />
+          <div class="feature-icon"><img src="assets/home_ic_kaaba_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
           <h3 data-i18n="f_khatma_t">الختمة</h3>
           <p data-i18n="f_khatma_d">تتبع إتمام القرآن — الصفحات، الأجزاء، الأهداف اليومية، وتدرّب على صفحة اليوم.</p>
         </article>
@@ -139,8 +154,15 @@
   <section id="practice" class="section-alt">
     <div class="container">
       <div class="showcase reveal">
-        <div class="showcase-frame">
-          <img src="assets/home_continue_quran_3d.png" alt="Recitation Studio" loading="lazy" />
+        <div class="showcase-frame showcase-phone">
+          <div class="showcase-phone-screen">
+            <img src="assets/home_hero_night.png" alt="Recitation Studio" loading="lazy" />
+          </div>
+          <div class="showcase-bento">
+            <div class="bento-tile"><img src="assets/home_ic_quran_3d.png" alt="" loading="lazy" /></div>
+            <div class="bento-tile"><img src="assets/home_gift_3d.png" alt="" loading="lazy" /></div>
+            <div class="bento-tile"><img src="assets/home_ic_mushaf_3d.png" alt="" loading="lazy" /></div>
+          </div>
         </div>
         <div class="showcase-body">
           <div class="eyebrow" data-i18n="section_practice_eyebrow">استوديو التلاوة</div>
@@ -156,8 +178,8 @@
           <p data-i18n="section_daily_desc">مواقيت الصلاة، آية اليوم، التحدي اليومي، بانر رمضان، الإنجازات، والتذكيرات.</p>
           <div class="chip-list" data-i18n-chips="daily_chips"></div>
         </div>
-        <div class="showcase-frame wide">
-          <img src="assets/home_verse_bg.png" alt="Daily features" loading="lazy" />
+        <div class="showcase-frame wide showcase-cover">
+          <img src="assets/home_ramadan_banner_bg.png" alt="Daily features" loading="lazy" />
         </div>
       </div>
     </div>
@@ -175,9 +197,9 @@
         <img class="bg" src="assets/kids_bg_sky_hero.jpg" alt="" loading="lazy" />
         <div class="overlay"></div>
         <div class="content">
-          <div>
-            <h3 style="margin:0 0 8px;font-size:1.8rem" data-i18n="section_kids_title">مغامرة قرآنية للأطفال</h3>
-            <p style="margin:0;color:var(--muted);max-width:48ch" data-i18n="section_kids_desc">عالم سحري يتعلم فيه الأطفال القرآن عبر القصص وخرائط الرحلة والمكافآت.</p>
+          <div class="kids-hero-copy">
+            <span class="kids-pill" data-i18n="section_kids_eyebrow">وضع الأطفال</span>
+            <p data-i18n="kids_hero_tagline">قصص، رحلة، مكافآت — بأمان تام للأطفال</p>
           </div>
           <div class="kids-chars">
             <img src="assets/kids_journey_char_boy_hafiz_idle.webp" alt="" width="100" height="100" loading="lazy" />
@@ -262,9 +284,18 @@
   <section id="premium">
     <div class="container">
       <div class="premium-box reveal">
+        <div class="premium-visual" aria-hidden="true">
+          <img src="assets/theme_hero_golden_dawn.jpg" alt="" loading="lazy" />
+        </div>
         <div>
+          <div class="eyebrow" data-i18n="section_premium_eyebrow">بريميوم</div>
           <h3 data-i18n="section_premium_title">ربيع بلس والعائلة</h3>
           <p data-i18n="section_premium_desc">افتح ثيمات بريميوم، مزامنة سحابية للمقاطع، مدرب ذكي، تحليل تجويد QTA، ووضع الأطفال.</p>
+          <ul class="premium-perks">
+            <li data-i18n="premium_p1">ثيمات حصرية للقراءة</li>
+            <li data-i18n="premium_p2">مزامنة سحابية للمقاطع</li>
+            <li data-i18n="premium_p3">مدرب ذكي وتحليل تجويد</li>
+          </ul>
         </div>
         <a class="btn btn-primary" href="#download" data-i18n="section_premium_cta">اعرف المزيد في التطبيق</a>
       </div>
@@ -303,13 +334,33 @@
   </section>
 
   <!-- Languages -->
-  <section id="languages" class="section-alt">
+  <section id="languages">
     <div class="container">
       <div class="section-head reveal">
+        <div class="eyebrow" data-i18n="section_langs_eyebrow">للجميع</div>
         <h2 data-i18n="section_langs_title">٢٨ لغة</h2>
         <p data-i18n="section_langs_desc">واجهة التطبيق بالكامل متوفرة بـ ٢٨ لغة — من العربية والإنجليزية إلى الأردية والصينية والتركية والمزيد.</p>
       </div>
-      <div class="lang-cloud reveal" id="lang-cloud"></div>
+      <div class="lang-panel reveal">
+        <div class="lang-cloud" id="lang-cloud"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section id="community" class="section-alt">
+    <div class="container">
+      <div class="community-card reveal">
+        <div>
+          <div class="eyebrow" data-i18n="section_community_eyebrow">تواصل معنا</div>
+          <h2 data-i18n="section_community_title">انضم لمجتمع ربيع القلوب</h2>
+          <p data-i18n="section_community_desc">تابعنا على فيسبوك لآخر الأخبار، موعد الإطلاق، والتحديثات الجديدة.</p>
+        </div>
+        <div class="community-actions">
+          <a class="btn btn-facebook" href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" data-i18n="footer_facebook">تابعنا على فيسبوك</a>
+          <a class="btn btn-outline" href="mailto:support@rabe3alquloob.com" data-i18n="footer_contact">تواصل معنا</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -317,6 +368,7 @@
   <section id="download">
     <div class="container">
       <div class="download-card reveal">
+        <div class="download-glow" aria-hidden="true"></div>
         <img class="logo" src="assets/rabea_brand_logo.webp" alt="Rabe3 Al-Quloob" width="100" height="100" loading="lazy" />
         <h2 data-i18n="hero_title">ربيع القلوب</h2>
         <p class="lead" data-i18n="download_lead">تطبيق قرآني متكامل — حمّله قريبًا على Google Play</p>
@@ -349,6 +401,8 @@
     </div>
   </footer>
 
+  <button class="scroll-top" id="scroll-top" type="button" aria-label="Back to top">↑</button>
+
   <script src="i18n.js"></script>
   <script>
     (function () {
@@ -374,10 +428,22 @@
         const pill = document.createElement("button");
         pill.type = "button";
         pill.className = "lang-pill";
+        pill.dataset.lang = code;
         pill.textContent = label;
         pill.addEventListener("click", () => window.applyLanguage(code));
         langCloud.appendChild(pill);
       });
+
+      window.syncLangPills = (lang) => {
+        document.querySelectorAll(".lang-pill").forEach((pill) => {
+          pill.classList.toggle("active", pill.dataset.lang === lang);
+        });
+      };
+      const origApply = window.applyLanguage;
+      window.applyLanguage = (lang) => {
+        origApply(lang);
+        window.syncLangPills?.(lang);
+      };
 
       langBtn.addEventListener("click", () => {
         const open = menu.classList.toggle("open");
@@ -392,6 +458,55 @@
       });
 
       menuToggle?.addEventListener("click", () => navLinks.classList.toggle("open"));
+
+      // Nav scroll + active section
+      const nav = document.getElementById("site-nav");
+      const sections = [...document.querySelectorAll("section[id]")];
+      const navAnchors = [...document.querySelectorAll(".nav-links a[href^='#']")];
+
+      const setActiveNav = () => {
+        const y = window.scrollY + nav.offsetHeight + 40;
+        let current = sections[0]?.id;
+        for (const sec of sections) {
+          if (sec.offsetTop <= y) current = sec.id;
+        }
+        navAnchors.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === `#${current}`));
+      };
+
+      const onScroll = () => {
+        nav?.classList.toggle("scrolled", window.scrollY > 12);
+        setActiveNav();
+        document.getElementById("scroll-top")?.classList.toggle("visible", window.scrollY > 600);
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      document.getElementById("scroll-top")?.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Animated stats
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.querySelectorAll("[data-count]").forEach((el) => {
+            const target = Number(el.dataset.count);
+            if (!target || el.dataset.done) return;
+            el.dataset.done = "1";
+            const start = performance.now();
+            const tick = (now) => {
+              const p = Math.min((now - start) / 900, 1);
+              const val = Math.round(target * (1 - Math.pow(1 - p, 3)));
+              el.textContent = target >= 1000 ? val.toLocaleString() : String(val);
+              if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+          });
+          statsObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.4 });
+      const statsEl = document.getElementById("stats");
+      if (statsEl) statsObserver.observe(statsEl);
 
       // Scroll reveal
       const observer = new IntersectionObserver((entries) => {
