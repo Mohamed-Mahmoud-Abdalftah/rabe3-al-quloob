@@ -36,7 +36,7 @@
   <link rel="preload" as="image" href="assets/home_hero_day.jpg" type="image/jpeg" imagesrcset="assets/home_hero_day.jpg 960w" imagesizes="100vw" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" /></noscript>
-  <link rel="stylesheet" href="styles.css?v=19" />
+  <link rel="stylesheet" href="styles.css?v=20" />
   <script>document.documentElement.classList.add("js");document.getElementById("critical")?.remove();</script>
   <script type="application/ld+json">
   {
@@ -236,9 +236,10 @@
     <section class="experience" id="kids">
       <div class="container">
         <div class="kids-banner reveal">
-          <img class="kids-banner-bg" src="assets/kids_bg_sky_hero.jpg" alt="" loading="lazy" />
-          <div class="kids-banner-overlay"></div>
-          <div class="kids-banner-content">
+          <div class="kids-banner-scene" aria-hidden="true">
+            <img src="assets/kids_bg_sky_hero.jpg" alt="" loading="lazy" decoding="async" />
+          </div>
+          <div class="kids-banner-body">
             <div class="kids-banner-copy">
               <p class="eyebrow eyebrow-light" data-i18n="exp_kids_eyebrow">Kids adventure</p>
               <h2 data-i18n="exp_kids_title">Help your children fall in love with the Quran.</h2>
