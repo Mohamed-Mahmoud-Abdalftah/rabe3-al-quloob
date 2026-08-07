@@ -4,516 +4,443 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ربيع القلوب — Rabe3 Al-Quloob</title>
-  <meta name="description" content="ربيع القلوب — تطبيق قرآني متكامل: مصحف، تلاوة، أذكار، دعاء، أحاديث، قبلة، وضع أطفال، و١٥ ثيمًا — بـ ٢٨ لغة." />
-  <meta name="theme-color" content="#0a0f0d" />
-  <meta property="og:title" content="ربيع القلوب — Rabe3 Al-Quloob" />
-  <meta property="og:description" content="Your complete Quran companion — read, memorize, practice, adhkar, dua, hadith, kids mode & more." />
-  <meta property="og:image" content="assets/rabea_brand_logo.webp" />
+  <meta name="description" content="The most beautiful Quran companion — read with calm, practice with intelligence, grow with your family. Privacy-first. Offline-ready. 28 languages." />
+  <meta name="theme-color" content="#060a08" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="canonical" href="https://mohamed-mahmoud-abdalftah.github.io/rabe3-al-quloob/rabe3/" />
+  <meta property="og:title" content="Rabe3 Al-Quloob — Your Quran, beautifully reimagined" />
+  <meta property="og:description" content="Read, memorize, and live with the Quran — in a calm, private, premium experience for the whole family." />
+  <meta property="og:image" content="https://mohamed-mahmoud-abdalftah.github.io/rabe3-al-quloob/rabe3/assets/rabea_brand_logo.webp" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mohamed-mahmoud-abdalftah.github.io/rabe3-al-quloob/rabe3/" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="assets/rabea_brand_logo.webp" type="image/webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Rabe3 Al-Quloob",
+    "alternateName": "ربيع القلوب",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Android",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Premium Quran companion with recitation studio, kids journey, daily Islamic tools, and privacy-first design."
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Navigation -->
-  <nav class="nav" id="site-nav">
+  <nav class="nav" id="site-nav" aria-label="Primary">
     <div class="container nav-inner">
       <a class="brand" href="#top">
-        <img src="assets/rabea_brand_logo.webp" alt="Rabe3" width="42" height="42" />
-        <span data-i18n="hero_title">ربيع القلوب</span>
+        <img src="assets/rabea_brand_logo.webp" alt="" width="36" height="36" decoding="async" />
+        <span data-i18n="brand_name">ربيع القلوب</span>
       </a>
       <div class="nav-links" id="nav-links">
-        <a href="#features" data-i18n="nav_features">المميزات</a>
-        <a href="#practice" data-i18n="nav_practice">التلاوة</a>
-        <a href="#kids" data-i18n="nav_kids">الأطفال</a>
-        <a href="#themes" data-i18n="nav_themes">الثيمات</a>
-        <a href="#premium" data-i18n="nav_premium">بريميوم</a>
-        <a href="#privacy" data-i18n="nav_privacy">الخصوصية</a>
-        <a href="#languages" data-i18n="nav_langs">اللغات</a>
-        <a href="#download" data-i18n="nav_download">تحميل</a>
+        <a href="#why" data-i18n="nav_why">Why us</a>
+        <a href="#reader" data-i18n="nav_reader">Reader</a>
+        <a href="#studio" data-i18n="nav_studio">Studio</a>
+        <a href="#kids" data-i18n="nav_kids">Kids</a>
+        <a href="#daily" data-i18n="nav_daily">Daily</a>
+        <a href="#privacy" data-i18n="nav_privacy">Privacy</a>
+        <a href="#download" class="nav-cta" data-i18n="nav_download">Download</a>
       </div>
-      <div style="display:flex;gap:8px;align-items:center">
+      <div class="nav-actions">
         <div class="lang-picker">
           <button class="lang-btn" id="lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
-            <span aria-hidden="true">🌐</span>
+            <span class="lang-icon" aria-hidden="true">🌐</span>
             <span id="lang-btn-label">العربية</span>
           </button>
-          <div class="lang-menu" id="lang-menu" role="listbox"></div>
+          <div class="lang-menu" id="lang-menu" role="listbox" aria-label="Language"></div>
         </div>
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Menu">☰</button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+          <span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="hero" id="top">
-    <div class="hero-bg">
-      <img src="assets/home_hero_day.png" alt="" />
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <div>
-        <div class="hero-badge" data-i18n="hero_badge">✦ تجربة إسلامية متكاملة</div>
-        <h1 data-i18n="hero_title">ربيع القلوب</h1>
-        <p class="hero-lead" data-i18n="hero_lead">تطبيق قرآني هادئ يغذي القلب — مصحف، استوديو تلاوة، أذكار، دعاء، أحاديث، مواقيت، مغامرة أطفال، والمزيد في مكان واحد.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#download" data-i18n="hero_cta_primary">حمّل التطبيق</a>
-          <a class="btn btn-ghost" href="#features" data-i18n="hero_cta_secondary">استكشف المميزات</a>
-        </div>
+  <main id="main">
+    <!-- Hero -->
+    <header class="hero" id="top">
+      <div class="hero-ambient" aria-hidden="true">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-grain"></div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-glow" aria-hidden="true"></div>
-        <div class="hero-device">
-          <div class="hero-device-notch" aria-hidden="true"></div>
-          <div class="hero-phone">
-            <img src="assets/home_hero_night.png" alt="Rabe3 Al-Quloob app preview" width="480" height="960" />
-          </div>
-        </div>
-        <div class="hero-float hero-float-1" aria-hidden="true"><img src="assets/home_ic_mushaf_3d.png" alt="" width="48" height="48" /></div>
-        <div class="hero-float hero-float-2" aria-hidden="true"><img src="assets/home_ic_azkar_3d.png" alt="" width="44" height="44" /></div>
+      <div class="hero-bg">
+        <img src="assets/home_hero_day.png" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" />
       </div>
-    </div>
-  </header>
-
-  <!-- Stats -->
-  <div class="container stats reveal" id="stats">
-    <div class="stat"><strong data-count="28">28</strong><span data-i18n="stat_langs">لغة</span></div>
-    <div class="stat"><strong data-count="288">288</strong><span data-i18n="stat_azkar">ذكر</span></div>
-    <div class="stat"><strong data-count="148">148</strong><span data-i18n="stat_dua">دعاء</span></div>
-    <div class="stat"><strong data-count="1896">1,896</strong><span data-i18n="stat_hadith">حديث</span></div>
-    <div class="stat"><strong data-count="15">15</strong><span data-i18n="stat_themes">ثيم</span></div>
-  </div>
-
-  <div class="container trust-strip reveal" aria-label="Trust highlights">
-    <span class="trust-item" data-i18n="trust_no_ads">بدون إعلانات</span>
-    <span class="trust-dot" aria-hidden="true"></span>
-    <span class="trust-item" data-i18n="trust_privacy">خصوصية أولاً</span>
-    <span class="trust-dot" aria-hidden="true"></span>
-    <span class="trust-item" data-i18n="trust_offline">يعمل بدون إنترنت للقراءة</span>
-    <span class="trust-dot" aria-hidden="true"></span>
-    <span class="trust-item" data-i18n="trust_family">وضع عائلي وأطفال</span>
-  </div>
-
-  <!-- Features -->
-  <section id="features">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="eyebrow" data-i18n="section_features_eyebrow">كل ما تحتاجه</div>
-        <h2 data-i18n="section_features_title">ثمانية أركان في شاشتك الرئيسية</h2>
-        <p data-i18n="section_features_desc">كل أداة لرحلتك اليومية مع القرآن — بنقرة واحدة.</p>
-      </div>
-      <div class="feature-grid">
-        <article class="feature-card reveal">
-          <div class="feature-icon"><img src="assets/home_ic_mushaf_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
-          <h3 data-i18n="f_mushaf_t">المصحف</h3>
-          <p data-i18n="f_mushaf_d">اقرأ القرآن الكريم مع العلامات والملاحظات والتفسير والترجمات وتجربة قراءة هادئة.</p>
-        </article>
-        <article class="feature-card reveal">
-          <div class="feature-icon"><img src="assets/home_ic_quran_3d.png" alt="" width="72" height="72" loading="lazy" onerror="this.src='assets/home_continue_quran_3d.png'" /></div>
-          <h3 data-i18n="f_practice_t">استوديو التلاوة</h3>
-          <p data-i18n="f_practice_d">اسمع، ردّد، ظلّل مع الشيخ، احفظ، وراجع بجلسات ذكية.</p>
-        </article>
-        <article class="feature-card reveal">
-          <div class="feature-icon"><img src="assets/home_ic_azkar_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
-          <h3 data-i18n="f_azkar_t">الأذكار</h3>
-          <p data-i18n="f_azkar_d">٢٨٨ ذكرًا مأثورًا في ٢٨+ فئة — صباح، مساء، سفر، نوم، وأكثر.</p>
-        </article>
-        <article class="feature-card reveal">
-          <div class="feature-icon"><img src="assets/home_ic_dua_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
-          <h3 data-i18n="f_dua_t">الدعاء</h3>
-          <p data-i18n="f_dua_d">١٤٨ دعاءً مأثورًا مصنّفًا مع دعاء اليوم.</p>
-        </article>
-        <article class="feature-card reveal">
-          <div class="feature-icon"><img src="assets/home_ic_hadith_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
-          <h3 data-i18n="f_hadith_t">الأحاديث</h3>
-          <p data-i18n="f_hadith_d">رياض الصالحين — ١٬٨٩٦ حديثًا في ٢٠ كتابًا مع بحث وشروح.</p>
-        </article>
-        <article class="feature-card reveal">
-          <div class="feature-icon"><img src="assets/home_ic_qibla_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
-          <h3 data-i18n="f_qibla_t">القبلة</h3>
-          <p data-i18n="f_qibla_d">بوصلة دقيقة لاتجاه الكعبة مع GPS ومعايرة الحساس.</p>
-        </article>
-        <article class="feature-card reveal">
-          <div class="feature-icon"><img src="assets/home_ic_tasbih_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
-          <h3 data-i18n="f_tasbih_t">السبحة</h3>
-          <p data-i18n="f_tasbih_d">عداد ذكر رقمي بوضع الخرز، أهداف يومية، سلاسل، وإحصائيات.</p>
-        </article>
-        <article class="feature-card reveal">
-          <div class="feature-icon"><img src="assets/home_ic_kaaba_3d.png" alt="" width="72" height="72" loading="lazy" /></div>
-          <h3 data-i18n="f_khatma_t">الختمة</h3>
-          <p data-i18n="f_khatma_d">تتبع إتمام القرآن — الصفحات، الأجزاء، الأهداف اليومية، وتدرّب على صفحة اليوم.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Practice Studio -->
-  <section id="practice" class="section-alt">
-    <div class="container">
-      <div class="showcase reveal">
-        <div class="showcase-frame showcase-phone">
-          <div class="showcase-phone-screen">
-            <img src="assets/home_hero_night.png" alt="Recitation Studio" loading="lazy" />
-          </div>
-          <div class="showcase-bento">
-            <div class="bento-tile"><img src="assets/home_ic_quran_3d.png" alt="" loading="lazy" /></div>
-            <div class="bento-tile"><img src="assets/home_gift_3d.png" alt="" loading="lazy" /></div>
-            <div class="bento-tile"><img src="assets/home_ic_mushaf_3d.png" alt="" loading="lazy" /></div>
-          </div>
-        </div>
-        <div class="showcase-body">
-          <div class="eyebrow" data-i18n="section_practice_eyebrow">استوديو التلاوة</div>
-          <h3 data-i18n="section_practice_title">تدرّب كالحافظ</h3>
-          <p data-i18n="section_practice_desc">تظليل مع الشيخ، وضع الصدى، حفظ تدريجي، مراجعة تكيفية، مقاطع، سلاسل، تحديات عائلية، ومدرب ذكي.</p>
-          <div class="chip-list" data-i18n-chips="practice_chips"></div>
-        </div>
-      </div>
-      <div class="showcase reverse reveal">
-        <div class="showcase-body">
-          <div class="eyebrow" data-i18n="section_daily_eyebrow">حياتك اليومية</div>
-          <h3 data-i18n="section_daily_title">يومك مع ربيع القلوب</h3>
-          <p data-i18n="section_daily_desc">مواقيت الصلاة، آية اليوم، التحدي اليومي، بانر رمضان، الإنجازات، والتذكيرات.</p>
-          <div class="chip-list" data-i18n-chips="daily_chips"></div>
-        </div>
-        <div class="showcase-frame wide showcase-cover">
-          <img src="assets/home_ramadan_banner_bg.png" alt="Daily features" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Kids -->
-  <section id="kids">
-    <div class="container">
-      <div class="kids-hero reveal">
-        <img class="bg" src="assets/kids_bg_sky_hero.jpg" alt="" loading="lazy" />
-        <div class="overlay"></div>
-        <div class="content">
-          <div class="kids-hero-copy">
-            <span class="kids-pill" data-i18n="section_kids_eyebrow">وضع الأطفال</span>
-            <h2 data-i18n="section_kids_title">مغامرة قرآنية للأطفال</h2>
-            <p data-i18n="section_kids_desc">عالم سحري يتعلم فيه الأطفال القرآن عبر القصص وخرائط الرحلة والمكافآت — محمي برقم سري للوالدين.</p>
-          </div>
-          <div class="kids-chars">
-            <img src="assets/kids_journey_char_boy_hafiz_idle.webp" alt="" width="100" height="100" loading="lazy" />
-            <img src="assets/kids_journey_char_girl_hafiza_idle.webp" alt="" width="100" height="100" loading="lazy" />
-            <img src="assets/kids_journey_reward_chest_open.webp" alt="" width="80" height="80" loading="lazy" />
-          </div>
-        </div>
-      </div>
-      <div class="kids-grid">
-        <article class="kids-card reveal">
-          <div class="icon-wrap"><img src="assets/kids_journey_island_juz_amma.webp" alt="" loading="lazy" /></div>
-          <h4 data-i18n="kids_c1_t">خريطة الرحلة</h4>
-          <p data-i18n="kids_c1_d">افتح الجزر، اجمع النجوم، وأكمل السور على خريطة مغامرات.</p>
-        </article>
-        <article class="kids-card reveal">
-          <div class="icon-wrap"><img src="assets/kids_journey_island_golden.webp" alt="" loading="lazy" /></div>
-          <h4 data-i18n="kids_c2_t">قصص ومرح</h4>
-          <p data-i18n="kids_c2_d">قصص إسلامية مرئية وحكايات ممتعة بـ ٢٣ لغة من حول العالم.</p>
-        </article>
-        <article class="kids-card reveal">
-          <div class="icon-wrap"><img src="assets/home_ic_mushaf_3d.png" alt="" loading="lazy" /></div>
-          <h4 data-i18n="kids_c3_t">اسمع وردّد</h4>
-          <p data-i18n="kids_c3_d">تلاوة مناسبة للأطفال بالميكروفون — اسمع، سجّل، واستمع لنفسك.</p>
-        </article>
-        <article class="kids-card reveal">
-          <div class="icon-wrap"><img src="assets/kids_journey_reward_chest_open.webp" alt="" loading="lazy" /></div>
-          <h4 data-i18n="kids_c4_t">المتجر والمكافآت</h4>
-          <p data-i18n="kids_c4_d">اجمع النجوم، افتح الشخصيات والملابس والقبعات واحتفل بالإنجازات.</p>
-        </article>
-        <article class="kids-card reveal">
-          <div class="icon-wrap"><img src="assets/home_gift_3d.png" alt="" loading="lazy" /></div>
-          <h4 data-i18n="kids_c5_t">فيديوهات التجويد</h4>
-          <p data-i18n="kids_c5_d">دروس فيديو قصيرة لتعلم أحكام التجويد بطريقة ممتعة.</p>
-        </article>
-        <article class="kids-card reveal">
-          <div class="icon-wrap"><img src="assets/kids_journey_char_girl_hafiza_idle.webp" alt="" loading="lazy" /></div>
-          <h4 data-i18n="kids_c6_t">لوحة الوالدين</h4>
-          <p data-i18n="kids_c6_d">ملفات متعددة، وقت شاشة، تتبع التقدم، وحماية برقم سري.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Themes -->
-  <section id="themes" class="section-alt">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="eyebrow" data-i18n="section_themes_eyebrow">ثيمات القراءة</div>
-        <h2 data-i18n="section_themes_title">١٥ ثيمًا مذهلًا للمصحف</h2>
-        <p data-i18n="section_themes_desc">من الفجر الذهبي إلى ليلة المجرة — ثيمات مجانية وبريميوم تحوّل تجربة القراءة.</p>
-      </div>
-      <div class="theme-grid reveal">
-        <div class="theme-card">
-          <img src="assets/theme_hero_golden_dawn.jpg" alt="" loading="lazy" />
-          <div class="label" data-i18n="theme_golden">الفجر الذهبي</div>
-        </div>
-        <div class="theme-card">
-          <img src="assets/theme_hero_midnight_mosque.jpg" alt="" loading="lazy" />
-          <div class="label" data-i18n="theme_midnight">مسجد منتصف الليل</div>
-        </div>
-        <div class="theme-card">
-          <img src="assets/theme_hero_emerald_paradise.jpg" alt="" loading="lazy" />
-          <div class="label" data-i18n="theme_emerald">جنة الزمرد</div>
-        </div>
-        <div class="theme-card premium">
-          <img src="assets/theme_hero_ottoman_blue.jpg" alt="" loading="lazy" />
-          <div class="label" data-i18n="theme_ottoman">الأزرق العثماني</div>
-        </div>
-        <div class="theme-card premium">
-          <img src="assets/theme_hero_neon_makkah.jpg" alt="" loading="lazy" />
-          <div class="label" data-i18n="theme_neon">مكة النيون</div>
-        </div>
-        <div class="theme-card premium">
-          <img src="assets/theme_hero_sakura_mosque.jpg" alt="" loading="lazy" />
-          <div class="label" data-i18n="theme_sakura">مسجد الساكورا</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Premium -->
-  <section id="premium">
-    <div class="container">
-      <div class="premium-box reveal">
-        <div class="premium-visual" aria-hidden="true">
-          <img src="assets/theme_hero_golden_dawn.jpg" alt="" loading="lazy" />
-        </div>
-        <div>
-          <div class="eyebrow" data-i18n="section_premium_eyebrow">بريميوم</div>
-          <h3 data-i18n="section_premium_title">ربيع بلس والعائلة</h3>
-          <p data-i18n="section_premium_desc">افتح ثيمات بريميوم، مزامنة سحابية للمقاطع، مدرب ذكي، تحليل تجويد QTA، ووضع الأطفال.</p>
-          <ul class="premium-perks">
-            <li data-i18n="premium_p1">ثيمات حصرية للقراءة</li>
-            <li data-i18n="premium_p2">مزامنة سحابية للمقاطع</li>
-            <li data-i18n="premium_p3">مدرب ذكي وتحليل تجويد</li>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="hero-eyebrow" data-i18n="hero_eyebrow">A new standard for Quran apps</p>
+          <h1 data-i18n="hero_headline">Your Quran journey, beautifully calm.</h1>
+          <p class="hero-sub" data-i18n="hero_sub">Read with focus. Practice with guidance. Live each day closer to the Book — without noise, ads, or compromise.</p>
+          <ul class="hero-benefits">
+            <li data-i18n="hero_b1">Immersive Mushaf with tafsir, audio, and fifteen serene themes</li>
+            <li data-i18n="hero_b2">AI-guided recitation studio that helps you improve, not judge</li>
+            <li data-i18n="hero_b3">A safe kids world and daily companion — private by design</li>
           </ul>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="#download" data-i18n="hero_cta_primary">Get the app</a>
+            <a class="btn btn-ghost btn-lg" href="#why" data-i18n="hero_cta_secondary">See how it works</a>
+          </div>
         </div>
-        <a class="btn btn-primary" href="#download" data-i18n="section_premium_cta">اعرف المزيد في التطبيق</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Privacy -->
-  <section id="privacy" class="section-alt">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="eyebrow" data-i18n="section_privacy_eyebrow">خصوصيتك تهمنا</div>
-        <h2 data-i18n="section_privacy_title">خصوصية وشفافية</h2>
-        <p data-i18n="section_privacy_desc">نحترم خصوصيتك — لا إعلانات، لا بيع لبياناتك، وتحكم كامل في الأذونات.</p>
-      </div>
-      <div class="privacy-grid reveal">
-        <article class="privacy-card">
-          <div class="icon" aria-hidden="true">🔒</div>
-          <h4 data-i18n="privacy_c1_t">بياناتك ملكك</h4>
-          <p data-i18n="privacy_c1_d">التقدم والعلامات والملاحظات تُخزَّن على جهازك. لا نجمع بريدًا إلكترونيًا للاستخدام الأساسي.</p>
-        </article>
-        <article class="privacy-card">
-          <div class="icon" aria-hidden="true">👶</div>
-          <h4 data-i18n="privacy_c2_t">وضع الأطفال آمن</h4>
-          <p data-i18n="privacy_c2_d">وضع الأطفال محمي برقم سري للوالدين، بدون إعلانات، مع تحكم في وقت الشاشة.</p>
-        </article>
-        <article class="privacy-card">
-          <div class="icon" aria-hidden="true">🎙️</div>
-          <h4 data-i18n="privacy_c3_t">الميكروفون بإذنك</h4>
-          <p data-i18n="privacy_c3_d">الميكروفون للتدريب على التلاوة فقط — تُعالج الصوت محليًا قدر الإمكان ولا تُباع بياناتك.</p>
-        </article>
-      </div>
-      <div class="privacy-cta reveal">
-        <a class="btn btn-outline" href="../privacy/" data-i18n="footer_privacy">سياسة الخصوصية الكاملة</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Languages -->
-  <section id="languages">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="eyebrow" data-i18n="section_langs_eyebrow">للجميع</div>
-        <h2 data-i18n="section_langs_title">٢٨ لغة</h2>
-        <p data-i18n="section_langs_desc">واجهة التطبيق بالكامل متوفرة بـ ٢٨ لغة — من العربية والإنجليزية إلى الأردية والصينية والتركية والمزيد.</p>
-      </div>
-      <div class="lang-panel reveal">
-        <div class="lang-cloud" id="lang-cloud"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Community -->
-  <section id="community" class="section-alt">
-    <div class="container">
-      <div class="community-card reveal">
-        <div>
-          <div class="eyebrow" data-i18n="section_community_eyebrow">تواصل معنا</div>
-          <h2 data-i18n="section_community_title">انضم لمجتمع ربيع القلوب</h2>
-          <p data-i18n="section_community_desc">تابعنا على فيسبوك لآخر الأخبار، موعد الإطلاق، والتحديثات الجديدة.</p>
-        </div>
-        <div class="community-actions">
-          <a class="btn btn-facebook" href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" data-i18n="footer_facebook">تابعنا على فيسبوك</a>
-          <a class="btn btn-outline" href="mailto:support@rabe3alquloob.com" data-i18n="footer_contact">تواصل معنا</a>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="device-frame">
+            <div class="device-notch"></div>
+            <div class="device-screen">
+              <img src="assets/home_hero_night.png" alt="" width="480" height="960" decoding="async" />
+            </div>
+          </div>
+          <div class="float-icon float-1"><img src="assets/home_ic_mushaf_3d.png" alt="" width="48" height="48" loading="lazy" /></div>
+          <div class="float-icon float-2"><img src="assets/home_ic_azkar_3d.png" alt="" width="44" height="44" loading="lazy" /></div>
+          <div class="float-icon float-3"><img src="assets/home_gift_3d.png" alt="" width="40" height="40" loading="lazy" /></div>
         </div>
       </div>
-    </div>
-  </section>
+      <a class="scroll-hint" href="#trust" aria-label="Scroll">
+        <span class="scroll-line"></span>
+      </a>
+    </header>
 
-  <!-- Download -->
-  <section id="download">
-    <div class="container">
-      <div class="download-card reveal">
-        <div class="download-glow" aria-hidden="true"></div>
-        <img class="logo" src="assets/rabea_brand_logo.webp" alt="Rabe3 Al-Quloob" width="100" height="100" loading="lazy" />
-        <h2 data-i18n="hero_title">ربيع القلوب</h2>
-        <p class="lead" data-i18n="download_lead">تطبيق قرآني متكامل — حمّله قريبًا على Google Play</p>
-        <div class="download-actions">
-          <a class="btn btn-primary" id="play-store-btn" href="https://play.google.com/store/apps/details?id=com.rabe3alquloob.app" target="_blank" rel="noopener" data-i18n="hero_cta_primary">حمّل التطبيق</a>
-          <a class="btn btn-facebook" href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" data-i18n="footer_facebook">تابعنا على فيسبوك</a>
+    <!-- Trust -->
+    <section class="trust" id="trust" aria-label="Trust">
+      <div class="container">
+        <div class="trust-grid reveal" id="stats">
+          <div class="trust-pill"><span class="trust-icon" aria-hidden="true">🛡️</span><span data-i18n="trust_no_ads">No ads, ever</span></div>
+          <div class="trust-pill"><span class="trust-icon" aria-hidden="true">🔒</span><span data-i18n="trust_privacy">Privacy first</span></div>
+          <div class="trust-pill"><span class="trust-icon" aria-hidden="true">📴</span><span data-i18n="trust_offline">Works offline</span></div>
+          <div class="trust-pill"><span class="trust-icon" aria-hidden="true">👨‍👩‍👧</span><span data-i18n="trust_family">Family safe</span></div>
+          <div class="trust-pill"><span class="trust-icon" aria-hidden="true">🌍</span><strong data-count="28">28</strong> <span data-i18n="stat_langs">languages</span></div>
         </div>
-        <span class="package-id">com.rabe3alquloob.app</span>
-        <span class="coming-soon" data-i18n="download_soon">قريبًا على Google Play — سجّل متابعتنا على فيسبوك لمعرفة موعد الإطلاق</span>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="container footer-inner">
+    <!-- Why -->
+    <section class="why" id="why">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow" data-i18n="why_eyebrow">Why Rabe3 Al-Quloob</p>
+          <h2 data-i18n="why_title">Built for presence, not distraction.</h2>
+          <p class="section-lead" data-i18n="why_lead">Most apps scatter your attention. We designed one calm home for reading, remembering, and growing — with the dignity your worship deserves.</p>
+        </div>
+        <div class="why-grid">
+          <article class="why-card reveal">
+            <div class="why-num">01</div>
+            <h3 data-i18n="why_1_t">Designed for stillness</h3>
+            <p data-i18n="why_1_d">Every screen is crafted to help you breathe, focus, and stay with the ayah — not fight the interface.</p>
+          </article>
+          <article class="why-card reveal">
+            <div class="why-num">02</div>
+            <h3 data-i18n="why_2_t">Intelligence that serves you</h3>
+            <p data-i18n="why_2_d">Practice tools that listen, compare, and coach — so improvement feels natural, not overwhelming.</p>
+          </article>
+          <article class="why-card reveal">
+            <div class="why-num">03</div>
+            <h3 data-i18n="why_3_t">Trust you can feel</h3>
+            <p data-i18n="why_3_d">No ads. No data selling. Your progress stays yours — on your device, under your control.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reader -->
+    <section class="experience" id="reader">
+      <div class="container experience-grid">
+        <div class="experience-visual reveal">
+          <div class="visual-card">
+            <img src="assets/home_ic_mushaf_3d.png" alt="" class="visual-icon" width="80" height="80" loading="lazy" />
+            <div class="visual-device">
+              <img src="assets/theme_hero_midnight_mosque.jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="experience-copy reveal">
+          <p class="eyebrow" data-i18n="exp_read_eyebrow">Reading experience</p>
+          <h2 data-i18n="exp_read_title">Lose yourself in the Mushaf.</h2>
+          <p class="section-lead" data-i18n="exp_read_lead">A reading space that feels sacred and modern — where every verse is easy to reach, understand, and return to.</p>
+          <ul class="highlights">
+            <li data-i18n="exp_read_h1">Understand every verse with trusted tafsir and translations</li>
+            <li data-i18n="exp_read_h2">Listen to beautiful recitations while you read</li>
+            <li data-i18n="exp_read_h3">Bookmark, annotate, and pick up exactly where you left off</li>
+            <li data-i18n="exp_read_h4">Search the entire Quran in seconds</li>
+          </ul>
+          <a class="btn btn-outline" href="#themes" data-i18n="exp_read_cta">Explore themes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Studio -->
+    <section class="experience experience-alt" id="studio">
+      <div class="container experience-grid reverse">
+        <div class="experience-visual reveal">
+          <div class="visual-card studio-card">
+            <div class="visual-device tall">
+              <img src="assets/home_hero_night.png" alt="" loading="lazy" />
+            </div>
+            <div class="bento-stack">
+              <div class="bento-item"><img src="assets/home_ic_quran_3d.png" alt="" loading="lazy" /></div>
+              <div class="bento-item"><img src="assets/home_continue_quran_3d.png" alt="" loading="lazy" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="experience-copy reveal">
+          <p class="eyebrow" data-i18n="exp_studio_eyebrow">Recitation studio</p>
+          <h2 data-i18n="exp_studio_title">Improve your voice, ayah by ayah.</h2>
+          <p class="section-lead" data-i18n="exp_studio_lead">Train like a student of tajweed — with tools that shadow the sheikh, highlight your progress, and guide your next step.</p>
+          <ul class="highlights">
+            <li data-i18n="exp_studio_h1">Listen, repeat, and shadow master reciters</li>
+            <li data-i18n="exp_studio_h2">Record yourself and compare waveforms side by side</li>
+            <li data-i18n="exp_studio_h3">Get intelligent feedback that builds confidence</li>
+            <li data-i18n="exp_studio_h4">Memorize with adaptive review that respects your pace</li>
+          </ul>
+          <a class="btn btn-outline" href="#download" data-i18n="exp_studio_cta">Start practicing</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kids -->
+    <section class="experience" id="kids">
+      <div class="container">
+        <div class="kids-banner reveal">
+          <img class="kids-banner-bg" src="assets/kids_bg_sky_hero.jpg" alt="" loading="lazy" />
+          <div class="kids-banner-overlay"></div>
+          <div class="kids-banner-content">
+            <div class="kids-banner-copy">
+              <p class="eyebrow eyebrow-light" data-i18n="exp_kids_eyebrow">Kids adventure</p>
+              <h2 data-i18n="exp_kids_title">Where young hearts meet the Quran.</h2>
+              <p data-i18n="exp_kids_lead">A joyful world of stories, journeys, and rewards — designed for children, protected by parents.</p>
+              <ul class="highlights highlights-light">
+                <li data-i18n="exp_kids_h1">Explore islands and earn stars on a living journey map</li>
+                <li data-i18n="exp_kids_h2">Stories and fun tales in 23 languages</li>
+                <li data-i18n="exp_kids_h3">Listen, record, and hear themselves grow</li>
+                <li data-i18n="exp_kids_h4">Parent PIN, screen time, and progress you control</li>
+              </ul>
+            </div>
+            <div class="kids-chars" aria-hidden="true">
+              <img src="assets/kids_journey_char_boy_hafiz_idle.webp" alt="" width="110" height="110" loading="lazy" />
+              <img src="assets/kids_journey_char_girl_hafiza_idle.webp" alt="" width="110" height="110" loading="lazy" />
+              <img src="assets/kids_journey_reward_chest_open.webp" alt="" width="88" height="88" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daily -->
+    <section class="experience experience-alt" id="daily">
+      <div class="container experience-grid">
+        <div class="experience-visual reveal">
+          <div class="visual-card wide-card">
+            <img src="assets/home_ramadan_banner_bg.png" alt="" class="wide-shot" loading="lazy" />
+          </div>
+        </div>
+        <div class="experience-copy reveal">
+          <p class="eyebrow" data-i18n="exp_daily_eyebrow">Daily companion</p>
+          <h2 data-i18n="exp_daily_title">Stay connected throughout your day.</h2>
+          <p class="section-lead" data-i18n="exp_daily_lead">From Fajr to sleep — gentle reminders, authentic adhkar, and habits that keep the Quran close.</p>
+          <ul class="highlights">
+            <li data-i18n="exp_daily_h1">288 adhkar and 148 supplications, organized for real life</li>
+            <li data-i18n="exp_daily_h2">Prayer times, Qibla, and dhikr counter in one place</li>
+            <li data-i18n="exp_daily_h3">Track your khatma and celebrate consistent progress</li>
+            <li data-i18n="exp_daily_h4">1,896 hadiths from Riyadh al-Salihin with search</li>
+          </ul>
+          <a class="btn btn-outline" href="#download" data-i18n="exp_daily_cta">Build your routine</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Themes -->
+    <section class="themes" id="themes">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow" data-i18n="section_themes_eyebrow">Reader themes</p>
+          <h2 data-i18n="section_themes_title">Fifteen moods for your Mushaf.</h2>
+          <p class="section-lead" data-i18n="section_themes_desc">From golden dawn to midnight mosque — each theme transforms reading into an experience you want to return to.</p>
+        </div>
+        <div class="theme-scroll reveal">
+          <figure class="theme-tile"><img src="assets/theme_hero_golden_dawn.jpg" alt="" loading="lazy" /><figcaption data-i18n="theme_golden">Golden Dawn</figcaption></figure>
+          <figure class="theme-tile"><img src="assets/theme_hero_midnight_mosque.jpg" alt="" loading="lazy" /><figcaption data-i18n="theme_midnight">Midnight Mosque</figcaption></figure>
+          <figure class="theme-tile"><img src="assets/theme_hero_emerald_paradise.jpg" alt="" loading="lazy" /><figcaption data-i18n="theme_emerald">Emerald Paradise</figcaption></figure>
+          <figure class="theme-tile premium"><img src="assets/theme_hero_ottoman_blue.jpg" alt="" loading="lazy" /><figcaption data-i18n="theme_ottoman">Ottoman Blue</figcaption></figure>
+          <figure class="theme-tile premium"><img src="assets/theme_hero_neon_makkah.jpg" alt="" loading="lazy" /><figcaption data-i18n="theme_neon">Neon Makkah</figcaption></figure>
+          <figure class="theme-tile premium"><img src="assets/theme_hero_sakura_mosque.jpg" alt="" loading="lazy" /><figcaption data-i18n="theme_sakura">Sakura Mosque</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="privacy" id="privacy">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow" data-i18n="section_privacy_eyebrow">Privacy</p>
+          <h2 data-i18n="section_privacy_title">Your worship stays yours.</h2>
+          <p class="section-lead" data-i18n="section_privacy_desc">We built Rabe3 Al-Quloob the way a sacred app should be built — with respect, transparency, and zero compromise on your data.</p>
+        </div>
+        <div class="privacy-grid reveal">
+          <article class="privacy-card">
+            <div class="card-icon" aria-hidden="true">🔐</div>
+            <h3 data-i18n="privacy_c1_t">On-device by default</h3>
+            <p data-i18n="privacy_c1_d">Bookmarks, notes, and progress live on your phone. No account required to begin your journey.</p>
+          </article>
+          <article class="privacy-card">
+            <div class="card-icon" aria-hidden="true">👶</div>
+            <h3 data-i18n="privacy_c2_t">Children protected</h3>
+            <p data-i18n="privacy_c2_d">Kids mode is PIN-gated, ad-free, and designed with parental controls you actually use.</p>
+          </article>
+          <article class="privacy-card">
+            <div class="card-icon" aria-hidden="true">🎙️</div>
+            <h3 data-i18n="privacy_c3_t">Microphone with consent</h3>
+            <p data-i18n="privacy_c3_d">Audio is for practice only — processed on-device whenever possible, never sold.</p>
+          </article>
+        </div>
+        <div class="privacy-link reveal">
+          <a class="btn btn-ghost" href="../privacy/" data-i18n="footer_privacy">Read full privacy policy</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Premium -->
+    <section class="premium" id="premium">
+      <div class="container">
+        <div class="premium-panel reveal">
+          <div class="premium-glow" aria-hidden="true"></div>
+          <div class="premium-content">
+            <p class="eyebrow eyebrow-gold" data-i18n="section_premium_eyebrow">Premium</p>
+            <h2 data-i18n="section_premium_title">Go deeper with Rabe3 Plus.</h2>
+            <p class="section-lead" data-i18n="section_premium_desc">Exclusive themes, cloud sync for practice clips, advanced tajweed analysis, and family features — for those who want the fullest experience.</p>
+            <ul class="premium-list">
+              <li data-i18n="premium_p1">Exclusive reader themes crafted for night and travel</li>
+              <li data-i18n="premium_p2">Cloud backup for your practice clips and progress</li>
+              <li data-i18n="premium_p3">AI coach and deep tajweed insights</li>
+            </ul>
+          </div>
+          <div class="premium-visual" aria-hidden="true">
+            <img src="assets/theme_hero_golden_dawn.jpg" alt="" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof -->
+    <section class="quotes" id="quotes" aria-label="Testimonials">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow" data-i18n="quotes_eyebrow">What seekers say</p>
+          <h2 data-i18n="quotes_title">Made for hearts that crave calm.</h2>
+        </div>
+        <div class="quotes-grid">
+          <blockquote class="quote-card reveal">
+            <p data-i18n="quote_1">"Finally — a Quran app that doesn't fight for my attention."</p>
+          </blockquote>
+          <blockquote class="quote-card reveal">
+            <p data-i18n="quote_2">"My children ask to open Kids mode. That never happened before."</p>
+          </blockquote>
+          <blockquote class="quote-card reveal">
+            <p data-i18n="quote_3">"The recitation studio feels like a patient teacher beside me."</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-intro reveal">
+          <p class="eyebrow" data-i18n="faq_eyebrow">FAQ</p>
+          <h2 data-i18n="faq_title">Questions, answered.</h2>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span data-i18n="faq_q1">Is Rabe3 Al-Quloob free?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer"><p data-i18n="faq_a1">Yes. Core reading, adhkar, dua, hadith, and daily tools are free. Premium unlocks advanced themes, cloud sync, and deeper practice features.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span data-i18n="faq_q2">Does it work offline?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer"><p data-i18n="faq_a2">Yes. Download your Mushaf and audio for reading and listening without an internet connection.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span data-i18n="faq_q3">Is it safe for children?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer"><p data-i18n="faq_a3">Kids mode is ad-free, PIN-protected, and includes parental controls for screen time and profiles.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span data-i18n="faq_q4">Which languages are supported?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer"><p data-i18n="faq_a4">The entire app interface is available in 28 languages — from Arabic and English to Urdu, Turkish, Chinese, and more.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="languages" id="languages">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow" data-i18n="section_langs_eyebrow">Global</p>
+          <h2 data-i18n="section_langs_title">28 languages. One home.</h2>
+          <p class="section-lead" data-i18n="section_langs_desc">Switch the entire experience to the language your heart understands.</p>
+        </div>
+        <div class="lang-cloud reveal" id="lang-cloud" role="list"></div>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section class="download" id="download">
+      <div class="container">
+        <div class="download-panel reveal">
+          <div class="download-ambient" aria-hidden="true"></div>
+          <img class="download-logo" src="assets/rabea_brand_logo.webp" alt="" width="88" height="88" loading="lazy" />
+          <h2 data-i18n="download_title">Begin your journey today.</h2>
+          <p class="section-lead" data-i18n="download_lead">Download Rabe3 Al-Quloob — calm, beautiful, and built for a lifetime with the Quran.</p>
+          <div class="download-actions">
+            <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.rabe3alquloob.app" target="_blank" rel="noopener" data-i18n="hero_cta_primary">Get the app</a>
+            <a class="btn btn-facebook" href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" data-i18n="footer_facebook">Follow on Facebook</a>
+          </div>
+          <p class="download-note" data-i18n="download_soon">Coming soon on Google Play — follow us for launch updates</p>
+          <code class="package-id">com.rabe3alquloob.app</code>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
       <div class="footer-brand">
-        <strong data-i18n="hero_title">ربيع القلوب</strong>
-        <span data-i18n="footer_tagline">تقبل الله منا ومنكم. © ربيع القلوب</span>
-        <div class="footer-social">
-          <a href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-          </a>
-        </div>
+        <strong data-i18n="brand_name">ربيع القلوب</strong>
+        <p data-i18n="footer_tagline">May Allah accept our efforts. © Rabe3 Al-Quloob</p>
+        <a class="footer-social" href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        </a>
       </div>
-      <div class="footer-links">
-        <a href="../privacy/" data-i18n="footer_privacy">سياسة الخصوصية</a>
-        <a href="https://www.facebook.com/rabe3alquloob/" target="_blank" rel="noopener" data-i18n="footer_facebook">فيسبوك</a>
-        <a href="mailto:support@rabe3alquloob.com" data-i18n="footer_contact">تواصل معنا</a>
-      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#reader" data-i18n="nav_reader">Reader</a>
+        <a href="#studio" data-i18n="nav_studio">Studio</a>
+        <a href="#kids" data-i18n="nav_kids">Kids</a>
+        <a href="../privacy/" data-i18n="footer_privacy">Privacy</a>
+        <a href="mailto:support@rabe3alquloob.com" data-i18n="footer_contact">Contact</a>
+      </nav>
     </div>
   </footer>
 
   <button class="scroll-top" id="scroll-top" type="button" aria-label="Back to top">↑</button>
 
-  <script src="i18n.js?v=3"></script>
-  <script>
-    (function () {
-      const menu = document.getElementById("lang-menu");
-      const langBtn = document.getElementById("lang-btn");
-      const navLinks = document.getElementById("nav-links");
-      const menuToggle = document.getElementById("menu-toggle");
-      const langCloud = document.getElementById("lang-cloud");
-
-      // Build language picker
-      window.RABE3_LANG_META.forEach(({ code, label }) => {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.dataset.lang = code;
-        btn.textContent = label;
-        btn.addEventListener("click", () => {
-          window.applyLanguage(code);
-          menu.classList.remove("open");
-          langBtn.setAttribute("aria-expanded", "false");
-        });
-        menu.appendChild(btn);
-
-        const pill = document.createElement("button");
-        pill.type = "button";
-        pill.className = "lang-pill";
-        pill.dataset.lang = code;
-        pill.textContent = label;
-        pill.addEventListener("click", () => window.applyLanguage(code));
-        langCloud.appendChild(pill);
-      });
-
-      window.syncLangPills = (lang) => {
-        document.querySelectorAll(".lang-pill").forEach((pill) => {
-          pill.classList.toggle("active", pill.dataset.lang === lang);
-        });
-      };
-      const origApply = window.applyLanguage;
-      window.applyLanguage = (lang) => {
-        origApply(lang);
-        window.syncLangPills?.(lang);
-      };
-
-      langBtn.addEventListener("click", () => {
-        const open = menu.classList.toggle("open");
-        langBtn.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-
-      document.addEventListener("click", (e) => {
-        if (!e.target.closest(".lang-picker")) {
-          menu.classList.remove("open");
-          langBtn.setAttribute("aria-expanded", "false");
-        }
-      });
-
-      menuToggle?.addEventListener("click", () => navLinks.classList.toggle("open"));
-
-      // Nav scroll + active section
-      const nav = document.getElementById("site-nav");
-      const sections = [...document.querySelectorAll("section[id]")];
-      const navAnchors = [...document.querySelectorAll(".nav-links a[href^='#']")];
-
-      const setActiveNav = () => {
-        const y = window.scrollY + nav.offsetHeight + 40;
-        let current = sections[0]?.id;
-        for (const sec of sections) {
-          if (sec.offsetTop <= y) current = sec.id;
-        }
-        navAnchors.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === `#${current}`));
-      };
-
-      const onScroll = () => {
-        nav?.classList.toggle("scrolled", window.scrollY > 12);
-        setActiveNav();
-        document.getElementById("scroll-top")?.classList.toggle("visible", window.scrollY > 600);
-      };
-      window.addEventListener("scroll", onScroll, { passive: true });
-      onScroll();
-
-      document.getElementById("scroll-top")?.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      // Animated stats
-      const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.querySelectorAll("[data-count]").forEach((el) => {
-            const target = Number(el.dataset.count);
-            if (!target || el.dataset.done) return;
-            el.dataset.done = "1";
-            const start = performance.now();
-            const tick = (now) => {
-              const p = Math.min((now - start) / 900, 1);
-              const val = Math.round(target * (1 - Math.pow(1 - p, 3)));
-              el.textContent = target >= 1000 ? val.toLocaleString() : String(val);
-              if (p < 1) requestAnimationFrame(tick);
-            };
-            requestAnimationFrame(tick);
-          });
-          statsObserver.unobserve(entry.target);
-        });
-      }, { threshold: 0.4 });
-      const statsEl = document.getElementById("stats");
-      if (statsEl) statsObserver.observe(statsEl);
-
-      // Scroll reveal
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-      }, { threshold: 0.12 });
-      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
-      window.initI18n();
-    })();
-  </script>
+  <script src="i18n.js?v=4" defer></script>
+  <script src="app.js?v=4" defer></script>
 </body>
 </html>
