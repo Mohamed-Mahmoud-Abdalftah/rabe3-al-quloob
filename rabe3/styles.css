@@ -593,12 +593,8 @@ h3 { font-size: 1.125rem; }
   outline-offset: 3px;
 }
 
-/* Page load fade — optional, never block content */
-html.js body.is-loading { opacity: 1; }
-html.js body.is-ready,
-html:not(.js) body {
-  opacity: 1;
-}
+/* Page load — content always visible */
+body { opacity: 1; }
 
 /* Device tilt + scroll parallax */
 .hero-visual {

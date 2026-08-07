@@ -3,14 +3,6 @@
     document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
   }
 
-  function markReady() {
-    document.body.classList.remove("is-loading");
-    document.body.classList.add("is-ready");
-  }
-
-  document.body.classList.add("is-loading");
-  requestAnimationFrame(markReady);
-
   const PLAY_STORE = document.body.dataset.playStore || "https://play.google.com/store/apps/details?id=com.rabe3alquloob.app";
   const FULL_LANDING_LANGS = new Set(["en", "ar", "tr", "fr", "id", "ur"]);
   window.RABE3_FULL_LANDING_LANGS = FULL_LANDING_LANGS;
@@ -324,7 +316,6 @@
   } catch (err) {
     console.error("Rabe3 landing init error:", err);
     revealAll();
-    markReady();
     if (typeof window.initI18n === "function") {
       try { window.initI18n(); } catch (_) {}
     }
