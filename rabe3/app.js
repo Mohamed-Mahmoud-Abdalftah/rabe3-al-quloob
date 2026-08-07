@@ -7,6 +7,11 @@
   const nav = document.getElementById("site-nav");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  requestAnimationFrame(() => {
+    document.body.classList.remove("is-loading");
+    document.body.classList.add("is-ready");
+  });
+
   window.RABE3_LANG_META.forEach(({ code, label }) => {
     const btn = document.createElement("button");
     btn.type = "button";
@@ -92,11 +97,18 @@
     window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
   });
 
-  document.querySelectorAll(".faq-item").forEach((item) => {
+  const faqItems = [...document.querySelectorAll(".faq-item")];
+  faqItems.forEach((item) => {
     const trigger = item.querySelector(".faq-trigger");
     trigger?.addEventListener("click", () => {
-      const open = item.classList.toggle("open");
-      trigger.setAttribute("aria-expanded", open ? "true" : "false");
+      const willOpen = !item.classList.contains("open");
+      faqItems.forEach((other) => {
+        if (other === item) return;
+        other.classList.remove("open");
+        other.querySelector(".faq-trigger")?.setAttribute("aria-expanded", "false");
+      });
+      item.classList.toggle("open", willOpen);
+      trigger.setAttribute("aria-expanded", willOpen ? "true" : "false");
     });
   });
 
@@ -133,12 +145,35 @@
     }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-    const heroVisual = document.querySelector(".hero-visual");
+    const heroVisual = document.getElementById("hero-device") || document.querySelector(".hero-visual");
     if (heroVisual) {
+      let scrollY = 0;
+      let tiltX = 0;
+      let tiltY = 0;
+
+      const applyHeroTransform = () => {
+        heroVisual.style.transform = `perspective(900px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(${scrollY * 0.06}px)`;
+      };
+
       window.addEventListener("scroll", () => {
-        const y = Math.min(window.scrollY, 600);
-        heroVisual.style.transform = `translateY(${y * 0.06}px)`;
+        scrollY = Math.min(window.scrollY, 600);
+        applyHeroTransform();
       }, { passive: true });
+
+      heroVisual.addEventListener("mousemove", (e) => {
+        const rect = heroVisual.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        tiltY = ((e.clientX - cx) / rect.width) * 6;
+        tiltX = -((e.clientY - cy) / rect.height) * 4;
+        applyHeroTransform();
+      });
+
+      heroVisual.addEventListener("mouseleave", () => {
+        tiltX = 0;
+        tiltY = 0;
+        applyHeroTransform();
+      });
     }
   } else {
     document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
