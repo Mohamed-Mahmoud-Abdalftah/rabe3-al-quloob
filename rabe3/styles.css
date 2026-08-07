@@ -367,8 +367,8 @@ h3 { font-size: 1.125rem; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
-  opacity: 0.28;
+  object-position: center 25%;
+  opacity: 0.22;
 }
 
 .hero-ambient { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
@@ -497,7 +497,7 @@ h3 { font-size: 1.125rem; }
 .hero-visual {
   position: relative;
   justify-self: center;
-  width: min(100%, 380px);
+  width: min(100%, 480px);
 }
 
 .promo-shot {
@@ -507,11 +507,9 @@ h3 { font-size: 1.125rem; }
   border-radius: calc(var(--radius-lg) - 8px);
 }
 
-.promo-shot--hero {
-  max-width: min(100%, 340px);
-  margin: 0 auto;
-  filter: drop-shadow(0 28px 56px rgba(0,0,0,0.5));
-  border-radius: 28px;
+.promo-shot--hero-wide {
+  filter: drop-shadow(0 28px 56px rgba(0,0,0,0.45));
+  border-radius: var(--radius-lg);
 }
 
 .visual-card--promo {
@@ -523,6 +521,20 @@ h3 { font-size: 1.125rem; }
 
 .visual-card--promo .promo-shot {
   max-width: min(100%, 300px);
+}
+
+.onboarding-strip {
+  margin-top: 48px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+}
+
+.onboarding-strip img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .device-frame {
@@ -826,6 +838,17 @@ body { opacity: 1; }
 .kids-chars img:nth-child(2) { width: 96px; height: 96px; animation-delay: 0.8s; }
 .kids-chars img:nth-child(3) { width: 76px; height: 76px; margin-bottom: 4px; animation-delay: 1.6s; }
 
+.kids-promo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 160px));
+  gap: 12px;
+}
+
+.promo-shot--kids {
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+}
+
 /* ── Themes ── */
 .themes { padding: var(--section-pad) 0; }
 
@@ -869,7 +892,7 @@ body { opacity: 1; }
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--line);
-  aspect-ratio: 473 / 1024;
+  aspect-ratio: 420 / 664;
   cursor: default;
   background: var(--bg-soft);
   transition: transform 0.35s var(--ease-out), box-shadow 0.35s;
@@ -888,11 +911,12 @@ body { opacity: 1; }
 .theme-tile img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
   display: block;
   transition: transform 0.5s var(--ease-out);
 }
+.theme-tile.premium img { object-position: center 42%; }
 
 .theme-tile.premium::after {
   content: "★";
@@ -1476,6 +1500,7 @@ body { opacity: 1; }
   .kids-banner-scene img { min-height: 220px; }
 
   .kids-chars { width: 100%; justify-content: center; }
+  .kids-promo-grid { grid-template-columns: 1fr 1fr; justify-items: center; max-width: 360px; margin-inline: auto; }
 
   .faq-layout { gap: 32px; }
   .faq-intro { text-align: center; }

@@ -25,9 +25,23 @@ for f in robots.txt sitemap.xml 404.html; do
   check "$BASE/$f"
 done
 
-for f in assets/promo/hero_bg.jpg assets/promo/hero_phone.jpg assets/promo/og_brand.jpg assets/rabea_brand_logo.webp; do
+for f in assets/promo/hero_bg.jpg assets/promo/hero_phone.jpg assets/promo/reader.jpg assets/promo/studio.jpg assets/promo/daily.jpg assets/promo/kids_journey.jpg assets/promo/og_brand.jpg assets/rabea_brand_logo.webp assets/kids_bg_sky_hero.jpg; do
   check "$SITE/$f"
 done
+
+body=$(curl -s "$SITE/index.html")
+if echo "$body" | grep -q 'kids-chars'; then
+  echo "OK   kids-chars present"
+else
+  echo "FAIL missing kids-chars"
+  FAIL=1
+fi
+if echo "$body" | grep -q 'kids_bg_sky_hero'; then
+  echo "OK   kids sky bg present"
+else
+  echo "FAIL missing kids sky bg"
+  FAIL=1
+fi
 
 for lang in ar en tr de es zh ru; do
   body=$(curl -s "$SITE/?lang=$lang")
