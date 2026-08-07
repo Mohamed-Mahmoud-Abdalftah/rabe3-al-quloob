@@ -30,11 +30,17 @@ for f in assets/promo/hero_bg.jpg assets/promo/hero_phone.jpg assets/promo/reade
 done
 
 body=$(curl -s "$SITE/index.html")
-if echo "$body" | grep -q 'kids-chars'; then
-  echo "OK   kids-chars present"
+if echo "$body" | grep -q 'kids-showcase'; then
+  echo "OK   kids-showcase present"
 else
-  echo "FAIL missing kids-chars"
+  echo "FAIL missing kids-showcase"
   FAIL=1
+fi
+if echo "$body" | grep -q 'kids-promo-grid'; then
+  echo "FAIL old kids-promo-grid still present"
+  FAIL=1
+else
+  echo "OK   kids-promo-grid removed"
 fi
 if echo "$body" | grep -q 'kids_bg_sky_hero'; then
   echo "OK   kids sky bg present"

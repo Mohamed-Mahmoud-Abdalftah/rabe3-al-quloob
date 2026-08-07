@@ -37,7 +37,7 @@
   <link rel="preload" as="image" href="assets/promo/hero_phone.jpg" type="image/jpeg" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" /></noscript>
-  <link rel="stylesheet" href="styles.css?v=23" />
+  <link rel="stylesheet" href="styles.css?v=24" />
   <script>document.documentElement.classList.add("js");document.getElementById("critical")?.remove();</script>
   <script type="application/ld+json">
   {
@@ -224,35 +224,51 @@
     </section>
 
     <!-- Kids -->
-    <section class="experience" id="kids">
-      <div class="container">
-        <div class="kids-banner reveal">
-          <div class="kids-banner-scene" aria-hidden="true">
-            <img src="assets/kids_bg_sky_hero.jpg" alt="" loading="lazy" decoding="async" />
-          </div>
-          <div class="kids-banner-body">
-            <div class="kids-banner-copy">
-              <p class="eyebrow eyebrow-light" data-i18n="exp_kids_eyebrow">Kids adventure</p>
-              <h2 data-i18n="exp_kids_title">Help your children fall in love with the Quran.</h2>
-              <p class="section-lead section-lead-light" data-i18n="exp_kids_lead">A joyful world of stories, journeys, and rewards — designed for children, protected by parents.</p>
-              <ul class="highlights highlights-light">
-                <li data-i18n="exp_kids_h1">Explore islands and earn stars on a living journey map</li>
-                <li data-i18n="exp_kids_h2">Stories and fun tales in 23 languages</li>
-                <li data-i18n="exp_kids_h3">Listen, record, and hear themselves grow</li>
-                <li data-i18n="exp_kids_h4">Parent PIN, screen time, and progress you control</li>
-              </ul>
-            </div>
-            <div class="kids-chars" aria-hidden="true">
-              <img src="assets/kids_journey_char_boy_hafiz_idle.webp" alt="" width="110" height="110" loading="lazy" />
-              <img src="assets/kids_journey_char_girl_hafiza_idle.webp" alt="" width="110" height="110" loading="lazy" />
-              <img src="assets/kids_journey_reward_chest_open.webp" alt="" width="88" height="88" loading="lazy" />
-            </div>
-            <div class="kids-promo-grid" aria-hidden="true">
-              <img class="promo-shot promo-shot--kids" src="assets/promo/kids_journey.jpg" alt="" width="472" height="1024" loading="lazy" decoding="async" />
-              <img class="promo-shot promo-shot--kids" src="assets/promo/kids_parents.jpg" alt="" width="473" height="1024" loading="lazy" decoding="async" />
-            </div>
+    <section class="experience kids-showcase" id="kids">
+      <div class="kids-showcase-bg" aria-hidden="true">
+        <img src="assets/kids_bg_sky_hero.jpg" alt="" loading="lazy" decoding="async" />
+      </div>
+      <div class="container experience-grid reverse">
+        <div class="experience-visual reveal">
+          <div class="visual-card visual-card--promo visual-card--kids">
+            <img class="promo-shot" src="assets/promo/kids_journey.jpg" alt="" width="472" height="1024" loading="lazy" decoding="async" />
           </div>
         </div>
+        <div class="experience-copy reveal">
+          <p class="eyebrow eyebrow-light" data-i18n="exp_kids_eyebrow">Kids adventure</p>
+          <h2 data-i18n="exp_kids_title">Help your children fall in love with the Quran.</h2>
+          <p class="section-lead section-lead-light" data-i18n="exp_kids_lead">A joyful world of stories, journeys, and rewards — designed for children, protected by parents.</p>
+          <ul class="highlights highlights-light">
+            <li data-i18n="exp_kids_h1">Explore islands and earn stars on a living journey map</li>
+            <li data-i18n="exp_kids_h2">Stories and fun tales in 23 languages</li>
+            <li data-i18n="exp_kids_h3">Listen, record, and hear themselves grow</li>
+            <li data-i18n="exp_kids_h4">Parent PIN, screen time, and progress you control</li>
+          </ul>
+          <a class="btn btn-outline btn-outline-light" href="#download" data-i18n="exp_kids_cta">Explore kids mode</a>
+        </div>
+      </div>
+      <div class="container kids-features reveal">
+        <article class="kids-feature">
+          <img src="assets/kids_journey_island_golden.webp" alt="" width="72" height="72" loading="lazy" decoding="async" />
+          <div>
+            <h3 data-i18n="kids_feat_journey_t">Memorization journey</h3>
+            <p data-i18n="kids_feat_journey_d">Islands, stars, and a map that grows with every surah.</p>
+          </div>
+        </article>
+        <article class="kids-feature">
+          <img src="assets/kids_journey_reward_chest_open.webp" alt="" width="72" height="72" loading="lazy" decoding="async" />
+          <div>
+            <h3 data-i18n="kids_feat_rewards_t">Rewards &amp; achievements</h3>
+            <p data-i18n="kids_feat_rewards_d">Celebrate progress with badges, stars, and weekly challenges.</p>
+          </div>
+        </article>
+        <article class="kids-feature kids-feature--shot">
+          <img class="kids-feature-shot" src="assets/promo/kids_parents.jpg" alt="" width="180" height="220" loading="lazy" decoding="async" />
+          <div>
+            <h3 data-i18n="kids_feat_parents_t">Parent controls</h3>
+            <p data-i18n="kids_feat_parents_d">PIN protection, profiles, reciter choice, and screen time you set.</p>
+          </div>
+        </article>
       </div>
     </section>
 
