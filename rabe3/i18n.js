@@ -63,7 +63,25 @@ const RABE3_I18N = {
     faq_q4: "Which languages are supported?", faq_a4: "The entire app interface is available in 28 languages — from Arabic and English to Urdu, Turkish, Chinese, and more.",
     download_title: "Begin your journey today.",
     download_lead: "Download Rabe3 Al-Quloob — calm, beautiful, and built for a lifetime with the Quran.",
-    download_soon: "Coming soon on Google Play — follow us for launch updates",
+    download_soon: "Free on Google Play · Android",
+    download_play_badge: "Get it on Google Play",
+    premium_cta: "Unlock with Rabe3 Plus",
+    theme_more_note: "9 more themes inside the app — 6 shown here.",
+    langs_landing_note: "This page is fully translated in Arabic and English. The app UI supports 28 languages.",
+    a11y_skip: "Skip to content",
+    a11y_menu: "Open menu",
+    a11y_scroll_down: "Scroll to trust badges",
+    a11y_back_top: "Back to top",
+    a11y_lang_menu: "Choose language",
+    a11y_theme_gallery: "Reader theme gallery",
+    values_eyebrow: "Design principles",
+    values_title: "Every decision serves your worship.",
+    value_1_t: "Calm over clutter",
+    value_1_d: "No feeds, no badges, no dark patterns — just space to be with the ayah.",
+    value_2_t: "Family-first safety",
+    value_2_d: "Kids mode is gated, ad-free, and built with controls parents actually use.",
+    value_3_t: "Honest privacy",
+    value_3_d: "Your bookmarks and practice stay on your device unless you choose cloud sync.",
     hero_badge: "✦ Complete Islamic experience",
     section_features_eyebrow: "Everything you need", section_features_title: "Eight pillars on your home screen",
     section_features_desc: "Every tool for your daily Quran journey — one tap away.",
@@ -174,7 +192,25 @@ const RABE3_I18N = {
     faq_q4: "ما اللغات المدعومة؟", faq_a4: "واجهة التطبيق بالكامل متوفرة بـ ٢٨ لغة — من العربية والإنجليزية إلى الأردية والتركية والصينية والمزيد.",
     download_title: "ابدأ رحلتك اليوم.",
     download_lead: "حمّل ربيع القلوب — هادئ، جميل، ومبني لعمر مع القرآن.",
-    download_soon: "قريبًا على Google Play — تابعنا لمعرفة موعد الإطلاق",
+    download_soon: "مجاني على Google Play · أندرويد",
+    download_play_badge: "حمّله من Google Play",
+    premium_cta: "افتح مع ربيع بلس",
+    theme_more_note: "٩ ثيمات إضافية داخل التطبيق — ٦ معروضة هنا.",
+    langs_landing_note: "هذه الصفحة مترجمة بالكامل للعربية والإنجليزية. واجهة التطبيق تدعم ٢٨ لغة.",
+    a11y_skip: "تخطي إلى المحتوى",
+    a11y_menu: "فتح القائمة",
+    a11y_scroll_down: "انتقل إلى شارات الثقة",
+    a11y_back_top: "العودة للأعلى",
+    a11y_lang_menu: "اختر اللغة",
+    a11y_theme_gallery: "معرض ثيمات القراءة",
+    values_eyebrow: "مبادئ التصميم",
+    values_title: "كل قرار يخدم عبادتك.",
+    value_1_t: "سكينة لا فوضى",
+    value_1_d: "لا خلاصات ولا شارات ولا حيل — فقط مساحة لتكون مع الآية.",
+    value_2_t: "العائلة أولاً",
+    value_2_d: "وضع الأطفال محمي وبلا إعلانات مع تحكم يستخدمه الوالدان فعلًا.",
+    value_3_t: "خصوصية صادقة",
+    value_3_d: "علاماتك وتدريبك يبقيان على جهازك ما لم تختر المزامنة السحابية.",
     section_features_eyebrow: "كل ما تحتاجه", section_features_title: "ثمانية أركان في شاشتك الرئيسية",
     section_features_desc: "كل أداة لرحلتك اليومية مع القرآن — بنقرة واحدة.",
     f_mushaf_t: "المصحف", f_mushaf_d: "اقرأ القرآن الكريم مع العلامات والملاحظات والتفسير والترجمات وتجربة قراءة هادئة.",
@@ -590,6 +626,12 @@ function applyLanguage(lang) {
     else el.textContent = val;
   });
 
+  document.querySelectorAll("[data-i18n-aria]").forEach(el => {
+    const key = el.getAttribute("data-i18n-aria");
+    const val = t(lang, key);
+    if (val !== key) el.setAttribute("aria-label", val);
+  });
+
   // Chips
   document.querySelectorAll("[data-i18n-chips]").forEach(el => {
     const key = el.getAttribute("data-i18n-chips");
@@ -599,8 +641,13 @@ function applyLanguage(lang) {
   });
 
   // Lang menu active state
-  document.querySelectorAll(".lang-menu button").forEach(btn => {
+  document.querySelectorAll(".lang-menu button, .lang-menu .lang-option").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
+  });
+
+  // Recalculate open FAQ panel heights after translation
+  document.querySelectorAll(".faq-item.open .faq-answer").forEach((answer) => {
+    answer.style.maxHeight = `${answer.scrollHeight}px`;
   });
 
   const langBtnLabel = document.getElementById("lang-btn-label");
@@ -626,4 +673,5 @@ if (typeof window !== "undefined") {
   window.RABE3_LANG_META = LANG_META;
   window.applyLanguage = applyLanguage;
   window.initI18n = initI18n;
+  window.t = t;
 }

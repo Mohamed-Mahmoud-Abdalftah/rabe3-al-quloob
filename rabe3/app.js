@@ -1,4 +1,5 @@
 (function () {
+  document.body.classList.add("is-loading");
   const menu = document.getElementById("lang-menu");
   const langBtn = document.getElementById("lang-btn");
   const navLinks = document.getElementById("nav-links");
@@ -15,23 +16,28 @@
   window.RABE3_LANG_META.forEach(({ code, label }) => {
     const btn = document.createElement("button");
     btn.type = "button";
+    btn.className = "lang-option";
     btn.dataset.lang = code;
+    btn.setAttribute("role", "option");
     btn.textContent = label;
-    btn.addEventListener("click", () => {
-      window.applyLanguage(code);
-      menu.classList.remove("open");
-      langBtn.setAttribute("aria-expanded", "false");
-    });
+    btn.addEventListener("click", () => selectLanguage(code));
     menu.appendChild(btn);
 
     const pill = document.createElement("button");
     pill.type = "button";
     pill.className = "lang-pill";
     pill.dataset.lang = code;
+    pill.setAttribute("role", "listitem");
     pill.textContent = label;
-    pill.addEventListener("click", () => window.applyLanguage(code));
+    pill.addEventListener("click", () => selectLanguage(code));
     langCloud.appendChild(pill);
   });
+
+  function selectLanguage(code) {
+    window.applyLanguage(code);
+    menu.classList.remove("open");
+    langBtn.setAttribute("aria-expanded", "false");
+  }
 
   window.syncLangPills = (lang) => {
     document.querySelectorAll(".lang-pill").forEach((pill) => {
@@ -43,6 +49,7 @@
   window.applyLanguage = (lang) => {
     origApply(lang);
     window.syncLangPills?.(lang);
+    updateFaqSchema(lang);
   };
 
   langBtn.addEventListener("click", () => {
@@ -61,6 +68,15 @@
     }
   });
 
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      menu.classList.remove("open");
+      langBtn?.setAttribute("aria-expanded", "false");
+      navLinks?.classList.remove("open");
+      menuToggle?.setAttribute("aria-expanded", "false");
+    }
+  });
+
   menuToggle?.addEventListener("click", () => {
     const open = navLinks.classList.toggle("open");
     menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
@@ -73,7 +89,11 @@
     });
   });
 
-  const sections = [...document.querySelectorAll("section[id], header[id]")].filter((el) => el.id);
+  const navSectionIds = new Set(
+    navLinks ? [...navLinks.querySelectorAll("a[href^='#']")].map((a) => a.getAttribute("href").slice(1)) : []
+  );
+  const sections = [...document.querySelectorAll("section[id], header[id]")]
+    .filter((el) => el.id && navSectionIds.has(el.id));
   const navAnchors = [...document.querySelectorAll(".nav-links a[href^='#']")];
 
   const setActiveNav = () => {
@@ -100,41 +120,47 @@
   const faqItems = [...document.querySelectorAll(".faq-item")];
   faqItems.forEach((item) => {
     const trigger = item.querySelector(".faq-trigger");
+    const answer = item.querySelector(".faq-answer");
     trigger?.addEventListener("click", () => {
       const willOpen = !item.classList.contains("open");
       faqItems.forEach((other) => {
         if (other === item) return;
         other.classList.remove("open");
-        other.querySelector(".faq-trigger")?.setAttribute("aria-expanded", "false");
+        const otherTrigger = other.querySelector(".faq-trigger");
+        const otherAnswer = other.querySelector(".faq-answer");
+        otherTrigger?.setAttribute("aria-expanded", "false");
+        if (otherAnswer) otherAnswer.style.maxHeight = "0";
       });
       item.classList.toggle("open", willOpen);
       trigger.setAttribute("aria-expanded", willOpen ? "true" : "false");
+      if (answer) {
+        answer.style.maxHeight = willOpen ? `${answer.scrollHeight}px` : "0";
+      }
     });
   });
 
-  if (!reducedMotion) {
-    const statsObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.querySelectorAll("[data-count]").forEach((el) => {
-          const target = Number(el.dataset.count);
-          if (!target || el.dataset.done) return;
-          el.dataset.done = "1";
-          const start = performance.now();
-          const tick = (now) => {
-            const p = Math.min((now - start) / 1000, 1);
-            const val = Math.round(target * (1 - Math.pow(1 - p, 3)));
-            el.textContent = target >= 1000 ? val.toLocaleString() : String(val);
-            if (p < 1) requestAnimationFrame(tick);
-          };
-          requestAnimationFrame(tick);
-        });
-        statsObserver.unobserve(entry.target);
-      });
-    }, { threshold: 0.35 });
-    const statsEl = document.getElementById("stats");
-    if (statsEl) statsObserver.observe(statsEl);
+  function updateFaqSchema(lang) {
+    const script = document.getElementById("faq-schema");
+    if (!script || typeof window.t !== "function") return;
+    const questions = [
+      ["faq_q1", "faq_a1"],
+      ["faq_q2", "faq_a2"],
+      ["faq_q3", "faq_a3"],
+      ["faq_q4", "faq_a4"],
+    ];
+    const mainEntity = questions.map(([q, a]) => ({
+      "@type": "Question",
+      name: window.t(lang, q),
+      acceptedAnswer: { "@type": "Answer", text: window.t(lang, a) },
+    }));
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity,
+    });
+  }
 
+  if (!reducedMotion) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -145,34 +171,36 @@
     }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-    const heroVisual = document.getElementById("hero-device") || document.querySelector(".hero-visual");
-    if (heroVisual) {
+    const tiltTarget = document.querySelector(".device-frame");
+    const heroVisual = document.getElementById("hero-device");
+    if (tiltTarget && heroVisual) {
       let scrollY = 0;
       let tiltX = 0;
       let tiltY = 0;
 
-      const applyHeroTransform = () => {
-        heroVisual.style.transform = `perspective(900px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(${scrollY * 0.06}px)`;
+      const applyTilt = () => {
+        tiltTarget.style.transform = `perspective(900px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+        heroVisual.style.setProperty("--hero-scroll-y", `${scrollY * 0.06}px`);
       };
 
       window.addEventListener("scroll", () => {
         scrollY = Math.min(window.scrollY, 600);
-        applyHeroTransform();
+        applyTilt();
       }, { passive: true });
 
       heroVisual.addEventListener("mousemove", (e) => {
         const rect = heroVisual.getBoundingClientRect();
         const cx = rect.left + rect.width / 2;
         const cy = rect.top + rect.height / 2;
-        tiltY = ((e.clientX - cx) / rect.width) * 6;
-        tiltX = -((e.clientY - cy) / rect.height) * 4;
-        applyHeroTransform();
+        tiltY = ((e.clientX - cx) / rect.width) * 5;
+        tiltX = -((e.clientY - cy) / rect.height) * 3;
+        applyTilt();
       });
 
       heroVisual.addEventListener("mouseleave", () => {
         tiltX = 0;
         tiltY = 0;
-        applyHeroTransform();
+        applyTilt();
       });
     }
   } else {
@@ -180,4 +208,5 @@
   }
 
   window.initI18n();
+  updateFaqSchema(document.documentElement.lang || "ar");
 })();
