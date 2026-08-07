@@ -37,7 +37,7 @@
   <link rel="preload" as="image" href="assets/promo/hero_phone.jpg" type="image/jpeg" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" /></noscript>
-  <link rel="stylesheet" href="styles.css?v=24" />
+  <link rel="stylesheet" href="styles.css?v=25" />
   <script>document.documentElement.classList.add("js");document.getElementById("critical")?.remove();</script>
   <script type="application/ld+json">
   {
@@ -139,7 +139,12 @@
           </div>
         </div>
         <div class="hero-visual reveal" id="hero-device" aria-hidden="true">
-          <img class="promo-shot promo-shot--hero-wide" src="assets/promo/hero_phone.jpg" alt="" width="1024" height="512" decoding="async" />
+          <div class="device-frame device-frame--hero">
+            <div class="device-notch"></div>
+            <div class="device-screen">
+              <img src="assets/home_phone_screen.jpg" alt="" width="540" height="960" decoding="async" />
+            </div>
+          </div>
         </div>
       </div>
       <a class="scroll-hint" href="#why" data-i18n-aria="a11y_scroll_down">
@@ -172,8 +177,14 @@
             <p data-i18n="why_3_d">No ads. No data selling. Your progress stays yours — on your device, under your control.</p>
           </article>
         </div>
-        <div class="onboarding-strip reveal" aria-hidden="true">
-          <img src="assets/promo/onboarding_strip.jpg" alt="" width="1024" height="682" loading="lazy" decoding="async" />
+        <div class="onboarding-block reveal">
+          <div class="section-intro section-intro--compact">
+            <p class="eyebrow eyebrow-gold" data-i18n="onboarding_eyebrow">First steps</p>
+            <h3 data-i18n="onboarding_title">Five screens to welcome you home.</h3>
+          </div>
+          <div class="onboarding-strip" aria-hidden="true">
+            <img src="assets/promo/onboarding_strip.jpg" alt="" width="1024" height="682" loading="lazy" decoding="async" />
+          </div>
         </div>
       </div>
     </section>
@@ -181,8 +192,8 @@
     <section class="experience" id="reader">
       <div class="container experience-grid">
         <div class="experience-visual reveal">
-          <div class="visual-card visual-card--promo">
-            <img class="promo-shot" src="assets/promo/reader.jpg" alt="" width="473" height="1024" loading="lazy" decoding="async" />
+          <div class="phone-mockup phone-mockup--reader">
+            <img src="assets/promo/reader.jpg" alt="" width="473" height="1024" loading="lazy" decoding="async" />
           </div>
         </div>
         <div class="experience-copy reveal">
@@ -204,8 +215,8 @@
     <section class="experience experience-alt" id="studio">
       <div class="container experience-grid reverse">
         <div class="experience-visual reveal">
-          <div class="visual-card visual-card--promo">
-            <img class="promo-shot" src="assets/promo/studio.jpg" alt="" width="472" height="1024" loading="lazy" decoding="async" />
+          <div class="phone-mockup phone-mockup--studio">
+            <img src="assets/promo/studio.jpg" alt="" width="472" height="1024" loading="lazy" decoding="async" />
           </div>
         </div>
         <div class="experience-copy reveal">
@@ -225,15 +236,8 @@
 
     <!-- Kids -->
     <section class="experience kids-showcase" id="kids">
-      <div class="kids-showcase-bg" aria-hidden="true">
-        <img src="assets/kids_bg_sky_hero.jpg" alt="" loading="lazy" decoding="async" />
-      </div>
-      <div class="container experience-grid reverse">
-        <div class="experience-visual reveal">
-          <div class="visual-card visual-card--promo visual-card--kids">
-            <img class="promo-shot" src="assets/promo/kids_journey.jpg" alt="" width="472" height="1024" loading="lazy" decoding="async" />
-          </div>
-        </div>
+      <div class="kids-showcase-bg" aria-hidden="true"></div>
+      <div class="container experience-grid">
         <div class="experience-copy reveal">
           <p class="eyebrow eyebrow-light" data-i18n="exp_kids_eyebrow">Kids adventure</p>
           <h2 data-i18n="exp_kids_title">Help your children fall in love with the Quran.</h2>
@@ -244,31 +248,18 @@
             <li data-i18n="exp_kids_h3">Listen, record, and hear themselves grow</li>
             <li data-i18n="exp_kids_h4">Parent PIN, screen time, and progress you control</li>
           </ul>
+          <div class="kids-pills" aria-hidden="true">
+            <span class="kids-pill"><img src="assets/kids_journey_island_golden.webp" alt="" width="32" height="32" loading="lazy" /><span data-i18n="kids_feat_journey_t">Memorization journey</span></span>
+            <span class="kids-pill"><img src="assets/kids_journey_reward_chest_open.webp" alt="" width="32" height="32" loading="lazy" /><span data-i18n="kids_feat_rewards_t">Rewards</span></span>
+            <span class="kids-pill kids-pill--icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="kids_feat_parents_t">Parent controls</span></span>
+          </div>
           <a class="btn btn-outline btn-outline-light" href="#download" data-i18n="exp_kids_cta">Explore kids mode</a>
         </div>
-      </div>
-      <div class="container kids-features reveal">
-        <article class="kids-feature">
-          <img src="assets/kids_journey_island_golden.webp" alt="" width="72" height="72" loading="lazy" decoding="async" />
-          <div>
-            <h3 data-i18n="kids_feat_journey_t">Memorization journey</h3>
-            <p data-i18n="kids_feat_journey_d">Islands, stars, and a map that grows with every surah.</p>
+        <div class="experience-visual reveal">
+          <div class="phone-mockup phone-mockup--kids">
+            <img src="assets/promo/kids_journey.jpg" alt="" width="472" height="1024" loading="lazy" decoding="async" />
           </div>
-        </article>
-        <article class="kids-feature">
-          <img src="assets/kids_journey_reward_chest_open.webp" alt="" width="72" height="72" loading="lazy" decoding="async" />
-          <div>
-            <h3 data-i18n="kids_feat_rewards_t">Rewards &amp; achievements</h3>
-            <p data-i18n="kids_feat_rewards_d">Celebrate progress with badges, stars, and weekly challenges.</p>
-          </div>
-        </article>
-        <article class="kids-feature kids-feature--shot">
-          <img class="kids-feature-shot" src="assets/promo/kids_parents.jpg" alt="" width="180" height="220" loading="lazy" decoding="async" />
-          <div>
-            <h3 data-i18n="kids_feat_parents_t">Parent controls</h3>
-            <p data-i18n="kids_feat_parents_d">PIN protection, profiles, reciter choice, and screen time you set.</p>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
@@ -276,8 +267,8 @@
     <section class="experience experience-alt" id="daily">
       <div class="container experience-grid">
         <div class="experience-visual reveal">
-          <div class="visual-card visual-card--promo">
-            <img class="promo-shot" src="assets/promo/daily.jpg" alt="" width="568" height="1024" loading="lazy" decoding="async" />
+          <div class="phone-mockup phone-mockup--daily">
+            <img src="assets/promo/daily.jpg" alt="" width="568" height="1024" loading="lazy" decoding="async" />
           </div>
         </div>
         <div class="experience-copy reveal">
@@ -363,7 +354,9 @@
             <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.rabe3alquloob.app" target="_blank" rel="noopener noreferrer" data-i18n="premium_cta">Download to explore Plus</a>
           </div>
           <div class="premium-visual" aria-hidden="true">
-            <img class="promo-shot" src="assets/promo/premium.jpg" alt="" width="528" height="1024" loading="lazy" decoding="async" />
+            <div class="phone-mockup phone-mockup--premium">
+              <img src="assets/promo/premium.jpg" alt="" width="528" height="1024" loading="lazy" decoding="async" />
+            </div>
           </div>
         </div>
       </div>

@@ -36,6 +36,18 @@ else
   echo "FAIL missing kids-showcase"
   FAIL=1
 fi
+if echo "$body" | grep -q 'phone-mockup'; then
+  echo "OK   phone-mockup present"
+else
+  echo "FAIL missing phone-mockup"
+  FAIL=1
+fi
+if echo "$body" | grep -q 'kids-pills'; then
+  echo "OK   kids-pills present"
+else
+  echo "FAIL missing kids-pills"
+  FAIL=1
+fi
 if echo "$body" | grep -q 'kids-promo-grid'; then
   echo "FAIL old kids-promo-grid still present"
   FAIL=1

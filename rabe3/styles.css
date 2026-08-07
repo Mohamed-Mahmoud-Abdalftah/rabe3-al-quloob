@@ -497,7 +497,58 @@ h3 { font-size: 1.125rem; }
 .hero-visual {
   position: relative;
   justify-self: center;
-  width: min(100%, 480px);
+  width: min(100%, 340px);
+}
+
+.device-frame--hero {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Unified phone mockup — crops promo art to the device area */
+.phone-mockup {
+  width: min(100%, 300px);
+  margin: 0 auto;
+  border-radius: 32px;
+  overflow: hidden;
+  aspect-ratio: 9 / 16;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  background: var(--bg-soft);
+}
+
+.phone-mockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.phone-mockup--reader img { object-position: center 24%; }
+.phone-mockup--studio img { object-position: center 30%; }
+.phone-mockup--daily img { object-position: center 26%; }
+.phone-mockup--kids img { object-position: center 34%; }
+.phone-mockup--premium img { object-position: center 18%; }
+
+.experience-copy {
+  max-width: 520px;
+}
+
+.experience-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.onboarding-block { margin-top: 56px; }
+
+.section-intro--compact {
+  margin-bottom: 24px;
+}
+
+.section-intro--compact h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  font-weight: 600;
+  color: var(--ink);
 }
 
 .promo-shot {
@@ -783,6 +834,8 @@ body { opacity: 1; }
 .kids-showcase {
   position: relative;
   overflow: hidden;
+  background: linear-gradient(165deg, #0a2840 0%, #0c1a24 45%, #060a08 100%);
+  border-block: 1px solid rgba(135, 180, 212, 0.15);
 }
 
 .kids-showcase-bg {
@@ -790,26 +843,9 @@ body { opacity: 1; }
   inset: 0;
   z-index: 0;
   pointer-events: none;
-}
-
-.kids-showcase-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(6, 10, 8, 0.55) 0%,
-    rgba(6, 10, 8, 0.82) 55%,
-    rgba(6, 10, 8, 0.95) 100%
-  );
-}
-
-.kids-showcase-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  opacity: 0.55;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(135, 180, 212, 0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(212, 168, 83, 0.12) 0%, transparent 60%);
 }
 
 .kids-showcase > .container {
@@ -821,16 +857,43 @@ body { opacity: 1; }
 .kids-showcase .experience-copy .section-lead,
 .kids-showcase .experience-copy .highlights li {
   color: #fff;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
 .kids-showcase .experience-copy .highlights li::before {
   background: var(--gold);
 }
 
-.visual-card--kids {
-  border-color: rgba(135, 180, 212, 0.35);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.06);
+.kids-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 8px 0 24px;
+}
+
+.kids-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.kids-pill img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.kids-pill--icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--gold);
+  flex-shrink: 0;
 }
 
 .btn-outline-light {
@@ -838,66 +901,12 @@ body { opacity: 1; }
   border-color: rgba(255, 255, 255, 0.45);
 }
 
-.btn-outline-light:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.7);
-  color: #fff;
-}
-
-.kids-features {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 40px;
-  padding-bottom: 8px;
-}
-
-.kids-feature {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  padding: 20px;
-  border-radius: var(--radius);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(8, 14, 11, 0.72);
-  backdrop-filter: blur(12px);
-}
-
-.kids-feature > img:not(.kids-feature-shot) {
-  width: 64px;
-  height: 64px;
-  flex-shrink: 0;
-  object-fit: contain;
-  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
-}
-
-.kids-feature h3 {
-  margin: 0 0 6px;
-  font-size: 0.95rem;
-  color: #fff;
-}
-
-.kids-feature p {
-  margin: 0;
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.kids-feature--shot {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.kids-feature-shot {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-  border-radius: calc(var(--radius) - 4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+@media (hover: hover) {
+  .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.7);
+    color: #fff;
+  }
 }
 
 /* ── Themes ── */
@@ -1075,14 +1084,11 @@ body { opacity: 1; }
 .premium-visual {
   position: relative;
   z-index: 1;
-  border-radius: var(--radius);
-  overflow: hidden;
-  aspect-ratio: 3/4;
-  max-height: 420px;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
 }
-.premium-visual img { width: 100%; height: 100%; object-fit: contain; object-position: center center; background: var(--bg-soft); }
 
 /* ── FAQ ── */
 .faq {
@@ -1491,7 +1497,8 @@ body { opacity: 1; }
   .experience-grid,
   .faq-layout { grid-template-columns: 1fr; }
 
-  .hero-visual { order: -1; max-width: 300px; }
+  .hero-visual { order: -1; max-width: 280px; }
+  .phone-mockup { width: min(100%, 260px); }
   .experience-grid.reverse .experience-visual,
   .experience-grid.reverse .experience-copy { order: unset; }
 
@@ -1541,14 +1548,7 @@ body { opacity: 1; }
   .scroll-hint { display: none; }
   .float-icon { display: none; }
 
-  .kids-features {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin-top: 28px;
-  }
-
-  .kids-feature--shot { flex-direction: row; text-align: start; }
-  .kids-feature-shot { max-width: 100px; }
+  .kids-pills { justify-content: center; }
 
   .faq-layout { gap: 32px; }
   .faq-intro { text-align: center; }
