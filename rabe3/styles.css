@@ -593,12 +593,11 @@ h3 { font-size: 1.125rem; }
   outline-offset: 3px;
 }
 
-/* Page load — only hide when JS is active; always show content if JS fails */
-html.js body.is-loading { opacity: 0; }
+/* Page load fade — optional, never block content */
+html.js body.is-loading { opacity: 1; }
 html.js body.is-ready,
 html:not(.js) body {
   opacity: 1;
-  transition: opacity 0.5s var(--ease-out);
 }
 
 /* Device tilt + scroll parallax */
@@ -1328,20 +1327,14 @@ html:not(.js) body {
   transform: none;
 }
 
-/* ── Reveal animations (progressive enhancement) ── */
+/* ── Reveal animations — never hide content (opacity stays 1) ── */
 .reveal {
   opacity: 1;
-  transform: none;
+  transform: translateY(20px);
+  transition: transform 0.7s var(--ease-out);
 }
 
-html.js .reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
-}
-
-html.js .reveal.visible {
-  opacity: 1;
+.reveal.visible {
   transform: none;
 }
 
