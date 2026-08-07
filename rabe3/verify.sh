@@ -25,7 +25,7 @@ for f in robots.txt sitemap.xml 404.html; do
   check "$BASE/$f"
 done
 
-for f in assets/home_hero_day.jpg assets/rabea_brand_logo.webp assets/theme_hero_midnight_mosque.jpg; do
+for f in assets/promo/hero_bg.jpg assets/promo/hero_phone.jpg assets/promo/og_brand.jpg assets/rabea_brand_logo.webp; do
   check "$SITE/$f"
 done
 
