@@ -4,6 +4,7 @@
   }
 
   const PLAY_STORE = document.body.dataset.playStore || "https://play.google.com/store/apps/details?id=com.rabe3alquloob.app";
+  const APP_STORE = document.body.dataset.appStore || "https://apps.apple.com/us/app/id6810179919";
   const FULL_LANDING_LANGS = new Set(["en", "ar", "tr", "fr", "id", "ur", "de", "es", "zh", "ru", "fa", "ms"]);
   window.RABE3_FULL_LANDING_LANGS = FULL_LANDING_LANGS;
 
