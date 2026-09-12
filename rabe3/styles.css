@@ -501,24 +501,24 @@ h3 { font-size: 1.125rem; }
 }
 
 .device-frame--hero {
-  max-width: 300px;
+  max-width: 320px;
   margin: 0 auto;
 }
 
 .device-frame--exp {
-  width: min(100%, 290px);
+  width: min(100%, 320px);
   margin: 0 auto;
 }
 
 .device-frame--sm {
   position: absolute;
-  bottom: -16px;
-  inset-inline-end: -4px;
-  width: min(46%, 190px);
+  bottom: -20px;
+  inset-inline-end: -24px;
+  width: min(56%, 220px);
   padding: 8px;
-  border-radius: 24px;
+  border-radius: 28px;
   z-index: 2;
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.65);
 }
 
 /* Legacy phone mockup — kept for verify compatibility */
@@ -615,10 +615,12 @@ h3 { font-size: 1.125rem; }
 
 .showcase-grid {
   display: grid;
-  grid-template-columns: 1.35fr 1fr 1fr;
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
   margin-top: 36px;
   align-items: stretch;
+  max-width: 1040px;
+  margin-inline: auto;
 }
 
 .showcase-card {
@@ -636,7 +638,7 @@ h3 { font-size: 1.125rem; }
   height: 100%;
   object-fit: cover;
   display: block;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 853 / 1844;
 }
 
 .showcase-card--wide {
@@ -644,8 +646,8 @@ h3 { font-size: 1.125rem; }
 }
 
 .showcase-card--wide img {
-  aspect-ratio: 2 / 1;
-  object-position: center center;
+  aspect-ratio: 853 / 1844;
+  object-position: center top;
 }
 
 @media (hover: hover) {
@@ -657,27 +659,23 @@ h3 { font-size: 1.125rem; }
 
 .device-frame {
   position: relative;
-  padding: 12px;
+  padding: 10px;
   border-radius: 36px;
   background: linear-gradient(165deg, rgba(255,255,255,0.14), rgba(255,255,255,0.03));
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: var(--shadow-lg);
-  transition: transform 0.15s var(--ease-out);
+  box-shadow: var(--shadow-lg), 0 20px 50px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
   transform-style: preserve-3d;
 }
 
 .device-notch {
-  width: 32%;
-  height: 5px;
-  margin: 0 auto 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.15);
+  display: none;
 }
 
 .device-screen {
   border-radius: 26px;
   overflow: hidden;
-  aspect-ratio: 9/16;
+  aspect-ratio: 853 / 1844;
   background: var(--bg-soft);
 }
 .device-screen img {
@@ -685,6 +683,7 @@ h3 { font-size: 1.125rem; }
   height: 100%;
   object-fit: cover;
   object-position: top center;
+  display: block;
 }
 
 .float-icon {
@@ -967,15 +966,18 @@ body { opacity: 1; }
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 460px;
-  padding: 12px 0 28px;
+  min-height: 520px;
+  padding: 12px 20px 28px;
 }
 
 .kids-showcase-poster {
   width: min(100%, 300px);
-  border-radius: calc(var(--radius-lg) - 4px);
+  border-radius: 28px;
   box-shadow: 0 36px 72px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.12);
+  aspect-ratio: 853 / 1844;
+  object-fit: cover;
+  display: block;
 }
 
 .btn-outline-light {
@@ -1579,15 +1581,18 @@ body { opacity: 1; }
   .experience-grid,
   .faq-layout { grid-template-columns: 1fr; }
 
-  .hero-visual { order: -1; max-width: 280px; }
-  .device-frame--exp { width: min(100%, 260px); }
+  .hero-visual { order: -1; max-width: 300px; }
+  .device-frame--exp { width: min(100%, 290px); }
   .showcase-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 20px;
+    max-width: 320px;
+    margin: 28px auto 0;
   }
-  .showcase-card--wide img { aspect-ratio: 16 / 9; }
-  .kids-visual-stack { min-height: 400px; }
-  .kids-showcase-poster { width: min(100%, 260px); }
+  .showcase-card--wide img { aspect-ratio: 853 / 1844; }
+  .kids-visual-stack { min-height: 460px; }
+  .kids-showcase-poster { width: min(100%, 280px); }
+  .device-frame--sm { width: min(55%, 190px); inset-inline-end: -10px; bottom: -12px; }
   .experience-grid.reverse .experience-visual,
   .experience-grid.reverse .experience-copy { order: unset; }
 
