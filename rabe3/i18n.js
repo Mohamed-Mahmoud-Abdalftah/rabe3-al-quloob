@@ -75,8 +75,9 @@ const RABE3_I18N = {
     faq_q4: "Which languages are supported?", faq_a4: "The entire app interface is available in 28 languages — from Arabic and English to Urdu, Turkish, Chinese, and more.",
     download_title: "Begin your journey today.",
     download_lead: "Download Rabe3 Al-Quloob — calm, beautiful, and built for a lifetime with the Quran.",
-    download_soon: "Free on Google Play · Android",
+    download_soon: "Free on the App Store & Google Play · iOS & Android",
     download_play_badge: "Get it on Google Play",
+    download_app_store: "Download on the App Store",
     premium_cta: "Download to explore Plus",
     theme_premium: "Premium theme",
     theme_more_note: "9 more themes inside the app — 6 shown here.",
@@ -86,6 +87,9 @@ const RABE3_I18N = {
     play_badge_top: "GET IT ON",
     play_badge_bottom: "Google Play",
     a11y_play_badge: "Get it on Google Play",
+    app_store_top: "Download on the",
+    app_store_bottom: "App Store",
+    a11y_app_store: "Download on the App Store",
     section_langs_desc: "Switch the app to your language — 28 options from Arabic to Chinese, Turkish, Urdu, and more.",
     a11y_skip: "Skip to content",
     a11y_menu: "Open menu",
@@ -222,8 +226,9 @@ const RABE3_I18N = {
     faq_q4: "ما اللغات المدعومة؟", faq_a4: "واجهة التطبيق بالكامل متوفرة بـ ٢٨ لغة — من العربية والإنجليزية إلى الأردية والتركية والصينية والمزيد.",
     download_title: "ابدأ رحلتك اليوم.",
     download_lead: "حمّل ربيع القلوب — هادئ، جميل، ومبني لعمر مع القرآن.",
-    download_soon: "مجاني على Google Play · أندرويد",
+    download_soon: "مجاني على App Store و Google Play · iOS وأندرويد",
     download_play_badge: "حمّله من Google Play",
+    download_app_store: "حمّله من App Store",
     premium_cta: "حمّل التطبيق لاستكشاف بلس",
     theme_premium: "ثيم بريميوم",
     theme_more_note: "٩ ثيمات إضافية داخل التطبيق — ٦ معروضة هنا.",
@@ -233,6 +238,9 @@ const RABE3_I18N = {
     play_badge_top: "حمّله من",
     play_badge_bottom: "Google Play",
     a11y_play_badge: "حمّله من Google Play",
+    app_store_top: "حمّله من",
+    app_store_bottom: "App Store",
+    a11y_app_store: "حمّله من متجر App Store",
     section_langs_desc: "بدّل لغة التطبيق — ٢٨ خيارًا من العربية إلى الصينية والتركية والأردية والمزيد.",
     a11y_skip: "تخطي إلى المحتوى",
     a11y_menu: "فتح القائمة",
@@ -693,9 +701,11 @@ const LANDING_PATCH = {
     faq_q4: "Hangi diller destekleniyor?", faq_a4: "Tüm uygulama arayüzü 28 dilde mevcuttur — Arapça ve İngilizce'den Urduca, Türkçe, Çince ve daha fazlasına.",
     download_title: "Yolculuğunuza bugün başlayın.",
     download_lead: "Rabe3 Al-Quloob'u indirin — sakin, güzel ve Kur'an ile bir ömür için inşa edildi.",
-    download_soon: "Google Play'de ücretsiz · Android",
+    download_soon: "App Store ve Google Play'de ücretsiz · iOS ve Android",
     download_play_badge: "Google Play'den indir",
+    download_app_store: "App Store'dan İndirin",
     play_badge_top: "İNDİRİN", play_badge_bottom: "Google Play",
+    app_store_top: "İNDİRİN", app_store_bottom: "App Store",
     section_langs_eyebrow: "Küresel", section_langs_title: "28 dil. Tek yuva.",
     section_langs_desc: "Uygulamayı dilinize geçirin — Arapça'dan Çince, Türkçe, Urduca ve daha fazlasına 28 seçenek.",
     langs_landing_note: "Bu sayfa 12 dilde tam çevrilidir: Arapça, İngilizce, Türkçe, Fransızca, Endonezce, Urduca, Almanca, İspanyolca, Çince, Rusça, Farsça ve Malayca. Uygulama arayüzü 28 dili destekler.",
@@ -703,7 +713,8 @@ const LANDING_PATCH = {
     sticky_cta: "Uygulamayı indir",
     footer_privacy: "Gizlilik Politikası", footer_facebook: "Facebook'ta takip et", footer_contact: "Bize ulaşın",
     footer_tagline: "Allah çabalarımızı kabul etsin. © Rabe3 Al-Quloob",
-    a11y_play_badge: "Google Play'den indir"
+    a11y_play_badge: "Google Play'den indir",
+    a11y_app_store: "App Store'dan İndirin"
   },
   fr: {
     meta_title: "Rabe3 Al-Quloob — Votre Coran, magnifiquement réinventé",
@@ -773,9 +784,11 @@ const LANDING_PATCH = {
     faq_q4: "Quelles langues sont supportées ?", faq_a4: "L'interface complète est disponible en 28 langues — de l'arabe et l'anglais à l'ourdou, le turc, le chinois et plus.",
     download_title: "Commencez votre voyage aujourd'hui.",
     download_lead: "Téléchargez Rabe3 Al-Quloob — calme, beau et conçu pour une vie avec le Coran.",
-    download_soon: "Gratuit sur Google Play · Android",
+    download_soon: "Gratuit sur l'App Store et Google Play · iOS et Android",
     download_play_badge: "Disponible sur Google Play",
+    download_app_store: "Télécharger dans l'App Store",
     play_badge_top: "DISPONIBLE SUR", play_badge_bottom: "Google Play",
+    app_store_top: "TÉLÉCHARGER DANS L'", app_store_bottom: "App Store",
     section_langs_eyebrow: "Mondial", section_langs_title: "28 langues. Un seul foyer.",
     section_langs_desc: "Passez l'app dans votre langue — 28 options de l'arabe au chinois, turc, ourdou et plus.",
     langs_landing_note: "Cette page est entièrement traduite en 12 langues : arabe, anglais, turc, français, indonésien, ourdou, allemand, espagnol, chinois, russe, persan et malais. L'app prend en charge 28 langues.",
@@ -783,7 +796,8 @@ const LANDING_PATCH = {
     sticky_cta: "Télécharger l'app",
     footer_privacy: "Politique de confidentialité", footer_facebook: "Suivre sur Facebook", footer_contact: "Nous contacter",
     footer_tagline: "Qu'Allah accepte nos efforts. © Rabe3 Al-Quloob",
-    a11y_play_badge: "Disponible sur Google Play"
+    a11y_play_badge: "Disponible sur Google Play",
+    a11y_app_store: "Télécharger dans l'App Store"
   },
   id: {
     meta_title: "Rabe3 Al-Quloob — Al-Quran Anda, dirancang ulang dengan indah",
@@ -853,9 +867,11 @@ const LANDING_PATCH = {
     faq_q4: "Bahasa apa yang didukung?", faq_a4: "Seluruh antarmuka aplikasi tersedia dalam 28 bahasa — dari Arab dan Inggris hingga Urdu, Turki, Mandarin, dan lainnya.",
     download_title: "Mulai perjalanan Anda hari ini.",
     download_lead: "Unduh Rabe3 Al-Quloob — tenang, indah, dan dibangun untuk seumur hidup dengan Al-Quran.",
-    download_soon: "Gratis di Google Play · Android",
+    download_soon: "Gratis di App Store & Google Play · iOS & Android",
     download_play_badge: "Dapatkan di Google Play",
+    download_app_store: "Unduh di App Store",
     play_badge_top: "DAPATKAN DI", play_badge_bottom: "Google Play",
+    app_store_top: "UNDUH DI", app_store_bottom: "App Store",
     section_langs_eyebrow: "Global", section_langs_title: "28 bahasa. Satu rumah.",
     section_langs_desc: "Ganti bahasa aplikasi — 28 pilihan dari Arab hingga Mandarin, Turki, Urdu, dan lainnya.",
     langs_landing_note: "Halaman ini diterjemahkan penuh dalam 12 bahasa: Arab, Inggris, Turki, Prancis, Indonesia, Urdu, Jerman, Spanyol, Cina, Rusia, Persia, dan Melayu. Aplikasi mendukung 28 bahasa.",
@@ -863,7 +879,8 @@ const LANDING_PATCH = {
     sticky_cta: "Unduh aplikasi",
     footer_privacy: "Kebijakan Privasi", footer_facebook: "Ikuti di Facebook", footer_contact: "Hubungi kami",
     footer_tagline: "Semoga Allah menerima usaha kami. © Rabe3 Al-Quloob",
-    a11y_play_badge: "Dapatkan di Google Play"
+    a11y_play_badge: "Dapatkan di Google Play",
+    a11y_app_store: "Unduh di App Store"
   },
   ur: {
     meta_title: "ربيع القلوب — آپ کا قرآن، خوبصورتی سے دوبارہ تصور شدہ",
@@ -935,9 +952,11 @@ const LANDING_PATCH = {
     faq_q4: "کون سی زبانیں سپورٹ ہیں؟", faq_a4: "پوری ایپ انٹرفیس ۲۸ زبانوں میں — عربی اور انگریزی سے اردو، ترکی، چینی اور مزید۔",
     download_title: "آج اپنی سفر شروع کریں۔",
     download_lead: "ربيع القلوب ڈاؤن لوڈ کریں — پرسکون، خوبصورت، اور قرآن کے ساتھ زندگی بھر کے لیے۔",
-    download_soon: "Google Play پر مفت · Android",
+    download_soon: "App Store اور Google Play پر مفت · iOS اور Android",
     download_play_badge: "Google Play سے حاصل کریں",
+    download_app_store: "App Store سے حاصل کریں",
     play_badge_top: "یہاں سے حاصل کریں", play_badge_bottom: "Google Play",
+    app_store_top: "یہاں سے حاصل کریں", app_store_bottom: "App Store",
     section_langs_eyebrow: "عالمی", section_langs_title: "۲۸ زبانیں۔ ایک گھر۔",
     section_langs_desc: "ایپ اپنی زبان میں بدلیں — عربی سے چینی، ترکی، اردو اور مزید تک ۲۸ اختیارات۔",
     langs_landing_note: "یہ صفحہ ۱۲ زبانوں میں مکمل ترجمہ شدہ ہے: عربی، انگریزی، ترکی، فرانسیسی، انڈونیشیائی، اردو، جرمن، ہسپانوی، چینی، روسی، فارسی اور مالے۔ ایپ ۲۸ زبانیں سپورٹ کرتی ہے۔",
@@ -945,7 +964,8 @@ const LANDING_PATCH = {
     sticky_cta: "ایپ حاصل کریں",
     footer_privacy: "رازداری کی پالیسی", footer_facebook: "فیس بک پر فالو کریں", footer_contact: "رابطہ",
     footer_tagline: "اللہ ہماری کوششیں قبول فرمائے۔ © ربيع القلوب",
-    a11y_play_badge: "Google Play سے حاصل کریں"
+    a11y_play_badge: "Google Play سے حاصل کریں",
+    a11y_app_store: "App Store سے حاصل کریں"
   },
 de: {
     meta_title: "Rabe3 Al-Quloob — Ihr Koran, wunderschön neu gedacht",
@@ -1017,9 +1037,11 @@ de: {
     faq_q4: "Welche Sprachen werden unterstützt?", faq_a4: "Die gesamte App-Oberfläche ist in 28 Sprachen verfügbar — von Arabisch und Englisch bis Urdu, Türkisch, Chinesisch und mehr.",
     download_title: "Beginnen Sie heute Ihre Reise.",
     download_lead: "Laden Sie Rabe3 Al-Quloob herunter — ruhig, schön und für ein Leben mit dem Koran gebaut.",
-    download_soon: "Kostenlos auf Google Play · Android",
+    download_soon: "Kostenlos im App Store & Google Play · iOS & Android",
     download_play_badge: "Bei Google Play herunterladen",
+    download_app_store: "Laden im App Store",
     play_badge_top: "JETZT BEI", play_badge_bottom: "Google Play",
+    app_store_top: "LADEN IM", app_store_bottom: "App Store",
     section_langs_eyebrow: "Global", section_langs_title: "28 Sprachen. Ein Zuhause.",
     section_langs_desc: "Stellen Sie die App auf Ihre Sprache um — 28 Optionen von Arabisch bis Chinesisch, Türkisch, Urdu und mehr.",
     langs_landing_note: "Diese Seite ist vollständig übersetzt in Arabisch, Englisch, Türkisch, Französisch, Indonesisch, Urdu, Deutsch, Spanisch, Chinesisch, Russisch, Persisch und Malaiisch. Die App-Oberfläche unterstützt 28 Sprachen.",
@@ -1027,7 +1049,8 @@ de: {
     sticky_cta: "App herunterladen",
     footer_privacy: "Datenschutzerklärung", footer_facebook: "Auf Facebook folgen", footer_contact: "Kontakt",
     footer_tagline: "Möge Allah unsere Bemühungen annehmen. © Rabe3 Al-Quloob",
-    a11y_play_badge: "Bei Google Play herunterladen"
+    a11y_play_badge: "Bei Google Play herunterladen",
+    a11y_app_store: "Laden im App Store"
   },
   es: {
     meta_title: "Rabe3 Al-Quloob — Tu Corán, bellamente reinventado",
@@ -1099,9 +1122,11 @@ de: {
     faq_q4: "¿Qué idiomas se admiten?", faq_a4: "Toda la interfaz de la app está disponible en 28 idiomas — del árabe y el inglés al urdu, turco, chino y más.",
     download_title: "Comienza tu viaje hoy.",
     download_lead: "Descarga Rabe3 Al-Quloob — sereno, hermoso y construido para toda una vida con el Corán.",
-    download_soon: "Gratis en Google Play · Android",
+    download_soon: "Gratis en App Store y Google Play · iOS y Android",
     download_play_badge: "Disponible en Google Play",
+    download_app_store: "Descargar en el App Store",
     play_badge_top: "DISPONIBLE EN", play_badge_bottom: "Google Play",
+    app_store_top: "CONSIGUE EN EL", app_store_bottom: "App Store",
     section_langs_eyebrow: "Global", section_langs_title: "28 idiomas. Un hogar.",
     section_langs_desc: "Cambia la app a tu idioma — 28 opciones del árabe al chino, turco, urdu y más.",
     langs_landing_note: "Esta página está completamente traducida al árabe, inglés, turco, francés, indonesio, urdu, alemán, español, chino, ruso, persa y malayo. La interfaz de la app admite 28 idiomas.",
@@ -1109,7 +1134,8 @@ de: {
     sticky_cta: "Descargar la app",
     footer_privacy: "Política de privacidad", footer_facebook: "Seguir en Facebook", footer_contact: "Contáctanos",
     footer_tagline: "Que Alá acepte nuestros esfuerzos. © Rabe3 Al-Quloob",
-    a11y_play_badge: "Disponible en Google Play"
+    a11y_play_badge: "Disponible en Google Play",
+    a11y_app_store: "Descargar en el App Store"
   },
   zh: {
     meta_title: "Rabe3 Al-Quloob — 您的古兰经，焕然新生",
@@ -1181,9 +1207,11 @@ de: {
     faq_q4: "支持哪些语言？", faq_a4: "完整应用界面提供 28 种语言 — 从阿拉伯语、英语到乌尔都语、土耳其语、中文等。",
     download_title: "今天开启您的旅程。",
     download_lead: "下载 Rabe3 Al-Quloob — 宁静、优美，为与古兰经相伴一生而打造。",
-    download_soon: "Google Play 免费 · Android",
+    download_soon: "可在 App Store 和 Google Play 免费下载 · iOS 与 Android",
     download_play_badge: "在 Google Play 获取",
+    download_app_store: "在 App Store 下载",
     play_badge_top: "立即下载", play_badge_bottom: "Google Play",
+    app_store_top: "App Store", app_store_bottom: "下载",
     section_langs_eyebrow: "全球", section_langs_title: "28 种语言。一个家园。",
     section_langs_desc: "将应用切换为您的语言 — 从阿拉伯语到中文、土耳其语、乌尔都语等 28 种选择。",
     langs_landing_note: "本页面完整翻译为阿拉伯语、英语、土耳其语、法语、印尼语、乌尔都语、德语、西班牙语、中文、俄语、波斯语和马来语。应用界面支持 28 种语言。",
@@ -1191,7 +1219,8 @@ de: {
     sticky_cta: "下载应用",
     footer_privacy: "隐私政策", footer_facebook: "在 Facebook 关注", footer_contact: "联系我们",
     footer_tagline: "愿真主接受我们的努力。© Rabe3 Al-Quloob",
-    a11y_play_badge: "在 Google Play 获取"
+    a11y_play_badge: "在 Google Play 获取",
+    a11y_app_store: "在 App Store 下载"
   },
   ru: {
     meta_title: "Rabe3 Al-Quloob — Ваш Коран, прекрасно переосмысленный",
@@ -1263,9 +1292,11 @@ de: {
     faq_q4: "Какие языки поддерживаются?", faq_a4: "Весь интерфейс приложения доступен на 28 языках — от арабского и английского до урду, турецкого, китайского и других.",
     download_title: "Начните путь сегодня.",
     download_lead: "Скачайте Rabe3 Al-Quloob — спокойный, красивый и созданный для жизни с Кораном.",
-    download_soon: "Бесплатно в Google Play · Android",
+    download_soon: "Бесплатно в App Store и Google Play · iOS и Android",
     download_play_badge: "Скачать в Google Play",
+    download_app_store: "Загрузите в App Store",
     play_badge_top: "СКАЧАТЬ В", play_badge_bottom: "Google Play",
+    app_store_top: "ЗАГРУЗИТЕ В", app_store_bottom: "App Store",
     section_langs_eyebrow: "Глобально", section_langs_title: "28 языков. Один дом.",
     section_langs_desc: "Переключите приложение на свой язык — 28 вариантов от арабского до китайского, турецкого, урду и других.",
     langs_landing_note: "Эта страница полностью переведена на арабский, английский, турецкий, французский, индонезийский, урду, немецкий, испанский, китайский, русский, персидский и малайский. Интерфейс приложения поддерживает 28 языков.",
@@ -1273,7 +1304,8 @@ de: {
     sticky_cta: "Скачать приложение",
     footer_privacy: "Политика конфиденциальности", footer_facebook: "Подписаться в Facebook", footer_contact: "Связаться с нами",
     footer_tagline: "Да примет Аллах наши усилия. © Rabe3 Al-Quloob",
-    a11y_play_badge: "Скачать в Google Play"
+    a11y_play_badge: "Скачать в Google Play",
+    a11y_app_store: "Загрузите в App Store"
   },
   fa: {
     meta_title: "ربيع القلوب — قرآن شما، زیبا و نوآورانه",
@@ -1345,9 +1377,11 @@ de: {
     faq_q4: "چه زبان‌هایی پشتیبانی می‌شوند؟", faq_a4: "کل رابط کاربری اپ به ۲۸ زبان در دسترس است — از عربی و انگلیسی تا اردو، ترکی، چینی و بیشتر.",
     download_title: "سفر خود را امروز آغاز کنید.",
     download_lead: "ربيع القلوب را دانلود کنید — آرام، زیبا و ساخته‌شده برای یک عمر با قرآن.",
-    download_soon: "رایگان در Google Play · Android",
+    download_soon: "رایگان در App Store و Google Play · iOS و Android",
     download_play_badge: "از Google Play دریافت کنید",
+    download_app_store: "از App Store دریافت کنید",
     play_badge_top: "دریافت از", play_badge_bottom: "Google Play",
+    app_store_top: "دریافت از", app_store_bottom: "App Store",
     section_langs_eyebrow: "جهانی", section_langs_title: "۲۸ زبان. یک خانه.",
     section_langs_desc: "اپ را به زبان خود تغییر دهید — ۲۸ گزینه از عربی تا چینی، ترکی، اردو و بیشتر.",
     langs_landing_note: "این صفحه به‌طور کامل به عربی، انگلیسی، ترکی، فرانسوی، اندونزیایی، اردو، آلمانی، اسپانیایی، چینی، روسی، فارسی و مالایی ترجمه شده است. رابط کاربری اپلیکیشن از ۲۸ زبان پشتیبانی می‌کند.",
@@ -1355,7 +1389,8 @@ de: {
     sticky_cta: "دانلود اپ",
     footer_privacy: "سیاست حریم خصوصی", footer_facebook: "دنبال کردن در فیسبوک", footer_contact: "تماس با ما",
     footer_tagline: "خداوند تلاش ما را بپذیرد. © ربيع القلوب",
-    a11y_play_badge: "از Google Play دریافت کنید"
+    a11y_play_badge: "از Google Play دریافت کنید",
+    a11y_app_store: "از App Store دریافت کنید"
   },
   ms: {
     meta_title: "Rabe3 Al-Quloob — Al-Quran anda, direka semula dengan indah",
@@ -1427,9 +1462,11 @@ de: {
     faq_q4: "Bahasa apa yang disokong?", faq_a4: "Keseluruhan antara muka aplikasi tersedia dalam 28 bahasa — dari Arab dan Inggeris hingga Urdu, Turki, Cina dan banyak lagi.",
     download_title: "Mulakan perjalanan anda hari ini.",
     download_lead: "Muat turun Rabe3 Al-Quloob — tenang, indah dan dibina untuk seumur hidup dengan Al-Quran.",
-    download_soon: "Percuma di Google Play · Android",
+    download_soon: "Percuma di App Store & Google Play · iOS & Android",
     download_play_badge: "Dapatkan di Google Play",
+    download_app_store: "Muat turun di App Store",
     play_badge_top: "DAPATKAN DI", play_badge_bottom: "Google Play",
+    app_store_top: "MUAT TURUN DI", app_store_bottom: "App Store",
     section_langs_eyebrow: "Global", section_langs_title: "28 bahasa. Satu rumah.",
     section_langs_desc: "Tukar aplikasi ke bahasa anda — 28 pilihan dari Arab hingga Cina, Turki, Urdu dan banyak lagi.",
     langs_landing_note: "Laman ini diterjemahkan sepenuhnya dalam Arab, Inggeris, Turki, Perancis, Indonesia, Urdu, Jerman, Sepanyol, Cina, Rusia, Parsi dan Melayu. Antara muka aplikasi menyokong 28 bahasa.",
@@ -1437,7 +1474,8 @@ de: {
     sticky_cta: "Muat turun aplikasi",
     footer_privacy: "Dasar Privasi", footer_facebook: "Ikuti di Facebook", footer_contact: "Hubungi kami",
     footer_tagline: "Semoga Allah terima usaha kita. © Rabe3 Al-Quloob",
-    a11y_play_badge: "Dapatkan di Google Play"
+    a11y_play_badge: "Dapatkan di Google Play",
+    a11y_app_store: "Muat turun di App Store"
   },
 };
 
